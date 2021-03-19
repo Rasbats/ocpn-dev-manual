@@ -1,6 +1,6 @@
-== Compile on Slackware
+= Compile on Slackware
 
-=== Building OpenCPN package in Slackware
+== Building OpenCPN package in Slackware
 
 Building a package in Slackware is a bit more intricate than the way
 described above (see: http://www.slackwiki.com/Building_A_Package ). +
@@ -61,7 +61,7 @@ under .configure according to the following:
 --build=$ARCH-slackware-linux
 ....
 
-==== 2. Download and pack source code
+=== 2. Download and pack source code
 
 Get the current beta sourcecode by
 
@@ -85,7 +85,7 @@ pack it to a .tar.gz //
 bash-4.2$ tar czf opencpn-3.2.2.tar.gz opencpn-3.2.2/
 ....
 
-==== 3. Build package
+=== 3. Build package
 
 Go superuser and use src2pkg
 
@@ -98,7 +98,7 @@ bash-4.2# src2pkg opencpn-3.2.2.tar.gz
 
 the package goes to /tmp
 
-==== 4. Install it:
+=== 4. Install it:
 
 ....
 bash-4.2# installpkg /tmp/opencpn-3.2.2-x86_64-1.txz (-i486 for x86 arch)

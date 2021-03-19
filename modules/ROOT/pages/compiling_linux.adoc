@@ -1,12 +1,12 @@
-== Compiling on Linux
+= Compiling on Linux
 image::opencpn_dev_linux_0.png[width=50]
 
 *Instructions aimed at Debian/Ubuntu and Fedora/CentOS, but could easily
 be adjusted to fit other Linuxes, BSDs and Solaris.*
 
-=== 1. Get required programs
+== 1. Get required programs
 
-==== Debian / Ubuntu / Mint etc
+=== Debian / Ubuntu / Mint etc
 
 ....
 $ sudo apt-get install build-essential cmake gettext git-core gpsd gpsd-clients libgps-dev wx-common libgtk3.0-gtk3-dev libglu1-mesa-dev libgtk2.0-dev libgtk3-dev wx3.0-headers libbz2-dev libtinyxml-dev libsndfile1-dev libportaudio2 portaudio19-dev libcurl4-openssl-dev libexpat1-dev libcairo2-dev libarchive-dev liblzma-dev libexif-dev libelf-dev libsqlite3-dev
@@ -31,26 +31,26 @@ libgtk3.0-gtk3-dev libgtk3-dev
 
 ....
 
-==== Fedora / CentOS
+=== Fedora / CentOS
 
 ....
 $ yum install git cmake rpm-build gcc-c++ libstdc++-devel gtk2-devel wxGTK-devel mesa-libGLU-devel mesa-libGL-devel gettext bzip2-devel portaudio-devel libarchive-devel liblzma-devel libexif-devel
 
 ....
 
-==== OpenSuSE
+=== OpenSuSE
 
 ....
 $ zypper install git cmake gcc-c++ libstdc++-devel gtk2-devel wxWidgets-wxcontainer-devel gettext-runtime gettext-tools libbz2-devel gpsd-devel portaudio-devel tinyxml-devel libcurl-devel freeglut-devel rpm-build libarchive-devel liblzma-devel libexif-devel
 
 ....
 
-==== Slackware
+=== Slackware
 
 see
 xref:compiling_on_slackware.adoc[Compiling on Slackware]
 
-==== NOTES :
+=== NOTES :
 
 * libportaudio2 and portaudio19-dev (Ubuntu), may be called libportaudio
 and libportaudio-dev, or similar in other distros, must be installed,
@@ -78,32 +78,32 @@ with libgps19 include files.
 * Note that these packages will install a significant number of other
 dependencies as well…
 
-==== Optional: Remove old installation
+=== Optional: Remove old installation
 
 _Only required if opencpn .deb / .rpm was installed previously_
 
-===== Debian / Ubuntu / Mint etc
+==== Debian / Ubuntu / Mint etc
 
 ....
 $ sudo apt-get remove opencpn
 
 ....
 
-===== Fedora / CentOS
+==== Fedora / CentOS
 
 ....
 $ yum remove opencpn
 
 ....
 
-===== OpenSUSE
+==== OpenSUSE
 
 ....
 $ zypper remove opencpn
 
 ....
 
-=== 2. Download source code
+== 2. Download source code
 
 Run this to get your local copy of the source code:
 
@@ -122,7 +122,7 @@ $ git pull
 
 ....
 
-=== 3. Build it
+== 3. Build it
 
 We'll build everything in a subdirectory to keep the codebase clean
 (easier to catch changes).
@@ -136,7 +136,7 @@ $ make
 
 ....
 
-==== Notes:
+=== Notes:
 
 * Default install dir is /usr/local, you can change this by providing
 the appropriate option to cmake:
@@ -164,7 +164,7 @@ GTK2_GTK_INCLUDE_DIR:PATH=/usr/include/gtk-2.0
 
 ....
 
-=== 4. Install it or create a package
+== 4. Install it or create a package
 
 Make sure to refer to the
 *xref:modularized_packaging.adoc[]*
@@ -201,7 +201,7 @@ $ sudo make package
 You may need to install the GDEBI package installer to install from the
 DEB package that is made.
 
-=== 5. IDEs for Linux to work on OpenCPN
+== 5. IDEs for Linux to work on OpenCPN
 
 You can use various IDEs to edit OpenCPN's code on Linux, to have an
 easy life, choose one of *http://www.codeblocks.org/[Code::Blocks]*,
@@ -243,9 +243,9 @@ as a parameter. This sets OpenCPN into 'portable' mode and therefore
 looks in the location the 'opencpn' executable is run from, i.e. your
 'build' directory.
 
-=== 6. Others
+== 6. Others
 
-==== Script to make the Git/Cmake process easy.
+=== Script to make the Git/Cmake process easy.
 
 ....
 #! /bin/sh
@@ -281,7 +281,7 @@ exit
 
 ....
 
-==== Compiling older releases.
+=== Compiling older releases.
 
 Old way from CVS, no longer maintained
 
@@ -303,7 +303,7 @@ $ make install
 
 ....
 
-==== Check on Plugin Availability and Versions
+=== Check on Plugin Availability and Versions
 
 Go to https://launchpad.net/~opencpn/+archive/ubuntu/opencpn Scroll down
 to the desired plugin, and look at the version number.

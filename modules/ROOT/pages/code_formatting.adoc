@@ -1,4 +1,4 @@
-== Code Formatting
+= Code Formatting
 
 Starting with the post-release 3.0 codebase, we are trying to unify the
 coding style of our source code. All new patches and contributions
@@ -31,7 +31,7 @@ placeholder file.
 If possible change editor defaults to remove blank at the end of the
 line. Avoid encoding, whitespace and formatting issues.
 
-=== CMake Formatting
+== CMake Formatting
 
 Having a uniform formatting enhances readability. The main
 CMakeLists.txt + some (not all) support files has been successfully

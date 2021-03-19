@@ -149,19 +149,17 @@ https://github.com/OpenCPN/OpenCPN/pull/1457[https:__github.com/OpenCPN/OpenCPN/
 The basic counter-question is: compared to bintray, github or what? I
 can see some general advantages:
 
-. It actually seems mature.
-. We can create multiple repos for installer stuff (metadata +
+* It actually seems mature.
+* We can create multiple repos for installer stuff (metadata +
 tarballs), test builds and legacy manual installers. Seems hard on
 github.
-. With a separate repo for manual packages it becomes more user-friendly
+* With a separate repo for manual packages it becomes more user-friendly
 (4 files /release instead of 12 for a typical plugin).
-. Cloudsmith has a rich administrative interface.
+* Cloudsmith has a rich administrative interface.
 
-....
-    - For example, the retention policy could be set per repo to keep all, keep the latest etc.
-    - This is important to keep the list of test builds manageable.
-- Thanks to a clever scheme there is no need for encrypted deployment keys. Makes life easier for plugin devs.
-....
+ For example, the retention policy could be set per repo to keep all, keep the latest etc.
+** This is important to keep the list of test builds manageable.
+** Thanks to a clever scheme there is no need for encrypted deployment keys. Makes life easier for plugin devs.
 
 Still, there is no project decision to use cloudsmith, it's a per-plugin
 decision to make or not. The only condition is that the plugin artifacts
@@ -169,32 +167,30 @@ are downloadable from an url, on cloudsmith or elsewehere.
 
 Pros Cloudsmith
 
-. Mature
-. Free to opensource
-. No need for encrypted deployment keys, which makes life easier for
+* Mature
+* Free to opensource
+* No need for encrypted deployment keys, which makes life easier for
 plugin devs.
-. Integrates well with github and circleci.
-. Rich administrative interface.
+* Integrates well with github and circleci.
+* Rich administrative interface.
 
-....
-    - Retention policy could be set per repo to keep all, keep the latest etc.
-    - Important to keep the list of test builds manageable.
-    - Can make an organization account and can manage & share permissions (and repositories) for that account.
-      - Opencpn organization on github which creates the Cloudsmith Opencpn Organization?
-      - Organization account url [[https://cloudsmith.io/~opencpn/repos/plugins/packages/|https://cloudsmith.io/~opencpn/repos/plugins/packages/]]
-      - Good for users, easier publishing to Opencpn.org Downloads page links.
-      - Since free/open-source, no billing is required.
-      - Decide who "owns" the opencpn org on Cloudsmith.
-      - Owners can then invite the rest of the plugin developers to the org on Cloudsmith
-        - give them specific read (or write) access to specific repositories.
-        - Maybe each plugin has its own repository, or you create a centralized repository for all of the plugins.
-        - That would be up to the opencpn developers.
-      - Note: Alec's PI Installer does not require centralized repository, flexible source.
-- Allows creation of multiple repositories to host the stable, unstable, manual versions of the binary and xml files.
-- With a separate repo for manual packages it becomes more user-friendly (4 files /release instead of 12 for a typical plugin).
-- Good search features
-- GitHub Actions (new service available to opensource) should be able to export to cloudsmith
-....
+** Retention policy could be set per repo to keep all, keep the latest etc.
+** Important to keep the list of test builds manageable.
+** Can make an organization account and can manage & share permissions (and repositories) for that account.
+*** Opencpn organization on github which creates the Cloudsmith Opencpn Organization?
+*** Organization account url [[https://cloudsmith.io/~opencpn/repos/plugins/packages/|https://cloudsmith.io/~opencpn/repos/plugins/packages/]]
+*** Good for users, easier publishing to Opencpn.org Downloads page links.
+*** Since free/open-source, no billing is required.
+*** Decide who "owns" the opencpn org on Cloudsmith.
+*** Owners can then invite the rest of the plugin developers to the org on Cloudsmith
+**** give them specific read (or write) access to specific repositories.
+**** Maybe each plugin has its own repository, or you create a centralized repository for all of the plugins.
+**** That would be up to the opencpn developers.
+*** Note: Alec's PI Installer does not require centralized repository, flexible source.
+* Allows creation of multiple repositories to host the stable, unstable, manual versions of the binary and xml files.
+* With a separate repo for manual packages it becomes more user-friendly (4 files /release instead of 12 for a typical plugin).
+* Good search features
+* GitHub Actions (new service available to opensource) should be able to export to cloudsmith
 
 Cons Cloudsmith
 
@@ -220,20 +216,18 @@ With some kind of version control, access privileges, etc. What are the
 policies as regards this critical file? Who can update the official
 copy, etc? Some ideas:
 
-. Start a new project on github called *OpenCPN/plugins*, with the same
+* Start a new project on github called *OpenCPN/plugins*, with the same
 maintainers as** OpenCPN/OpenCPN**.
-. Move the parts related to building *ocpn-plugins.xml* to this new
+* Move the parts related to building *ocpn-plugins.xml* to this new
 project. This includes
 
-....
-    - plugins/metadata
-    - plugins/icons
-    - parts of tools
-    - parts of CMakeLists.txt which creates ocpn-plugins.xml
-- The new project basically "exports" ocpn-plugins.xml. It has an independent versioning scheme, perhaps as simple as a single number.
-- Each release of OpenCPN is distributed with a fixed version of ocpn-plugins.xml.
-- The code in #1457 is updated so it can //update ocpn-plugins.xml//  by downloading it from from github //on user request//.
-....
+** plugins/metadata
+** plugins/icons
+** parts of tools
+** parts of CMakeLists.txt which creates ocpn-plugins.xml
+* The new project basically "exports" ocpn-plugins.xml. It has an independent versioning scheme, perhaps as simple as a single number.
+* Each release of OpenCPN is distributed with a fixed version of ocpn-plugins.xml.
+* The code in #1457 is updated so it can //update ocpn-plugins.xml//  by downloading it from from github //on user request//.
 
 ==== Why is CircleCI appropriate to use?
 

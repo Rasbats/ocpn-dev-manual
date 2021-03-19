@@ -1,4 +1,4 @@
-== Pl Manager UI Discussion
+= Pl Manager UI Discussion
 
 Dave wrote:
 

@@ -1,4 +1,4 @@
-== PI Manager Catalog & Meta-Url
+= PI Manager Catalog & Meta-Url
 
 PI Manager uses ocpn-plugins.xml to provide the required metadata and
 URLs for installation of plugins.

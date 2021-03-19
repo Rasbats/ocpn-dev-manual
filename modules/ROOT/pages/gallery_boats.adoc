@@ -1,4 +1,4 @@
-== Boat Gallery
+= Boat Gallery
 
 Photographs of OpenCPN Editor's Boats. +
 NOTE: If you are registered "Editor", you may

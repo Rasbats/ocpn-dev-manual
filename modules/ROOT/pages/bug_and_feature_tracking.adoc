@@ -1,6 +1,6 @@
-== Bug and Feature Tracking
+= Bug and Feature Tracking
 
-=== Tracker
+== Tracker
 
 Bug tracking for stable and beta releases as well as feature tracking
 are available on a dedicated site

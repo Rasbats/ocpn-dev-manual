@@ -1,4 +1,4 @@
-== Modularized Packaging
+= Modularized Packaging
 
 As part of OpenCPN 3.3 beta series we implemented a modularized
 packaging system allowing to produce packages with just the program or
@@ -30,7 +30,7 @@ packaging system is provided, which so far means Linux. The plumbing to
 produce all the modularized packages for Ubuntu/Debian we make available
 through the Launchpad PPA lives at https://github.com/nohal/launchpad
 
-=== Platforms without proper package management
+== Platforms without proper package management
 
 On Windows and Mac we miss the packaging system Linux distributions have
 and will have to implement our own way to download the selected modules.

@@ -1,4 +1,4 @@
-== Building on Motorola Xoom
+= Building on Motorola Xoom
 
 *NOTICE!*
 

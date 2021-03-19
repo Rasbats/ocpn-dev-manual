@@ -1,4 +1,4 @@
-== PI Manager Dev Procedure
+= PI Manager Dev Procedure
 
 //* https://github.com/leamas/OpenCPN/wiki[PIugin Manager Github Wiki]
 * xref:plugin-installer:ROOT:Home.adoc[Plugin Manager Github Wiki]
@@ -6,9 +6,9 @@ Extensive documentation
 * https://github.com/opencpn-radar-pi/radar_pi/blob/ci/RELEASE.md[Example:
 Kees on How to Publish radar_pi]
 
-=== Build and Deploy
+== Build and Deploy
 
-==== Deploy to "Beta" Repository
+=== Deploy to "Beta" Repository
 
 . Code/logic for the cloudsmith repository to deploy to:
 
@@ -23,7 +23,7 @@ Kees on How to Publish radar_pi]
     - Push your new beta-ocpn-pugins.xml catalog to your remote repository
 ....
 
-==== "Beta" Test
+=== "Beta" Test
 
 . PI Devs will not be testing all the PI OS versions, instead other beta
 testers will have to do that.
@@ -43,9 +43,9 @@ with PI Installer using
 - Beta testers then notify acceptance via Cruiser Forum thread.
 ....
 
-==== Deploy to "Prod" Repository
+=== Deploy to "Prod" Repository
 
-===== PLACEHOLDER NOTE
+==== PLACEHOLDER NOTE
 
 https://cloudsmith.io/~opencpn/repos/[Cloudsmith OpenCPN Organization
 Plugin Repositories] are one of the deployment resources used for
@@ -127,13 +127,13 @@ for installation by alpha and beta testers when the Alpha catalog is
 picked and updated. This is very handy because it does not involve any
 PR and Merge by Dave.
 
-==== Reversion
+=== Reversion
 
 . To revert to a previous version, make a PR to OpenCPN/plugins of the
 version you wish to revert to.
 . Email the lead developer.
 
-==== PI Installer and Deployment
+=== PI Installer and Deployment
 
 (Draft) How does the Plugin Developer test deployment and installation
 of their plugin … and the generated ocpn-plugins.xml?
