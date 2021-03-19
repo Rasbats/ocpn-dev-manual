@@ -1,6 +1,6 @@
-== CI: Push build to Git Release
+= CI: Push build to Git Release
 
-=== Initiate the push with 'git push origin [tag]'
+== Initiate the push with 'git push origin [tag]'
 
 In both .travis and appveyor it is possible to initiate the push of a
 build to your Git repository. These instructions assume that you
@@ -8,13 +8,13 @@ appveyor and travis accounts and know your way around their services and
 basic process. Your travis account is used to confirm 'successful'
 builds of linux and osx, and to create those packages and releases.
 
-=== How to push a .Travis 'built' file to a new Github 'Release'
+== How to push a .Travis 'built' file to a new Github 'Release'
 
 For travis refer to
 http://www.cruisersforum.com/forums/f134/tactics-plugin-166909-2.html#post2913910[Petri's
 post #637]
 
-==== A. Configure CMake and the Travis file for security and permissions
+=== A. Configure CMake and the Travis file for security and permissions
 
 . You can use this Dashboard-Tactics_pi
 https://github.com/canne/dashboard_tactics_pi/blob/master/.travis.yml[.travis]
@@ -46,7 +46,7 @@ Plus, take the dashboard_tactics_pi.pkgproj.in where I modified the key NAME as 
 Repeat the build process from zero on an empty build directory and let me know.
 ....
 
-==== B. Bottom of travis.yml file
+=== B. Bottom of travis.yml file
 
 Example Bottom section of the travis.yml file. Note: indentation is
 important in yml files, child parts MUST be indeted below the owner.
@@ -71,7 +71,7 @@ If you want another deploy section, like launchpad, you will need to
 create a new "- provider:" with the text "launchpad" following it. Both
 "- provider:" labels need to have the same indentation.
 
-==== C. Install Travis CLI to encrypt a Github secure public key
+=== C. Install Travis CLI to encrypt a Github secure public key
 
 . You need a travis CLI (command line interface) to be able to encrypt
 the GitHub token. The encrypted string is put in your personal
@@ -100,7 +100,7 @@ and then from the linux command prompt execute:`+
 225mb disk space used.
 +`
 
-==== D. Encrypt a Github API Token with Travis encrytion
+=== D. Encrypt a Github API Token with Travis encrytion
 
 . Create a Github API token for travis in GitHub here
 https://github.com/settings/tokens[Developer tools]. Select all rights
@@ -111,7 +111,7 @@ a copy of your key.
 CLI:`+  echo [Paste GitHub Token Here] | travis encrypt -r [username]/[repository_name] --org
 +`
 
-==== E. Copy and Paste the encrypted key into the Travis secure field
+=== E. Copy and Paste the encrypted key into the Travis secure field
 
 . The command above produces a very long arbitrary string in format
 "1234abcde….f".
@@ -122,7 +122,7 @@ modify the .travis.yml on the fly…they mes up the file completely the
 file. So stick to copy-paste.
 . Save the Travis file.
 
-==== F. Start building the .travis project
+=== F. Start building the .travis project
 
 . You will need to turn the project "on" after signing into your travis
 account. Click on the icon in the top right with the down chevron and
@@ -141,7 +141,7 @@ patient when it is running.
 . Make sure it built successfully. The project will not be saved because
 travis does not provide that type of storage space.
 
-==== G. Deploy 'build' to Github
+=== G. Deploy 'build' to Github
 
 . Now the project is ready to create a Release in Github. There are two
 ways to do this.
@@ -163,7 +163,7 @@ fails to build, remove remote tag. git tag –delete v1.13.1 <--You've
 made a mistake, it fails to build, remove local tag. Fix the problem and
 start over. </code>
 
-==== H. Troubleshooting
+=== H. Troubleshooting
 
 When the Travis build does not work the error messages can be obscure
 and not really help too much. A typical message may be:
@@ -188,12 +188,12 @@ compile much quicker.
 to do multiple commits to get it working. Once it is working you can
 make the changes to your main branch(es) and clean up the 'test' branch
 
-=== How to push an Appveyor 'built' file to a new Github 'Release'
+== How to push an Appveyor 'built' file to a new Github 'Release'
 
 The use and configuration of Appveyor is similar to Travis in many
 respects. We use Appveyor to create Windows packages.
 
-==== A. Configure Appveyor.yml file for security and permissions
+=== A. Configure Appveyor.yml file for security and permissions
 
 ....
 # Artifacts Configuration
@@ -230,20 +230,20 @@ _Appveyor_auth_token_[plugin_name]_ and then select a Permissions
 . Copy the resulting code to your clipboard and somewhere else, as this
 is the last time you will have access to the public key.
 
-==== B. Encrypt a Github secure public key using Appveyor Encrypt Service
+=== B. Encrypt a Github secure public key using Appveyor Encrypt Service
 
 . Sign into the https://ci.appveyor.com/tools/encrypt[Appveyor
 Encryption Service] and paste the public key into the field.
 . Push "Encrypt". Copy the result to clipboard.
 
-==== C. Copy and Paste the encrypted key into the Appveyor secure field
+=== C. Copy and Paste the encrypted key into the Appveyor secure field
 
 . Then paste that into the appveyor.yml file after auth_token: and
 secure:, where the words _<encrypted GitHub API token here>_ occur. The
 encrypted public token can be enclosed by quotes.
 . Save the appveyor.yml file,
 
-==== D. Start building the Appveyor project
+=== D. Start building the Appveyor project
 
 . You will need to select or turn the project "on" after signing into
 your appveyor account.
@@ -256,7 +256,7 @@ git commit -a -m "update appveyor.yml"
 git push origin master
 +`
 
-==== E. Deploy 'build' to Github
+=== E. Deploy 'build' to Github
 
 . It takes awhile for the commit (Windows) to build correctly, be
 patient when it is running.
@@ -287,7 +287,7 @@ git tag –delete v1.9.1-ov42  <--You've made a mistake, it fails to build, remo
 Fix the problem and start over.
 ....
 
-==== F. What happens upon Deployment
+=== F. What happens upon Deployment
 
 * The git push origin v1.9.1-ov42 Tag command is executed.
 * Upon which a new Release & Tag "v1.9.3-ov42-test" gets created in
@@ -311,7 +311,7 @@ https://github.com/rgleason/weatherfax_pi/releases/tag/v1.9.3-ov42-test[https:__
   Build success
 ----
 
-==== G. How to get to these Appveyor Locations? The simplest way to access
+=== G. How to get to these Appveyor Locations? The simplest way to access
 
 Appveyor is through Github commits
 eg:https://github.com/rgleason/weatherfax_pi/commits/master
@@ -323,7 +323,7 @@ new Tag is pushed to remote.) - green check.
 Note that VERSION.cmake entries/changes and TAG must be manually
 coordinated!
 
-=== Additional Notes
+== Additional Notes
 
 For more information about setting the auth_token security please read
 notes in Appveyor Forum discussions:
@@ -344,7 +344,7 @@ encrypted version of that into the appveyor file.)
 It's a nice efficient way to make a release with an identical tag. This
 is what I've done on my repository:
 
-==== More information for Appveyor
+=== More information for Appveyor
 
 * http://www.cruisersforum.com/forums/f134/beta-test-technical-30929-7.html#post2876644[Post
 #2396]

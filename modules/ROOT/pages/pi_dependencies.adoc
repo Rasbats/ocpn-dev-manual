@@ -1,4 +1,4 @@
-== PI Dependencies
+= PI Dependencies
 
 https://github.com/Rasbats/photolayer_pi/pull/30[Photolayer-PI-Dependencies]
 

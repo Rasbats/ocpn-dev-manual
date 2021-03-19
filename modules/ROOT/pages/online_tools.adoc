@@ -1,4 +1,4 @@
-== Online Nmea Tools
+= Online Nmea Tools
 
 https://www.tigoe.com/pcomp/code/Processing/127/[Explanation of Calc of
 Checksum]

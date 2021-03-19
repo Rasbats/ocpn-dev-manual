@@ -1,6 +1,6 @@
-== Compile on Raspberry PI
+= Compile on Raspberry PI
 
-=== Prerequisites:
+== Prerequisites:
 
 HW setup: Make sure that you have:
 
@@ -21,7 +21,7 @@ buy a bigger SD card (32 Gb),or leave the SD card for Jessie and the app
 and add a decent USB Memory stick. The Pi mounts memory sticks
 automatically under /media/… The Pi is picky concerning mem sticks!
 
-=== Make sure, you are on the latest OS version
+== Make sure, you are on the latest OS version
 
 ....
 $sudo apt-get update
@@ -44,13 +44,13 @@ framebuffer_depth=32
 framebuffer_ignore_alpha=1
 ....
 
-=== Getting the sources and building OpenCPN:
+== Getting the sources and building OpenCPN:
 
 ....
 Simply follow the Linux build instructions for Ubuntu/Debian
 ....
 
-=== Random notes:
+== Random notes:
 
 Be aware that you also have to make provisions for the HW you want to
 connect to the Pi, to give you GPS, AIS etc. and where and how you want
@@ -90,7 +90,7 @@ compilation or SW bugs all over the place. On a more or less clean
 installation on an unspoilt RPI, everything should work fine. If not,
 consider HW issues (as described above).
 
-=== Additional Details
+== Additional Details
 
 I'm running the Pi headless; that's because I probably have no issues w/
 performance limitation from v-sync on TV screens. 60 fps looks very much

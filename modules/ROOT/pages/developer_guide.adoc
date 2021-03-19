@@ -1,6 +1,6 @@
-== Developer Guide
+= Developer Guide
 
-=== How to contribute to OpenCPN Code
+== How to contribute to OpenCPN Code
 
 The best way to contribute to OpenCPN code is to fork the main
 repository from

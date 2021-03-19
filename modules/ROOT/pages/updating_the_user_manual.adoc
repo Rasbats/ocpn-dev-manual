@@ -1,4 +1,4 @@
-== Updating the User Manual
+= Updating the User Manual
 
 FIXME - DO AFTER MIGRATION - This page needs to be continued and brought
 up to date. Also confirming that the manual has been updated with all
@@ -45,7 +45,7 @@ http://opencpn.willkamp.com/
 . Find **Show Task ID# * - Enter the FS# - Hit* enter**
 . The search will be on ALL tasks, closed and open.
 
-=== Android
+== Android
 
 Looking again at all the changes, one big thing that is not instantly
 obvious, is that OpenCPN now badly needs documentation for Android

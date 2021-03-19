@@ -1,4 +1,4 @@
-== User Interface Styling
+= User Interface Styling
 
 The Style Manager allows you to modify many aspects of the OpenCPN user
 interface:
@@ -8,7 +8,7 @@ interface:
 * The size and background of the chart status bar.
 * The background of the active route window.
 
-=== Configuration files
+== Configuration files
 
  +
 When OpenCPN starts it will look for files named *styleXXX.xml* (where
@@ -70,7 +70,7 @@ hide a certain tool in your style you can specify the **
 ** <icon>**is a general purpose icon, not used in the toolbar. Cursors
 and waypoint markers are examples of this type of icon. It has only one
 state. +
-==== Tool names and plug-ins ====
+=== Tool names and plug-ins ====
 
  +
 The standard OpenCPN tools have names, which you can easily get by

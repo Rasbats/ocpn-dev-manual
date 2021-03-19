@@ -1,9 +1,9 @@
-== Internationalization
+= Internationalization
 
 Welcome all translators. Please review Crowdin below. That is the easy
 way to contribute your skills to the development of Opencpn and Plugins.
 
-=== Add a new Language
+== Add a new Language
 
 ....
  - To translate OpenCPN into any language, download the **opencpn.pot**  file from [[https://sourceforge.net/p/opencpn/code/ci/master/tree/po/|here]].
@@ -27,7 +27,7 @@ sudo locale-gen de_DE.UTF-8
 sudo update-locale
 ....
 
-=== To improve or extend any existing translation (local)
+== To improve or extend any existing translation (local)
 
 . To improve or extend any existing translation, download the respective
 .po file, e.g. *opencpn_it_IT.po* for Italian.
@@ -38,7 +38,7 @@ Linux, you may need to install further language libraries to be able to
 select all languages.
 
  +
-==== Use Crowdin with Browser ==== With version 3.3.1824 we have changed
+=== Use Crowdin with Browser ==== With version 3.3.1824 we have changed
 OpenCPN's translations to be managed by https://crowdin.net/[Crowdin]. +
 There are a couple of reasons behind this decision:
 
@@ -63,7 +63,7 @@ keep the translations up to date is a web browser and a bit of time. +
  +
 *Please join us by signing up at
 https://crowdin.net/project/opencpn/invite* +
-==== Concerning "Items" and "Texts", the rule is: ====
+=== Concerning "Items" and "Texts", the rule is: ====
 
 1 Item in the language file 1 = Display text. +
 Of course, this requires you to put more items in this file, but this is
@@ -72,7 +72,7 @@ its language.
 
 Currently, all the other plugins and the heart of OpenCPN follow this
 rule and we can always translate very correctly. +
-====FAQ==== +
+===FAQ==== +
 *_I have a question about translation priority between core and plugins,
 ....How can this be dealt with?_*
 

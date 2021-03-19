@@ -1,4 +1,4 @@
-== Compiling on Windows
+= Compiling on Windows
 
 == Prerequisities
 

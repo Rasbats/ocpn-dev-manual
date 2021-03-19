@@ -1,6 +1,6 @@
-== CI: Travis Encryption for Windows Dev
+= CI: Travis Encryption for Windows Dev
 
-=== For Windows Developers
+== For Windows Developers
 
 In order to get the new Plugin Installer working, you will need a
 TravisCI encryption of a Github Personnal token for your plugin.

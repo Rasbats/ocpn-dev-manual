@@ -1,9 +1,9 @@
-== Troubleshooting
+= Troubleshooting
 
 For trouble shooting and lower level nitty gritty details, the command
 line, configuration files and debuggers are your friends.
 
-=== OpenCPN has a minimal command line interface (CLI)
+== OpenCPN has a minimal command line interface (CLI)
 
 ....
 Usage: opencpn [-h] [-p] [-fullscreen] [-no_opengl] [-rebuild_gl_raster_cache] [-parse_all_enc] [-unit_test_1 <num>]
@@ -16,7 +16,7 @@ Usage: opencpn [-h] [-p] [-fullscreen] [-no_opengl] [-rebuild_gl_raster_cache] [
   -unit_test_1:<num>            Display a slideshow of <num> charts and then exit. Zero or negative <num> specifies no limit.
 ....
 
-==== [-unit_test_1]
+=== [-unit_test_1]
 
 This command test cycles through all possible charts in the currently
 loaded chart database, adjusting the viewport to show the loaded chart
@@ -30,20 +30,20 @@ A side-effect of this switch is that it can be used to process a set of
 ENC charts into SENC files. The first, time consuming processing of ENC
 charts, can this way be done unattended.
 
-==== [ -p ]
+=== [ -p ]
 
 The portable option is explained
 link:/opencpn/opencpn_user_manual/advanced_features/portable_opencpn.adoc[]
 
-==== [-no_opengl]
+=== [-no_opengl]
 
 A total switch-off of OpenGL, in a more thorough way than in "Options".
 
-==== [ -fullscreen ]
+=== [ -fullscreen ]
 
 Starts OpenCPN in FullScreen mode
 
-=== Debugging Output Settings for Logfile
+== Debugging Output Settings for Logfile
 
 The _config or ini_ file contains a lot of settings that are saved
 between sessions. +
@@ -63,7 +63,7 @@ DebugBSBImg     Add logfile debug output for BSBImg\\
 DebugGDAL       Add logfile debug output for GDAL\\
 ....
 
-=== Using a FIFO for ais debugging.
+== Using a FIFO for ais debugging.
 
 See the code in _ais.cpp_ +
 `+/*
@@ -86,7 +86,7 @@ See the code in _ais.cpp_ +
 You may see that if the port name contains the string "fifo", then the
 requirement for the port to be a TTY is relaxed.
 
-=== wxWidgets
+== wxWidgets
 
 OpenCPN uses wxWidgets, currently version 3.0.2.
 https://www.wxwidgets.org/docs/[wxWidgets Reference Manuals] . The Often

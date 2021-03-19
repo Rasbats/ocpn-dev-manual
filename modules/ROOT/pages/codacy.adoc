@@ -1,4 +1,4 @@
-== Codacy:Automate code quality
+= Codacy:Automate code quality
 
 https://www.codacy.com/[Codacy Website]
 

@@ -1,6 +1,6 @@
-== CI: Push Linux Build to Launchpad
+= CI: Push Linux Build to Launchpad
 
-=== Initiate the push with 'git push origin [tag]'
+== Initiate the push with 'git push origin [tag]'
 
 In .travis it is possible to initiate the push of a Linux build to your
 Launchpad repository. These instructions assume that you have a travis
@@ -8,20 +8,20 @@ account and know your way around the services and basic process. Your
 travis account is used to confirm 'successful' builds of linux and osx,
 and to create Linux packages to deploy to your Launchpad.
 
-=== How to push a .Travis 'built' file to your Launchpad
+== How to push a .Travis 'built' file to your Launchpad
 
 For travis refer to
 http://www.cruisersforum.com/forums/f134/tactics-plugin-166909-2.html#post2913910[Petri's
 post #637]
 
-==== A. Configure the Travis file for security and permissions
+=== A. Configure the Travis file for security and permissions
 
 . You can use this OCPN_Draw_pi
 https://github.com/jongough/ocpn_draw_pi/blob/master/.travis.yml[.travis]
 file as an example. The important part is the "- provider: launchpad"
 section.
 
-==== B. Launchpad provider at bottom of travis.yml file
+=== B. Launchpad provider at bottom of travis.yml file
 
 Example Bottom section of the travis.yml file. Note: indentation is
 important in yml files, child parts MUST be indeted below the owner.
@@ -55,7 +55,7 @@ If you want another deploy section, like git, you will need to create a
 new "- provider:" with the text "releases" following it. Both "-
 provider:" labels need to have the same indentation.
 
-==== C. Install Travis CLI to encrypt a Launchpad secure public key
+=== C. Install Travis CLI to encrypt a Launchpad secure public key
 
 . You need a travis CLI (command line interface) to be able to encrypt
 the Launchpad tokens. The encrypted strings are put in your personal
@@ -79,7 +79,7 @@ response: 1.8.10.
 225mb disk space used.
 +`
 
-==== D. Install "curl" to allow posting information to Launchpad
+=== D. Install "curl" to allow posting information to Launchpad
 
 Part of the process requires the http "Post" process to acquire security
 tokens. The easy way to do this from a command prompt using the "curl"
@@ -88,7 +88,7 @@ program. * For Linux: Your package manager should be able to install
 website http://techieroop.com/how-to-install-curl-on-windows-10/ and
 select the correct version for your setup.
 
-==== E. Create a Launchpad "request-token"
+=== E. Create a Launchpad "request-token"
 
 Issue the following command from a command prompt.
 
@@ -118,7 +118,7 @@ oauth_token=XJwTXv9f8RRRT6TwCZ4x&oauth_token_secret=lbrXHsQ0jVlJlqLpNX4mGWtNjcRp
 
 Save this information as you will need it in following steps.
 
-==== F. Authenticate the User
+=== F. Authenticate the User
 
 You will now need to logon to your Launchpad account. You need to have
 been authenticated before you can issue the next command from your
@@ -138,7 +138,7 @@ https://launchpad.net/+authorize-token?oauth_token=XJwTXv9f8RRRT6TwCZ4x
 You will now be asked for the level of access to provide this token. The
 easiest is to select "All", the last button on the page.
 
-==== G. Get new secure Launchpad token
+=== G. Get new secure Launchpad token
 
 In your command prompt window issue the following command:
 
@@ -158,7 +158,7 @@ From this you would get a response like:
 oauth_token=DJZmQkJ65F3M0HD4Lws5&oauth_token_secret=WbwMzlDhW3HpkHxLh7wrtkXqPZkFS8n6HHXrZXLj4WK0vKljjJqHtdx9hWmCLXJLZ0CQSc5kD8jWnsdn&lp.context=None
 ....
 
-==== G. Encrypt your tokens before use
+=== G. Encrypt your tokens before use
 
 You should now encrypt your tokens before they are used. This makes the
 interaction more secure.
@@ -218,7 +218,7 @@ indentation in your .travis.yml file. It is far better to select the
 line starting with "secure:" and copy paste it into the requisite
 position in the .travis.yml file, in this case "oauth_token_secret"
 
-==== H. Start building the .travis project
+=== H. Start building the .travis project
 
 . You will need to turn the project "on" after signing into your travis
 account. Click on the icon in the top right with the down chevron and
@@ -234,7 +234,7 @@ patient when it is running.
 . Make sure it built successfully. The project will not be saved because
 travis does not provide that type of storage space.
 
-==== I. Troubleshooting
+=== I. Troubleshooting
 
 When the Travis build does not work the error messages can be obscure
 and not really help too much. A typical message may be:

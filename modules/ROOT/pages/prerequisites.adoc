@@ -1,4 +1,4 @@
-== Prerequisites
+= Prerequisites
 
 The following assumes you are able to build OpenCPN from source and have
 the needed tools. You can find the detailed instructions at
@@ -7,7 +7,7 @@ Linux] and
 xref:compiling_windows.adoc[Compiling
 Windows]
 
-=== Git magic
+== Git magic
 
 If you followed the building instructions above, you already have the
 local repository clone and all the needed tools on your computer. Open a
@@ -83,14 +83,14 @@ Be aware that this is not a Git tutorial at all. To know how to use Git,
 consult the Git book at http://book.git-scm.com/ or any other tutorials
 on the net.
 
-=== Code formatting
+== Code formatting
 
  +
 Please read the page on
 xref:code_formatting.adoc[Code
 Formatting] before writing new code for OpenCPN.
 
-=== Publishing your code
+== Publishing your code
 
  +
 The best way to ensure your code gets properly submitted to OpenCPN is
@@ -102,7 +102,7 @@ your work and referenceing the github commit URL. +
  +
 The official development master is here:
 [[https:__github.com/OpenCPN/OpenCPN|https://github.com/OpenCPN/OpenCPN] +
-===== Creating a patch =====
+==== Creating a patch =====
 
  +
 Expecting your branch is checked out and you are in your working
@@ -116,18 +116,18 @@ git diff master> mystuff.patch
 In the newly created file called _mystuff.patch_ you may review the code
 you are going to submit with any text editor.
 
-=== Submitting a patch
+== Submitting a patch
 
  +
 Create a Flyspray account at http://opencpn.willkamp.com
 
-==== Bugfix:
+=== Bugfix:
 
 Attach the patch with comment to the corresponding issue in the
 bugtracker - for 4.5.x
 http://opencpn.willkamp.com/index.php?project=76&do=index&switch=1
 
-==== New feature:
+=== New feature:
 
 Attach the patch with comment to the corresponding issue in the Feature
 requests tracker at

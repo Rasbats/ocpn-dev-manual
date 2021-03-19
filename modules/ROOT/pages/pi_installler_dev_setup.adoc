@@ -1,9 +1,9 @@
-== PI Manager Dev Setup
+= PI Manager Dev Setup
 
 https://github.com/leamas/OpenCPN/wiki[PIugin Manager Github Wiki]
 Extensive documentation
 
-=== Build and Deploy Plugins
+== Build and Deploy Plugins
 
 Alec Leamas is the author of PI Installer and should be given extensive
 credit & thanks for his many months of work on the Plugin Installer. Jon
@@ -35,14 +35,14 @@ download by the BUILD services.
 * KEY #2 is needed to give the BUILD services the ability to PUSH to
 CLOUDSMITH.
 
-=== PI Manager System consists of three parts:
+== PI Manager System consists of three parts:
 
-==== 1. Plugin Manager inside OpenCPN
+=== 1. Plugin Manager inside OpenCPN
 
 The plugin manager is now in OpenCPN master branch. Make a fresh build
 of opencpn from this branch. There are occasional improvements made now.
 
-==== 2. Plugin Build & Deploy by Plugin Devs
+=== 2. Plugin Build & Deploy by Plugin Devs
 
 FIXME We need to simplify
 
@@ -66,7 +66,7 @@ while useful, are not necessary to use the installer. As long as there
 is a working file with metadata and a downloadable tarball everything is
 fine, at least for a starter.
 
-==== 3. Metadata Repository:Git OpenCPN/Plugins
+=== 3. Metadata Repository:Git OpenCPN/Plugins
 
 FIXME
 
@@ -83,7 +83,7 @@ PI Installer. This file contains all the necessary PI information and
 locations of files. Dave R. has control of this github repository and
 will accept PRs
 
-=== Assumed Cloud Services
+== Assumed Cloud Services
 
 We assume you have or are able to configure the following free
 opensource accounts/services:
@@ -102,7 +102,7 @@ from Code & Deploy repositories.
 These next steps add build and deployment of multiple OS to Git Release
 and Cloudsmith for PI Installer.
 
-=== Plugins Adaptation
+== Plugins Adaptation
 
 You may have to adapt the plugin in various ways. Please review the
 items in this link
@@ -226,7 +226,7 @@ when hovered over shows "Opensource".
     - Then at the bottom "Upload Packages" button.
 ....
 
-=== CLOUDSMITH_API_KEY Generation and Use
+== CLOUDSMITH_API_KEY Generation and Use
 
 KEY #2 provides your BUILD service the ability to PUSH artifacts
 (tarballs, xml, packages) to your CLOUDSMITH repository.
@@ -276,7 +276,7 @@ Key,width=400]
 
 Once this is done the deploy to Cloudsmith should work.
 
-=== Cloudsmith Retention Policy Settings
+== Cloudsmith Retention Policy Settings
 
 Example: A repository with 4gb and about 5000 packages used for
 development. Retention policy set some time ago but these have not
@@ -298,9 +298,9 @@ there's an "X Per Page" selector, where you can change the setting from
 25 packages to 500. So if you really needed a manual action to
 delete/copy/move many packages at once, you can do it like that.
 
-=== Cloudsmith Repositories Examples
+== Cloudsmith Repositories Examples
 
-==== OpenCPN Plugin Repositories
+=== OpenCPN Plugin Repositories
 
 https://cloudsmith.io/~david-register/repos/
 
@@ -326,7 +326,7 @@ https://cloudsmith.io/~jon-gough/repos/
 
 == Setup: Configure Plugin for PI Installer
 
-=== Summary of Process
+== Summary of Process
 
 . Configure your plugin's files by replacing cmake and circleci scripts
 and modify them appropriately.
@@ -340,7 +340,7 @@ repositories, along with a new ocpn-plugin.xml catalog file.
 . See link:/opencpn/developer_manual/pi_installer_procedure.adoc[PI Installer
 Procedure Build-Deploy] below, for more detail.
 
-=== Add CMake and Script Files
+== Add CMake and Script Files
 
 FIXME
 
@@ -444,7 +444,7 @@ data (icons)
 
 ....
 
-=== Modify Files
+== Modify Files
 
 Then the top of CMakeLists.txt must be customized for the plugin and
 environment. There are basically two sets of files for CMake that have
@@ -454,7 +454,7 @@ has gone to some effort to bring all the Plugin Dev settings up to the
 top of CMakeLists.txt The example below is from Jon's testplugin_pi but
 needs to be updated!
 
-==== CMakeLists.txt
+=== CMakeLists.txt
 
 ....
 project(testplugin_pi)
@@ -501,7 +501,7 @@ set(APPVEYOR_TEST_DEPLOY_TO_CLOUDSMITH "true")
 
 ....
 
-==== circleci\config.yml
+=== circleci\config.yml
 
 Your account does not have rights to run macos until CircleCI staff
 explicitly enables it. If you don't have access to run the macOS
@@ -545,7 +545,7 @@ Line 65 start
 
 ....
 
-==== appveyor.yml
+=== appveyor.yml
 
 Generate a GitHub Personal Token specifically for Appveyor and your
 plugin. Save the code somewhere. Then encrypt the Github Personal Token
@@ -560,7 +560,7 @@ deploy:
 
 ....
 
-==== .travis.yml
+=== .travis.yml
 
 Generate a GitHub Personal Token specifically for Travis and your
 plugin. Save the code somewhere. Then encrypt the Github Personal Token
@@ -583,7 +583,7 @@ deploy:
 
 == Other Notes
 
-=== Cloudsmith OpenCPN Organization
+== Cloudsmith OpenCPN Organization
 
 https://cloudsmith.io/orgs/opencpn/
 
@@ -594,14 +594,14 @@ have created an opensource Cloudsmiith account.
 
 See this https://github.com/OpenCPN/OpenCPN/issues/1573
 
-=== Installation Destination change with Plugin Manager
+== Installation Destination change with Plugin Manager
 
 https://github.com/OpenCPN/OpenCPN/issues/1605
 
 Check your plugins for any changes needed to keep intended user
 experience when installing, noting path isssues.
 
-=== Catalog XML "name" must match "Common Name"
+== Catalog XML "name" must match "Common Name"
 
 The name used in the Plugin Manager XML Catalog must match the "Common
 Name" of the plugin being installed.
