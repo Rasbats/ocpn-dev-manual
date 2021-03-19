@@ -1,5 +1,3 @@
-image:indexmenu_n>1[indexmenu_n>1]
-
 == Prerequisites
 
 The following assumes you are able to build OpenCPN from source and have

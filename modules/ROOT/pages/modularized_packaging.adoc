@@ -1,5 +1,3 @@
-image:indexmenu_n>5[indexmenu_n>5]
-
 == Modularized Packaging
 
 As part of OpenCPN 3.3 beta series we implemented a modularized
