@@ -149,15 +149,13 @@ travis does not provide that type of storage space.
 ways to do this.
 . Option 1: Create the new 'Tag' from within Github Release Tab.
 
-....
-    * In GitHub create a repository, like v1.2.3 as 'tag', description can be anything, but it best to include the version. This is where Travis and AppVeyor both deploy the built contents.
-    * When you hit the create button, Travis and AppVeyor will create the 'build' and deploy (the condition flags in the configuration file are define this action) to the Github 'Release' Tag.
-    * That's why it's important to check before you create the 'Tag' that all builds do pass faultlessly. (Repositories cannot be deleted since they are, in fact defined by tags.)
-    * If you observe 401 error at the deployment phase in travis logs search in google.com with the following phrase for possible causes "travis github [[https://api.github.com/user|https://api.github.com/user]]: 401 - bad credentials"
-- Option 2: Command Line - Make a 'Tag' locally and push it to your remote.
-    * From your command line create a new tag locally, and then push that tag to your remote repository.
-    * All the same cautions apply, make sure it builds properly first.<code>
-....
+* In GitHub create a repository, like v1.2.3 as 'tag', description can be anything, but it best to include the version. This is where Travis and AppVeyor both deploy the built contents.
+* When you hit the create button, Travis and AppVeyor will create the 'build' and deploy (the condition flags in the configuration file are define this action) to the Github 'Release' Tag.
+* That's why it's important to check before you create the 'Tag' that all builds do pass faultlessly. (Repositories cannot be deleted since they are, in fact defined by tags.)
+* If you observe 401 error at the deployment phase in travis logs search in google.com with the following phrase for possible causes "travis github [[https://api.github.com/user|https://api.github.com/user]]: 401 - bad credentials"
+* Option 2: Command Line - Make a 'Tag' locally and push it to your remote.
+** From your command line create a new tag locally, and then push that tag to your remote repository.
+** All the same cautions apply, make sure it builds properly first.<code>
 
 OPTION 2: TAG COMMANDS Make tag locally and push to remote git tag
 v1.13.1 <--Create the tag on your local repository git push origin
@@ -166,8 +164,6 @@ and pushes. git push –delete origin v1.13.1 <--You've made a mistake, it
 fails to build, remove remote tag. git tag –delete v1.13.1 <--You've
 made a mistake, it fails to build, remove local tag. Fix the problem and
 start over. </code>
-
-==== 
 
 ==== H. Troubleshooting
 
@@ -295,16 +291,17 @@ Fix the problem and start over.
 
 ==== F. What happens upon Deployment
 
-. The git push origin v1.9.1-ov42 Tag command is executed.
-. Upon which a new Release & Tag "v1.9.3-ov42-test" gets created in
+* The git push origin v1.9.1-ov42 Tag command is executed.
+* Upon which a new Release & Tag "v1.9.3-ov42-test" gets created in
 GitHub "Releases", which now contains the results of the - - Appveyor
 build under the "Assets" label. You should find a file similar to
 "weatherfax_pi-1.9.3-ov42-win32.exe".
-. See
+* See
 https://github.com/rgleason/weatherfax_pi/releases/tag/v1.9.3-ov42-test[https:__github.com/rgleason/weatherfax_pi/releases/tag/v1.9.3-ov42-test]]
-- The Appveyor 'Console Tab' shows:
+* The Appveyor 'Console Tab' shows:
 [[https:__ci.appveyor.com/project/rgleason/weatherfax-pi|https:__ci.appveyor.com/project/rgleason/weatherfax-pi]]
-- The Appveyor "Artifacts Tab" shows the file pushed to Github
+* The Appveyor "Artifacts Tab" shows the file pushed to Github
+----
 'Release':
 [[https:__ci.appveyor.com/project/rgleason/weatherfax-pi/build/artifacts|https://ci.appveyor.com/project/rgleason/weatherfax-pi/build/artifacts]`+  Collecting artifacts...
   Found artifact 'build\weatherfax_pi-1.9.3-ov42-win32.exe' matching 'build\*.exe' path
@@ -314,9 +311,10 @@ https://github.com/rgleason/weatherfax_pi/releases/tag/v1.9.3-ov42-test[https:__
   Creating "v1.9.3-ov42-test" release for repository "rgleason/weatherfax_pi" tag "v1.9.3-ov42-test" commit "05b6418e674b7d722424146c8efe2745a88b635b"...OK
   Uploading "weatherfax_pi-1.9.3-ov42-win32.exe" to release assets...OK
   Build success
-+`
+----
 
-G. How to get to these Appveyor Locations? The simplest way to access
+==== G. How to get to these Appveyor Locations? The simplest way to access
+
 Appveyor is through Github commits
 eg:https://github.com/rgleason/weatherfax_pi/commits/master
 
