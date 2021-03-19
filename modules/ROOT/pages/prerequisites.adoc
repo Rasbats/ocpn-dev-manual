@@ -85,26 +85,25 @@ on the net.
 
 == Code formatting
 
- +
 Please read the page on
 xref:code_formatting.adoc[Code
 Formatting] before writing new code for OpenCPN.
 
 == Publishing your code
 
- +
 The best way to ensure your code gets properly submitted to OpenCPN is
 to create a clone of the OpenCPN GitHub master repository, and push your
 commits to your cloned repository. When everything is available on
 Github you can either send a mail the developers or create an issue in
 http://opencpn.willkamp.com[http:__opencpn.willkamp.com]] describing
 your work and referenceing the github commit URL. +
- +
-The official development master is here:
-[[https:__github.com/OpenCPN/OpenCPN|https://github.com/OpenCPN/OpenCPN] +
-==== Creating a patch =====
 
- +
+The official development master is here:
+https://github.com/OpenCPN/OpenCPN
+
+=== Creating a patch
+
+ 
 Expecting your branch is checked out and you are in your working
 directory. Simply issue:
 
@@ -112,13 +111,13 @@ directory. Simply issue:
 git diff master> mystuff.patch
 ....
 
- +
+
 In the newly created file called _mystuff.patch_ you may review the code
 you are going to submit with any text editor.
 
 == Submitting a patch
 
- +
+
 Create a Flyspray account at http://opencpn.willkamp.com
 
 === Bugfix:

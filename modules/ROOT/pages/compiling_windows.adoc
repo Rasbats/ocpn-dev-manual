@@ -184,5 +184,3 @@ will customize Osetup.bat. The latest of Transmitter Dan's batchutils is
 in git. If you want to use some other environment variable other than
 WXDIR that is ok. The Cmake tool will accept a number of possible
 environment names as the root of the wxWidgets toolkit.
-
-== 

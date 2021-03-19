@@ -12,21 +12,17 @@ should be used.
 {empty}1. How to get Alpha/Beta Testers familiar with Github and
 locating those compiled files?
 
-....
-      * When we are actually in Beta test, we will describe the process and condition of the CI artifacts. 
-      * We may use the artifacts then, but probably not. 
-      * We have enough trouble tracking issues with one "official" Beta location. 
-      * Using the almost daily updates of CI product for Beta testing would be a nightmare.
-      * Best to think of the usefulness of CI as we are right now: In Alpha test of some new features, some of which features are known to be incomplete or even with known heinous errors.
-....
+* When we are actually in Beta test, we will describe the process and condition of the CI artifacts. 
+* We may use the artifacts then, but probably not. 
+* We have enough trouble tracking issues with one "official" Beta location. 
+* Using the almost daily updates of CI product for Beta testing would be a nightmare.
+* Best to think of the usefulness of CI as we are right now: In Alpha test of some new features, some of which features are known to be incomplete or even with known heinous errors.
 
 {empty}2. Are these eventually going to be the source for the Website
 Downloads page?
 
-....
-      * No. The CI artifacts result from building the current github HEAD. 
-      * This, in general, will not be the same as the in-production Release point.
-....
+* No. The CI artifacts result from building the current github HEAD. 
+* This, in general, will not be the same as the in-production Release point.
 
 === Summary
 

@@ -39,12 +39,10 @@ SET(PACKAGE_NAME dashboard_pi)
 SET(VERBOSE_NAME Dashboard)
 SET(TITLE_NAME Dashboard)
 ENDIF (TACTICS_INSTRUMENTS)
-+`
+`
 
-....
 Plus, take the dashboard_tactics_pi.pkgproj.in where I modified the key NAME as instructed.
 Repeat the build process from zero on an empty build directory and let me know.
-....
 
 === B. Bottom of travis.yml file
 
@@ -53,7 +51,7 @@ important in yml files, child parts MUST be indeted below the owner.
 This is shown below by "api_key:" being the owner and "secure:" being
 the child, noticd that "secure:" is indented.
 
-....
+----
 deploy:
 - provider: releases
   api_key:
@@ -65,7 +63,7 @@ deploy:
     repo: canne/dashboard_tactics_pi
     tags: true
     all_branches: true
-....
+----
 
 If you want another deploy section, like launchpad, you will need to
 create a new "- provider:" with the text "launchpad" following it. Both
@@ -73,22 +71,21 @@ create a new "- provider:" with the text "launchpad" following it. Both
 
 === C. Install Travis CLI to encrypt a Github secure public key
 
-. You need a travis CLI (command line interface) to be able to encrypt
+
+* You need a travis CLI (command line interface) to be able to encrypt
 the GitHub token. The encrypted string is put in your personal
-.travis.yml file. Unlike AppVeyor services, there is no on-line
+*travis.yml file. Unlike AppVeyor services, there is no on-line
 encryption service, that's why you need to start with a travis CLI
 installation
 
-....
- - [[https://github.com/travis-ci/travis.rb|Travis CLI Tool]] for Windows Developers use [[opencpn:developer_manual:ci_travis_encryption_windows|Rubyinstaller/Gem/Travis]] which still uses 1Gb of disk space but is the easiest alternative.
-- Travis CLI installation instructions for Windows (Suggest use of "Travis CLI Tool" above). When you are sure that you have travis CLI up and working, you can start to create the encrypted key. Without it, deployment to GitHub does not work.
-- Travis CLI installation instructions for Linux are just below. Note that Windows10 users can:
-   * Install a Travis CLI Tool as listed above (easiest).
-   * Create a [[https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:supplementary_software:run-ubuntu-in-win10|WSL-Windows Subsystem for Linux (Ubuntu 18.04LTS) on Win10 Installation]].
-   * or create a Virtual Box and install Ubuntu Linux.
-....
+* [[https://github.com/travis-ci/travis.rb|Travis CLI Tool]] for Windows Developers use [[opencpn:developer_manual:ci_travis_encryption_windows|Rubyinstaller/Gem/Travis]] which still uses 1Gb of disk space but is the easiest alternative.
+* Travis CLI installation instructions for Windows (Suggest use of "Travis CLI Tool" above). When you are sure that you have travis CLI up and working, you can start to create the encrypted key. Without it, deployment to GitHub does not work.
+* Travis CLI installation instructions for Linux are just below. Note that Windows10 users can:
+** Install a Travis CLI Tool as listed above (easiest).
+** Create a [[https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:supplementary_software:run-ubuntu-in-win10|WSL-Windows Subsystem for Linux (Ubuntu 18.04LTS) on Win10 Installation]].
+** or create a Virtual Box and install Ubuntu Linux.
 
-and then from the linux command prompt execute:`+
+and then from the linux command prompt execute:`
   sudo apt-get update --fix-missing
   sudo apt-get install ruby
   sudo apt-get install gem
@@ -98,16 +95,16 @@ and then from the linux command prompt execute:`+
   response: 1.8.10.
 
 225mb disk space used.
-+`
+`
 
 === D. Encrypt a Github API Token with Travis encrytion
 
-. Create a Github API token for travis in GitHub here
+* Create a Github API token for travis in GitHub here
 https://github.com/settings/tokens[Developer tools]. Select all rights
 to repository "repo" and repository only (that's enough - if it does not
 work, it is something else). Don't close the window until you have made
 a copy of your key.
-. Open command window and give following command (in Linux) with travis
+* Open command window and give following command (in Linux) with travis
 CLI:`+  echo [Paste GitHub Token Here] | travis encrypt -r [username]/[repository_name] --org
 +`
 
@@ -195,7 +192,7 @@ respects. We use Appveyor to create Windows packages.
 
 === A. Configure Appveyor.yml file for security and permissions
 
-....
+----
 # Artifacts Configuration
 artifacts: # push all files in directory
   path: build\*.exe
@@ -215,14 +212,15 @@ deploy:
     configuration: Release  # Debug contains non-redist MS DLLs
     APPVEYOR_REPO_TAG: true   # deploy on tag push only
 #   branch: master   # release from master branch only
-....
+----
 
-. You can also use this Weatherfax_pi
+You can also use this Weatherfax_pi
 https://github.com/seandepagnier/weatherfax_pi/files/3112304/appveyor.yml.txt[appveyor.yml]
 file for reference and there are some
 https://github.com/seandepagnier/weatherfax_pi/issues/134[in process
 notes] available.
-. Login to your Appveyor Account and Create a
+
+Login to your Appveyor Account and Create a
 _https://github.com/settings/tokens[Github API Public Security Token]_
 under _New Personal Token_, entering a "Note" similar to
 _Appveyor_auth_token_[plugin_name]_ and then select a Permissions
@@ -254,38 +252,37 @@ before the next step. Commit and push to the remote repository.
 and date, an commit and push that!`+git add appveyor.yml
 git commit -a -m "update appveyor.yml"
 git push origin master
-+`
+
 
 === E. Deploy 'build' to Github
 
-. It takes awhile for the commit (Windows) to build correctly, be
+* It takes awhile for the commit (Windows) to build correctly, be
 patient when it is running.
-. Make sure it built successfully by checking that the Artifact Tab for
+* Make sure it built successfully by checking that the Artifact Tab for
 the install package file.
-. Now the project is ready to create a Release in Github. There are two
+* Now the project is ready to create a Release in Github. There are two
 ways to do this.
-. Option 1: Create the new 'Tag' from within Github Release Tab.
+* Option 1: Create the new 'Tag' from within Github Release Tab.
 
-....
-    * In GitHub create a repository, like v1.2.3 as 'tag', description can be anything, but it best to include the version. This is where Travis and AppVeyor both deploy the built contents.
-    * When you hit the create button, Travis and AppVeyor will create the 'build' and deploy (the condition flags in the configuration file are define this action) to the Github 'Release' Tag.
-    * That's why it's important to check before you create the 'Tag' that all builds do pass faultlessly. (Repositories cannot be deleted since they are, in fact defined by tags.)
-    * If you observe 401 error at the deployment phase in travis logs search in google.com with the following phrase for possible causes "travis github [[https://api.github.com/user|https://api.github.com/user]]: 401 - bad credentials"
-- Option 2: Command Line - Make a 'Tag' locally and push it to your remote.
-    * From your command line create a new tag locally, and then push that tag to your remote repository.
-    * All the same cautions apply, make sure it builds properly first.<code>
-....
+* In GitHub create a repository, like v1.2.3 as 'tag', description can be anything, but it best to include the version. This is where Travis and AppVeyor both deploy the built contents.
+* When you hit the create button, Travis and AppVeyor will create the 'build' and deploy (the condition flags in the configuration file are define this action) to the Github 'Release' Tag.
+* That's why it's important to check before you create the 'Tag' that all builds do pass faultlessly. (Repositories cannot be deleted since they are, in fact defined by tags.)
+* If you observe 401 error at the deployment phase in travis logs search in google.com with the following phrase for possible causes "travis github [[https://api.github.com/user|https://api.github.com/user]]: 401 - bad credentials"
+* Option 2: Command Line - Make a 'Tag' locally and push it to your remote.
+** From your command line create a new tag locally, and then push that tag to your remote repository.
+** All the same cautions apply, make sure it builds properly first.<code>
 
 OPTION 2: TAG COMMANDS Make tag locally and then push to remote </code>
 
-....
 Examples:
+
+----
 git tag v1.9.1-ov42    <--Create the tag on your local repository
 git push origin v1.9.1-ov42  <--Push the tag to your remote repository, travis creates build and pushes.
 git push –delete origin v1.9.1-ov42  <--You've made a mistake, it fails to build, remove remote tag.
 git tag –delete v1.9.1-ov42  <--You've made a mistake, it fails to build, remove local tag.
 Fix the problem and start over.
-....
+----
 
 === F. What happens upon Deployment
 
@@ -299,9 +296,10 @@ https://github.com/rgleason/weatherfax_pi/releases/tag/v1.9.3-ov42-test[https:__
 * The Appveyor 'Console Tab' shows:
 [[https:__ci.appveyor.com/project/rgleason/weatherfax-pi|https:__ci.appveyor.com/project/rgleason/weatherfax-pi]]
 * The Appveyor "Artifacts Tab" shows the file pushed to Github
+
 ----
 'Release':
-[[https:__ci.appveyor.com/project/rgleason/weatherfax-pi/build/artifacts|https://ci.appveyor.com/project/rgleason/weatherfax-pi/build/artifacts]`+  Collecting artifacts...
+https:__ci.appveyor.com/project/rgleason/weatherfax-pi/build/artifacts|https://ci.appveyor.com/project/rgleason/weatherfax-pi/build/artifacts`+  Collecting artifacts...
   Found artifact 'build\weatherfax_pi-1.9.3-ov42-win32.exe' matching 'build\*.exe' path
   Uploading artifacts...
   [1/1] build\weatherfax_pi-1.9.3-ov42-win32.exe (721,873 bytes)...100%
@@ -356,5 +354,3 @@ is what I've done on my repository:
 appveyor 'auth_token' to push a new github release #134]
 * http://www.cruisersforum.com/forums/f134/beta-test-technical-30929-7.html#post2873659[Getting
 auth token]
-
-:
