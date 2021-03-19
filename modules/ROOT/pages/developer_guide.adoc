@@ -1,0 +1,26 @@
+//image:indexmenu_n>3[indexmenu_n>3]
+
+== Developer Guide
+
+=== How to contribute to OpenCPN Code
+
+The best way to contribute to OpenCPN code is to fork the main
+repository from
+https://github.com/OpenCPN/OpenCPN[https:__github.com/OpenCPN/OpenCPN]],
+push your changes to your fork and create a pull request. There is a
+short guide to the whole process at
+[[https:__guides.github.com/activities/forking/|https://github.com/OpenCPN/OpenCPN]
+
+* xref:prerequisites.adoc[Prerequisites]
+* xref:compiling_linux.adoc[Compiling
+Linux]
+* xref:compiling_windows.adoc[Compiling
+Windows]
+* xref:compiling_mac_osx.adoc[Compiling
+macOS]
+* xref:modularized_packaging.adoc[Modularized
+Packaging]
+* xref:internationalization.adoc[Internationalization]
+* xref:code_formatting.adoc[Code
+Formatting]
+* xref:messaging.adoc[Messaging]
