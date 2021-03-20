@@ -73,7 +73,7 @@ hide a certain tool in your style you can specify the **
 and waypoint markers are examples of this type of icon. It has only one
 state.
 
-=== Tool names and plug-ins ====
+=== Tool names and plug-ins
 
 
 The standard OpenCPN tools have names, which you can easily get by

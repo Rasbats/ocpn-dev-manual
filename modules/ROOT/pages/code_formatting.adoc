@@ -22,7 +22,7 @@ control statements. +
 For **Eclipse **users there is a Code Formatter template available at
 image:/opencpn/files/codestyle.xml.doc[opencpn:files:codestyle.xml]
 (Remove the .doc extension) +
-For *[[http://uncrustify.sourceforge.net/%7CUncrustify*]]**users there
+For http://uncrustify.sourceforge.net/[Uncrustify] users there
 is an uncrustify.cfg available at
 image:/opencpn/files/beautify.cfg.doc[opencpn:files:beautify.cfg.doc]
 (Remove the .doc extension) FIXME file needs to be found. This is just a
@@ -43,7 +43,6 @@ All in all this has created a much more consistent formatting of the
 CMake setup files. It might make sense to consider also for a template
 project
 
-'''''
 
 ....
 #include <math.h>
