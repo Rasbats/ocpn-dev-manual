@@ -1,11 +1,9 @@
-image:indexmenu_n>8[indexmenu_n>8]
-
-== Pl Manager Summary
+= Pl Manager Summary
 
 https://github.com/leamas/OpenCPN/wiki[PIugin Manager Github Wiki]
 Extensive documentation
 
-=== Design Goals
+== Design Goals
 
 . Make plugins easily discoverable for users.
 . Support simple, one-button click plugin installation
@@ -14,7 +12,7 @@ Extensive documentation
 . Be compatible with existing plugin installations
 . Improve build and deploy workflow for plugins.
 
-=== Design Goals - Additional & Later
+== Design Goals - Additional & Later
 
 . Simple, one-button click install for user.
 . Simple, one-button click uninstall for user.
@@ -24,7 +22,7 @@ installation-wise.
 . Ocpn devs: Platform-independent code (mostly).
 . Plugins devs: Make it simpler to provide plugins.
 
-=== Alec's Discussion
+== Alec's Discussion
 
 The simple, platform-independent one-click user actions are simply not
 feasible using native packages. Reasons include that uninstall just
@@ -50,9 +48,9 @@ All this boils down to a solution similar to the browsers, IDE:s,
 multimedia tools etc., out there: use an application-specific format for
 the plugin (.tar.gz in this case).
 
-=== Dave's Summary
+== Dave's Summary
 
-==== Operation:
+=== Operation:
 
 . There is a metadata file called "ocpn-plugins.xml" which contains a
 description, tarball URLs, and potentially other stuff for a set of
@@ -68,7 +66,7 @@ platform specific.
 . Legacy (user-managed) plugin installers (by .exe, .dmg, or PPA) can
 coexist, but are in no way "managed" by the new GUI.
 
-==== Control issues:
+=== Control issues:
 
 . I assume OCPN can download at will a new updated copy of
 ocpn-plugins.xml, on user request.
@@ -80,7 +78,7 @@ integration and management.
 well as creating and promulgating a new release of ocpn-plugins.xml,
 properly versioned in some unclear way.
 
-==== Hosting questions:
+=== Hosting questions:
 
 . We collectively wonder where to host the ocpn-plugins.xml files, with
 some kind of version control, access privileges, etc. NOTE: The
@@ -91,7 +89,7 @@ access to this repository.
 . We also wonder where, or if, to assertively host the tarballs, and
 other blobs required for installation, for each plugin.
 
-==== Ideas:
+=== Ideas:
 
 . Start a new project on github called OpenCPN/plugins, with the same
 maintainers as OpenCPN/OpenCPN.
@@ -106,7 +104,7 @@ ocpn-plugins.xml.
 #1457] is updated so it can update ocpn-plugins.xml by downloading it
 from from github on user request.
 
-=== Alec's Initial Summary
+== Alec's Initial Summary
 
 This is about the new Plugin Installer as proposed in
 https://github.com/OpenCPN/OpenCPN/pull/1457[[1]]
@@ -142,9 +140,9 @@ https://github.com/OpenCPN/OpenCPN/pull/1457[https:__github.com/OpenCPN/OpenCPN/
 [5] Bsb4_pi
 [[https:__github.com/leamas/bsb4_pi/|https://github.com/leamas/bsb4_pi/]
 
-=== Questions
+== Questions
 
-==== Explain the advantages of cloudsmith ci?
+=== Explain the advantages of cloudsmith ci?
 
 The basic counter-question is: compared to bintray, github or what? I
 can see some general advantages:
@@ -210,7 +208,7 @@ Cons GitHub
 . Cannot create multiple repositories in a single account. (stable,
 unstable, manual)
 
-==== We collectively wonder where to host the ocpn-plugins.xml files
+=== We collectively wonder where to host the ocpn-plugins.xml files
 
 With some kind of version control, access privileges, etc. What are the
 policies as regards this critical file? Who can update the official
@@ -229,11 +227,13 @@ project. This includes
 * Each release of OpenCPN is distributed with a fixed version of ocpn-plugins.xml.
 * The code in #1457 is updated so it can //update ocpn-plugins.xml//  by downloading it from from github //on user request//.
 
-==== Why is CircleCI appropriate to use?
+=== Why is CircleCI appropriate to use?
 
 {empty}1. The killer feature is the ability to log in to failed builds
-when running into trouble. 2. Tokens and encryption is easier,
+when running into trouble.
+x 2. Tokens and encryption is easier,
 particularly for Win Dev (The simplified token/no encryption is actually
-cloudsmith). 3. Circleci seems quite fast, although Travis is good too.
+cloudsmith)
+3. Circleci seems quite fast, although Travis is good too.
 4. Circleci information menus are very good, example
 https://circleci.com/gh/rgleason/squiddio_pi/140
