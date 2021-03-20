@@ -267,7 +267,7 @@ useful. Either delete functions/code or comment out.
 removed.
 
 - All the changes are not going to be listed. Source code files can be
-downloaded image:oplaydo1_code.zip[here.]
+downloaded link:{attachmentsdir}/oplaydo1_code.zip[here].
 
 - 'std:abs' causes an error on Linux, which is found by CodeBlocks. Use
 'fabs' instead.
