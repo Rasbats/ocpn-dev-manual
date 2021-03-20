@@ -180,7 +180,7 @@ account.
 - Typical Setttings: Since building a PR is one way to make sure it works, if someone wants to help you out, therefor please enable the //Build forked pull requests//  option which should make circleci build all PRs. If //Pass secrets to builds from forked pull requests//, is Disabled, it will not be able to upload anything.
 ....
 
-image:/opencpn/dev/circleci-build-all-pr.png[CircleCI build all
+image:circleci-build-all-pr.png[CircleCI build all
 PR,width=600]
 
 == CLOUDSMITH Deployment Repository
@@ -212,7 +212,7 @@ repos are free.
 - Make sure you select "Opensource" (not Public) and complete the rest of the information appropriately, see below.
 ....
 
-image:/opencpn/dev/cloudsmith-create-repository.png[Cloudsmith create
+image:cloudsmith-create-repository.png[Cloudsmith create
 Repository,width=600]
 
 . When completed the new repository should have a "heart" icon which
@@ -271,7 +271,7 @@ into your TRAVIS account on
       * Select Add. See the screenshot.
 ....
 
-image:/opencpn/dev/travis-cloudsmith_api_key.png[Travis Cloudsmith API
+image:travis-cloudsmith_api_key.png[Travis Cloudsmith API
 Key,width=400]
 
 Once this is done the deploy to Cloudsmith should work.
@@ -337,8 +337,8 @@ up opensource repositories.
 metadata catalog to confirm installation and test the plugin.
 . After testing, issue a new version, pushing new binaries to cloudsmith
 repositories, along with a new ocpn-plugin.xml catalog file.
-. See link:/opencpn/developer_manual/pi_installer_procedure.adoc[PI Installer
-Procedure Build-Deploy] below, for more detail.
+. See xref:pi_installer_procedure.adoc[PI Installer Procedure Build-Deploy]
+ below, for more detail.
 
 == Add CMake and Script Files
 

@@ -1,9 +1,0 @@
-= Boat Gallery
-
-Photographs of OpenCPN Editor's Boats. +
-NOTE: If you are registered "Editor", you may
-https://www.opencpn.org/wiki/dokuwiki/doku.php?id=opencpn&tab_files=upload&do=media&ns=opencpn%3Afiles%3Agallery_boats[Upload
-several images of your boat here] This is basically a test. - Yes, you
-really should become an editor.
-
-image:/gallery>/opencpn/files/gallery_boats[gallery_boats]

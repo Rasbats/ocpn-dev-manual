@@ -19,9 +19,7 @@ directory (** ~/.opencpn *under Linux). +
 Each style.xml file defines one or several styles. The overall structure
 of the file should look like this: +
 
-----
-image:/opencpn/dev/styles_0.png[styles_0.png,width=572,height=564] +
-----
+image:styles_0.png[styles_0.png,width=572,height=564]
 
 All bitmaps that the style needs are defined in a PNG file, which is
 named in the * <graphics-file>** tag. The various *<xxx-location>* tags
@@ -73,7 +71,7 @@ hide a certain tool in your style you can specify the **
 and waypoint markers are examples of this type of icon. It has only one
 state.
 
-=== Tool names and plug-ins ====
+=== Tool names and plug-ins
 
 
 The standard OpenCPN tools have names, which you can easily get by
