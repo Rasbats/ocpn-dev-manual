@@ -19,14 +19,12 @@ A general sample of the preferred style follows below. Follow this
 template for whitespace around braces, parentheses, operators and
 control statements. +
  +
-For **Eclipse **users there is a Code Formatter template available at
-image:codestyle.xml.doc[opencpn:files:codestyle.xml]
+For **Eclipse **users there is a Code Formatter template available
+link:{attachmentsdir}/codestyle.xml[here]
 (Remove the .doc extension) +
 For http://uncrustify.sourceforge.net/[Uncrustify] users there
-is an uncrustify.cfg available at
-image:beautify.cfg.doc[opencpn:files:beautify.cfg.doc]
-(Remove the .doc extension) FIXME file needs to be found. This is just a
-placeholder file.
+is an uncrustify.cfg available 
+link:{attachmentsdir}/beautify.cfg[here]
 
 If possible change editor defaults to remove blank at the end of the
 line. Avoid encoding, whitespace and formatting issues.

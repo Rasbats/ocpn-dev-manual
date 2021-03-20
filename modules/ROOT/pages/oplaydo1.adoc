@@ -326,7 +326,7 @@ useful. Either delete functions/code or comment out.
 removed.
 
 - All the changes are not going to be listed. Source code files can be
-downloaded image:oplaydo1_code.zip[here.]
+downloaded link:{attachmentsdir}/oplaydo1_code.zip[here].
 
 - After removing all the errors and building/installing the plugin the
 new dialog is shown.

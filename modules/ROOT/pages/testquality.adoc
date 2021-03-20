@@ -77,9 +77,10 @@ using another or different email.
 
 == Here are some test Examples
 
-* image:tc47-test-tw-calc-with-stw.pdf[Example
+* link:{attachmentsdir}/tc47-test-tw-calc-with-stw.pdf[Example
 Test Process]
-* image:tc53-test-current-spd.dir-w-leeway.pdf[Test-current-spd.dir-w-leeway]
+* link:{attachmentsdir}/tc53-test-current-spd.dir-w-leeway.pdf[
+Test-current-spd.dir-w-leeway]
 
 Unfortunately this is missing some of the images which really help with
 understanding.
