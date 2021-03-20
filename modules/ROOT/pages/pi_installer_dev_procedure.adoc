@@ -166,10 +166,10 @@ subject Opencpn OS.
 and point the xml file to the appropriate url.
 
 Plugin Installer activated at the "+" +
-image:/opencpn/dev/pi-installer_.jpg[PI Installer +,width=300]
+image:pi-installer_.jpg[PI Installer +,width=300]
 
 PI Installer menu to Load a URL directly +
-image:/opencpn/dev/pi-installer-load-url.jpg[PI Installer Load URL
+image:pi-installer-load-url.jpg[PI Installer Load URL
 Direct,width=300]
 
 . Select your plugin for installation.

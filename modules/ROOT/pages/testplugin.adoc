@@ -1,0 +1,18 @@
+= Testplugin and Frontend2
+
+Github: https://github.com/jongough/testplugin_pi
+
+. Fully functional plugin
+. Uses all of the required OCPN interfaces and demonstrates how to use
+the ocpn_draw_pi API set, both the JSON and Binary versions.
+. Frontend2
+. Guidance for the automated build process
+
+----
+    - Cmake, CMakeLists.txt and scripts needed to compile the environments.
+    - Encapsulates the complexities of multi environment builds and deploys to make it easier to build and deliver plugins
+    - All plugin changes can be made in CMakeLists.txt, i.e. adding source and header files, there is no need to modify the other build files
+----
+
+Additional guidance for converting an existing plugin to use Frontend2
+https://github.com/rgleason/testplugin_pi/blob/updates/Frontend2.md[Frontend2.md]

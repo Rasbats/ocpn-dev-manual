@@ -11,8 +11,7 @@ Communicate and coordinate with teams of any size
 FREE for open source projects on GitHub public repo’s and ultra cost effective for private repo’s.
 ....
 
-image:/opencpn/dev/developer_guide/testqualtity-from-canne.png[Canne's
-TestQuality Example,width=550]
+image:testqualtity-from-canne.png[Canne's TestQuality Example,width=550]
 
 == How to use TestQuality
 
@@ -78,9 +77,9 @@ using another or different email.
 
 == Here are some test Examples
 
-* image:/opencpn/dev/developer_guide/tc47-test-tw-calc-with-stw.pdf[Example
+* image:tc47-test-tw-calc-with-stw.pdf[Example
 Test Process]
-* image:/opencpn/dev/developer_guide/tc53-test-current-spd.dir-w-leeway.pdf[Test-current-spd.dir-w-leeway]
+* image:tc53-test-current-spd.dir-w-leeway.pdf[Test-current-spd.dir-w-leeway]
 
 Unfortunately this is missing some of the images which really help with
 understanding.
