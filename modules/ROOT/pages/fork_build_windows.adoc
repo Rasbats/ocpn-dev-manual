@@ -119,8 +119,6 @@ If you get an error saying 'Fabs' could not be found, try replacing
 Copy 'DR_pi.dll' from the 'Release' folder to the plugins folder of the
 main OpenCPN program.
 
-image:p_release.png[p_release.png]
-
 image:p_pasted.png[p_pasted.png]
 
 When you enable the DR plugin you should see the plugin icon on the
