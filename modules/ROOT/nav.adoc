@@ -32,6 +32,7 @@ Developer Plugins
 ** xref:ocpn_draw_odapi.adoc[OCPN Draw ODAPI]
 ** xref:standalone_plugin_compilation.adoc[Plugin Compilation Win]
 ** xref:troubleshooting_plugins.adoc[Troubleshooting Plugins]
+** xref:plugin_build_files.adoc[Plugin Build Files]
 * xref:plugin_guidelines.adoc[Plugin Guidelines]
 * xref:plugin_documentation.adoc[Plugin Documentation]
 * xref:plugin_submissions.adoc[Plugin Submissions]
