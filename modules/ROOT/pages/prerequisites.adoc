@@ -94,8 +94,7 @@ Formatting] before writing new code for OpenCPN.
 The best way to ensure your code gets properly submitted to OpenCPN is
 to create a clone of the OpenCPN GitHub master repository, and push your
 commits to your cloned repository. When everything is available on
-Github you can either send a mail the developers or create an issue in
-http://opencpn.willkamp.com[http:__opencpn.willkamp.com]] describing
+Github you can create an issue in github OpenCPN describing
 your work and referenceing the github commit URL. +
 
 The official development master is here:
@@ -118,16 +117,12 @@ you are going to submit with any text editor.
 == Submitting a patch
 
 
-Create a Flyspray account at http://opencpn.willkamp.com
+Create a Flyspray account at https://opencpn.org/flyspray/
 
 === Bugfix:
 
-Attach the patch with comment to the corresponding issue in the
-bugtracker - for 4.5.x
-http://opencpn.willkamp.com/index.php?project=76&do=index&switch=1
+Use properly configured Github Pull Requests that build with a green check please
 
 === New feature:
 
-Attach the patch with comment to the corresponding issue in the Feature
-requests tracker at
-http://opencpn.willkamp.com/index.php?do=newtask&project=6
+Create a Flyspray account at https://opencpn.org/flyspray/  or submit PR to OpenCPN in github.com

@@ -39,7 +39,7 @@ everything is clear.
 
 
 Tracker Search (Flyspray) FS#xxxx Register and Login to Tracker
-http://opencpn.willkamp.com/
+https://opencpn.org/flyspray/
 
 . From the main window, Upper Right corner.
 . Find **Show Task ID# * - Enter the FS# - Hit* enter**
