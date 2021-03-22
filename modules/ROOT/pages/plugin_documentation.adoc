@@ -100,7 +100,7 @@ image:s-wdpi-52.png[s-wdpi-52.png]
 
 *Step 4*
 Click *Anchor* and *OK*
-image:wdpi-53_0.png[image]
+image:s-wdpi-53_0.png[image]
 
 *Step 5*
 Edit the alarm.
