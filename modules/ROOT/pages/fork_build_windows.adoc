@@ -4,7 +4,7 @@
 
 * Register with GitHub and obtained a profile. This allows the setting
 up of repositories where your code can be published.
-* xreF:compiling_windows.adoc[Visual Studio 2013]
+* xref:compiling_windows.adoc[Visual Studio 2013]
 * xref:compiling_windows.adoc[Git]
 * xref:compiling_windows.adoc[CMake]
 

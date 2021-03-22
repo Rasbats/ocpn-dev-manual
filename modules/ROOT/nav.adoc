@@ -4,7 +4,9 @@
 Developer Guide
 * xref:prerequisites.adoc[Prerequisites]
 * xref:compiling_linux.adoc[Compiling on Linux]
-** xref:building-on-armhf-linux-armbian-orange-pi.adoc[Building on armhf linux - Armbian - Orange Pi]
+** xref:building_and_installing_on_cubieboard_2_with_hw_acceleration.adoc[
+Cubieboard 2 with HW acceleration]
+** xref:building-on-armhf-linux-armbian-orange-pi.adoc[armhf linux - Armbian - Orange Pi]
 ** xref:building_on_motorola_xoom.adoc[Building on Motorola Xoom]
 ** xref:compiling_on_slackware.adoc[Compile on Slackware]
 ** xref:rpi2.adoc[Compile on Raspberry PI]
@@ -40,7 +42,7 @@ Developer Plugins
 * xref:pi_installer_summary.adoc[PI Manager Summary]
 * xref:pi_installler_dev_setup.adoc[PI Manager Dev Setup]
 * xref:pi_installer_catalog_meta.adoc[PI Manager Catalog & Meta-Url]
-* xref:pi_installer_summary.adoc[PI Manager Dev Procedure]
+* xref:pi_installer_dev_procedure.adoc[PI Manager Dev Procedure]
 * xref:ci-push-build-to-git.adoc[CI: Push build to Git Release]
 * xref:ci-push-linux-build-to-launchpad.adoc[CI: Push Linux Build to Launchpad]
 * xref:ci_travis_encryption_windows.adoc[CI: Travis Encryption for Windows Dev]

@@ -10,18 +10,16 @@ Kees on How to Publish radar_pi]
 
 === Deploy to "Beta" Repository
 
-. Code/logic for the cloudsmith repository to deploy to:
+Code/logic for the cloudsmith repository to deploy to:
 
-....
-    - If a commit is made, deployment to Beta repository.
-    - When Version is changed and 'git push –tag origin branch:branch' used, deployment to the Prod and Pkg repository.
-- Confirm untagged commits & builds are successful and pushed to your "Beta" Cloudsmith repository.
-- Confirm tagged version changes are successful and pushed to your "Prod" & "Pkg" Cloudsmith repository.
-- Include the main icon (svg preferred, but 64×64 png is ok) for use in the PI Installer. (only one required)
-- Copy your catalogs metadata (xml) and main icon to your local opencpn/plugins/metadata repository
-- Generate a local beta-ocpn-plugins.xml so that the uploaded tarballs can be tested and then push it up to your forked repository. See [[https://github.com/OpenCPN/plugins|Readme]] and read suggested steps below. (See process below)
-    - Push your new beta-ocpn-pugins.xml catalog to your remote repository
-....
+* If a commit is made, deployment to Beta repository.
+* When Version is changed and 'git push –tag origin branch:branch' used, deployment to the Prod and Pkg repository.
+* Confirm untagged commits & builds are successful and pushed to your "Beta" Cloudsmith repository.
+* Confirm tagged version changes are successful and pushed to your "Prod" & "Pkg" Cloudsmith repository.
+* Include the main icon (svg preferred, but 64×64 png is ok) for use in the PI Installer. (only one required)
+* Copy your catalogs metadata (xml) and main icon to your local opencpn/plugins/metadata repository
+* Generate a local beta-ocpn-plugins.xml so that the uploaded tarballs can be tested and then push it up to your forked repository. See [[https://github.com/OpenCPN/plugins|Readme]] and read suggested steps below. (See process below)
+* Push your new beta-ocpn-pugins.xml catalog to your remote repository
 
 === "Beta" Test
 
@@ -36,12 +34,10 @@ Opencpn version and the beta-ocpn-plugins.xml
 . Beta testers need to load and test with their OS version of Opencpn
 with PI Installer using
 
-....
-    - Example: [[https://github.com/rgleason/plugins|https://github.com/rgleason/plugins]] using the beta-ocpn-plugins.xml file.
-    - URL [eg] will be: [[https://raw.githubusercontent.com/rgleason/plugins/master/beta-ocpn-plugins.xml|https://raw.githubusercontent.com/rgleason/plugins/master/beta-ocpn-plugins.xml]]
-    - Confirm the plugin loads and works properly.
-- Beta testers then notify acceptance via Cruiser Forum thread.
-....
+. Example: [[https://github.com/rgleason/plugins|https://github.com/rgleason/plugins]] using the beta-ocpn-plugins.xml file.
+. URL [eg] will be: [[https://raw.githubusercontent.com/rgleason/plugins/master/beta-ocpn-plugins.xml|https://raw.githubusercontent.com/rgleason/plugins/master/beta-ocpn-plugins.xml]]
+. Confirm the plugin loads and works properly.
+. Beta testers then notify acceptance via Cruiser Forum thread.
 
 === Deploy to "Prod" Repository
 
