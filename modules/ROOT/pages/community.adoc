@@ -33,6 +33,7 @@ Plugins]
 
 User Manual Editor: Assist by
 link:/opencpn/developer_manual/edit_user_manual#won_t_you_become_an_editor_to_advance_opencpn[Editing]
+FIXME!
 
 User Feedback: Suggestions, User Interface Suggestions, Feature
 Requests, Bugs +
@@ -135,24 +136,22 @@ of experience. Respect each other and work together when possible.
 
 Debugging see the "Compiling" pages"
 
-* link:/opencpn/developer_manual/developer_guide/compiling_linux[Linux
-Compile & Debug] - https://www.gnu.org/software/ddd/[GNU Data Display
+* xref:compiling_linux.adoc[Linux Compile & Debug] - https://www.gnu.org/software/ddd/[GNU Data Display
 Debugger Webpage]
 http://knuth.luther.edu/~leekent/tutorials/ddd.html[Intro to DDD]
 https://www.gnu.org/software/ddd/manual/pdf/ddd.pdf[Manual]
-* link:/opencpn/developer_manual/developer_guide/compiling_windows[Windows
-Compile & Debug] -
+* xref:compiling_windows.adoc[Windows Compile & Debug] -
 https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/[Windows
 Debuggers]
-* link:/opencpn/developer_manual/developer_guide/compiling_mac_osx[Compile
-& Debug on MacOS]
+* xref:compiling_mac_osx.adoc[Compile & Debug on MacOS]
 
 Online Repositories - Free to Opensource
 
 * https://github.com/open-source[Github Opensource]
-https://help.github.com/[Help]
-https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository[Getting
-Started] https://github.com/OpenCPN/OpenCPN[OpenCPN Github] Plugin
+* https://help.github.com/[Help]
+* https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository[Getting
+Started] 
+* https://github.com/OpenCPN/OpenCPN[OpenCPN Github] Plugin
 Repositories
 * https://sourceforge.net/projects/opencpn/?source=directory[Sourceforge
 OpenCPN] Older compiled OpenCPN
@@ -180,5 +179,4 @@ download the most recent "build" without having to compile.
 . OpenCPN Programmers do not use these tools for Continuous Integration
 (CI) or Continuous Releases (CR) or Test Driven Development (TDD).
 
-See link:/opencpn/developer_manual/advanceddebugtips[Advanced Debugging
-Tips]
+See xref:advanceddebugtips.adoc[Advanced Debugging Tips]

@@ -4,10 +4,9 @@
 
 * Register with GitHub and obtained a profile. This allows the setting
 up of repositories where your code can be published.
-* link:/opencpn/developer_manual/developer_guide/compiling_windows[Visual
-Studio 2013]
-* link:/opencpn/developer_manual/developer_guide/compiling_windows[Git]
-* link:/opencpn/developer_manual/developer_guide/compiling_windows[CMake]
+* xreF:compiling_windows.adoc[Visual Studio 2013]
+* xref:compiling_windows.adoc[Git]
+* xref:compiling_windows.adoc[CMake]
 
 == Process
 
