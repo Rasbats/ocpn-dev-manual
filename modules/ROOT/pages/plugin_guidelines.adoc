@@ -4,8 +4,8 @@
 OpenCPN.org:*
 
 Plugins published on OpenCPN.org must be distributable under the license
-terms of link:/opencpn/developer_manual/plugins/plugin_api/gpl_v2[GPL
-V2] or later.
+terms of https://www.gnu.org/licenses/old-licenses/gpl-2.0.html[GPL V2]
+or later.
 
 . In particular, this means that the Plugin author must arrange for
 independent publication of the source code of the Plugin. OpenCPN.org
@@ -50,15 +50,14 @@ author of any bugs.
 
 Even at the Beta stage you are encouraged to produce a user guide for
 the plugin. A template showing the sort of information needed is
-link:/opencpn/developer_manual/plugins/beta_plugins/plugin_page_template[here.]
+xref:plugin_page_template.adoc[here.]
 
 When you are satisfied that the plugin is ready for release please look
-at the link:/opencpn/developer_manual/plugins/plugin_submissions[Plugin
-Submissions] page for more details.
+at the xref:plugin_submissions.adoc[Plugin Submissions] page for more details.
 
 You can have edit access to this wiki, allowing you to make the User
 Guide. There is a User Guide template
-link:/opencpn/developer_manual/plugins/beta_plugins/plugin_page_template[here]and
+xref:plugin_page_template.adoc[here]and
 the completed guide can be added to the
 link:/opencpn/opencpn_user_manual/plugins[OpenCPN User Manual.]
 

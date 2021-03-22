@@ -1,8 +1,8 @@
 = Plugin Documentation
 
-OpenCPN Plug-in (pi) documentation*
+*OpenCPN Plug-in (pi) documentation*
 
-Some rough first ideas on the set-up for OpenCPN-plugin
+[.underline]#Some rough first ideas on the set-up for OpenCPN-plugin
 documentation (English version)#
 
 
@@ -66,7 +66,6 @@ Answer: ……..
 
 
 *The problem:
-
 The English language is spoken in many different parts of the world. And
 in different ways.
 I'm Dutch and (I think) I can write a bit of text in English. But what I
@@ -77,21 +76,17 @@ default English is "US" English and therefore (I realize I'm not making
 friends in the USA now….) not quite "the real thing" either.
 
 *The proposed solution:
-
-*Visualise 
-
-That means: *less text* (not so easy for me) and *more
+{empty}*Visualise*. That means: *less text* (not so easy for me) and *more
 screenshots*. Less text also means: don't try to write "a lot of words"
 for things that are already obvious and don't need further
 explanation.
 
 *Example:
-
 We can write a whole story (equals "lots of words"…) about how to set up
 an anchor alarm, but another way to skin the cat is to visualize it by
 means of a series of screenshots. Like this:
 
-Setting up an Anchor Alarm in Watchdog-plugin:
+[.underline]#Setting up an Anchor Alarm in Watchdog-plugin:#
 
 *Step 1*
 
@@ -103,11 +98,11 @@ image:s-wdpi-51.png[s-wdpi-51.png]
 *Step 3*
 image:s-wdpi-52.png[s-wdpi-52.png]
 
-*Step 4
+*Step 4*
 Click *Anchor* and *OK*
-image:s-wdpi-53_0.png[image]
+image:wdpi-53_0.png[image]
 
-*Step 5
+*Step 5*
 Edit the alarm.
 Fill in and click OK.
 For explanation of the different items: see text a to h

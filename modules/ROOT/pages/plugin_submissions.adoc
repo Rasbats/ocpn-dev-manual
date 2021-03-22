@@ -17,6 +17,6 @@ the plugin author and comments made.
 
 If a large number of changes have been made after publication consider
 requesting another entry in
-'link:/opencpn/developer_manual/plugins/beta_plugins/plugins_under_development[Plugins
-under development]'. See
-link:/opencpn/user_manual/plugins/other/shipdriver[Beta Plugins].
+link:/opencpn/developer_manual/plugins/beta_plugins/plugins_under_development[Plugins
+under development]'.  FIXME
+link:/opencpn/user_manual/plugins/other/shipdriver[Beta Plugins]. FIXME

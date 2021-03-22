@@ -567,7 +567,7 @@ plugin. Save the code somewhere. Then encrypt the Github Personal Token
 with Travis CI, and put that encryption into the code as below.
 
 Refer to
-link:/opencpn/developer_manual/ci-push-build-to-git#c_install_travis_cli_to_encrypt_a_github_secure_public_key.adoc[Travis
+xref:ci_travis_encryption_windows.adoc#_for_windows_developers[Travis
 Encryption of Github Personnal Access Token]
 
 ....

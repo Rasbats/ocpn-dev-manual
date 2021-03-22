@@ -131,10 +131,9 @@ plugin_name);
 * image:/opencpn/dev/plugins/beta_plugins/plugin_api/opencpn-lib.zip[Opencpn-lib.zip]
 * image:/opencpn/dev/plugins/beta_plugins/plugin_api/opencpn-lib.7z[Opencpn-lib.7z]
 * http://sourceforge.net/projects/opencpnplugins/files/windows_opencpn_development_libraries/[Sourceforge:
-opencpnplugins Windows Opencpn Development Libraries/] +
-*
-http://sourceforge.net/projects/opencpnplugins/files/opencpn_lib/[Sourceforge
-opencpnplugins Opencpn_Lib] +
+opencpnplugins Windows Opencpn Development Libraries/]
+* http://sourceforge.net/projects/opencpnplugins/files/opencpn_lib/[Sourceforge
+opencpnplugins Opencpn_Lib]
 Sourceforge files are not as complete.
 
 == Head Developer: About Plugins & API
