@@ -10,6 +10,8 @@ Developer Guide
 ** xref:rpi2.adoc[Compile on Raspberry PI]
 * xref:compiling_windows.adoc[Compiling on Windows]
 * xref:compiling_mac_osx.adoc[Compiling on macOS]
+* Internationalization
+** xref:plugin_languages.adoc[Plugin Languages]
 * xref:modularized_packaging.adoc[Modularized Packaging]
 * xref:internationalization.adoc[Internationalization (i18n)]
 * xref:code_formatting.adoc[Code Formatting]
@@ -34,6 +36,7 @@ Developer Plugins
 * xref:bug_and_feature_tracking.adoc[Bugs and feature tracking]
 * xref:troubleshooting.adoc[Troubleshooting]
 * xref:pi_dependencies.adoc[PI Dependencies]
+* xref:pi_installer-ui.adoc[PI Manager UI Discussion]
 * xref:pi_installer_summary.adoc[PI Manager Summary]
 * xref:pi_installler_dev_setup.adoc[PI Manager Dev Setup]
 * xref:pi_installer_catalog_meta.adoc[PI Manager Catalog & Meta-Url]
