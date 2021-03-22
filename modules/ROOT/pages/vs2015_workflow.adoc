@@ -16,7 +16,7 @@ for some of the programs used here. This applies to:
 * 7Zip
 
 The steps will follow the instructions
-link:/opencpn/developer_manual/developer_guide/compiling_windows[here].
+xref:compiling_windows.adoc[here].
 
 'Navigate' means using 'Windows Explorer' to find a folder or file.
 
