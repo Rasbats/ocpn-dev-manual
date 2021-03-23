@@ -1,78 +1,65 @@
-= Cross compile for Windows under Linux
+= Cross compile for Windows under Linux -- mingw
+
+== General
 
 This is much more convenient than building under windows, and the build
-is much faster. The resulting binary can be tested in wine. If you have
-any questions Cruisers Forum Thread is here:
-http://www.cruisersforum.com/forums/f134/building-opencpn-using-mingw-gcc-on-windows-121802.html#post1600285[building-opencpn-using-mingw-gcc-on-windows-121802.html#post1600285]
-. These instructions are less detailed, so it is helpful to first review
-and understand the build process for compiling using MinGW under
-windows.
+is usually faster. The resulting binary can be tested in wine. If you have
+any questions Cruisers Forum Thread is
+http://www.cruisersforum.com/forums/f134/building-opencpn-using-mingw-gcc-on-windows-121802.html#post1600285[here].
 
-Install mingw cross compiler, and wine for testing:
-`+$ apt-get install mingw32 wine
-+` cross compile wxwidgets:
-`+$ ./configure –prefix=/usr/local/i586-mingw32 –host=i586-mingw32msvc –with-opengl –enable-unicode
-$ make
-$ sudo make install
-+` note: you may attempt –with-graphics_ctx as well, but this requires
-linking with non-free gdiplus.dll and isn't required.
+The info here is based on the CI scripts which lives in the _ci/_
+directory. These scripts, which are continously tested is the 
+ultimate source for how to make the mingw build.
 
-In /usr/share/cmake-*/Modules/ FindwxWidgets.cmake
+== The Fedora environment
 
-There is a bug in the cmake module FindwxWidgets.cmake that prevents any
-library using wxWidgets to cross compile for Windows from Linux. Please
-note that this bug is different from issue 0006187. Lines 192 to 198 are
-concerned by the present bug:
+The build is best done on Fedora, where the mingw stack seems to be
+well maintained. For non-Fedora users, the easiest way is to use
+a Fedora docker container. An example how to use a such a container,
+assuming a build script which lives in _$PWD/build-mingw.sh_:
 
-`+IF(WIN32 AND NOT CYGWIN AND NOT MSYS)
-SET(wxWidgets_FIND_STYLE "win32")
-ELSE(WIN32 AND NOT CYGWIN AND NOT MSYS)
-IF(UNIX OR MSYS)
-SET(wxWidgets_FIND_STYLE "unix")
-ENDIF(UNIX OR MSYS)
-ENDIF(WIN32 AND NOT CYGWIN AND NOT MSYS)
-` 
-The problem is that, when cross compiling from Linux for Windows,
-the
-test "WIN32 AND NOT CYGWIN AND NOT MSYS" is true but find style should
-be "unix", because the Windows-based wxWidget library is installed in
-a
-Unix environment.
+    $ echo "DOCKER_OPTS=\"-H tcp://127.0.0.1:2375 -H $DOCKER_SOCK -s devicemapper\"" \
+        | sudo tee /etc/default/docker > /dev/null
+    $ sudo systemctl restart docker.service
+    $ sudo docker pull fedora:33
+    $ docker run --privileged  \
+        -v /sys/fs/cgroup:/sys/fs/cgroup \
+        -v $(pwd):/opencpn-ci:rw \
+        fedora:33  /opencpn-ci/build-mingw.sh
 
-Therefore, the following line replacement corrects this bug:
-`IF(WIN32 AND NOT CYGWIN AND NOT MSYS AND NOT CMAKE_CROSSCOMPILING)
-SET(wxWidgets_FIND_STYLE "win32")
-ELSE(WIN32 AND NOT CYGWIN AND NOT MSYS AND NOT CMAKE_CROSSCOMPILING)
-IF(UNIX OR MSYS OR CMAKE_CROSSCOMPILING)
-SET(wxWidgets_FIND_STYLE "unix")
-ENDIF(UNIX OR MSYS OR CMAKE_CROSSCOMPILING)
-ENDIF(WIN32 AND NOT CYGWIN AND NOT MSYS AND NOT CMAKE_CROSSCOMPILING)
-`
+== Install build dependencies
 
-After making this change, cross compile opencpn for windows.
+The first line is usually not required on a regular Fedora host where
+these are installed anyway. Note the dependency on Leamas's COPR
+opencpn-mingw repository.
 
-`+$ git clone -b mingw https://github.com/seandepagnier/OpenCPN.git
-$ cd OpenCPN
-` 
-Copy the wxWidgets libraries into a folder here called
-wxWidgets-mingw
+    $ su -c "dnf install -y sudo dnf-plugins-core"
+    $ sudo dnf copr enable -y --nogpgcheck leamas/opencpn-mingw 
+    $ sudo dnf builddep -y mingw/fedora/opencpn-deps.spec
 
-----
-$ mkdir build-mingw32-cross
-$ cd build-mingw32-cross
-$ cmake -DCMAKE_TOOLCHAIN_FILE=../buildwin/Toolchain-mingw32.cmake ..
-$ make
-$ make package
-$ ./opencpn*exe
-----
+== Clone the sources
+The sources are quite large, a 330 MB download at the time of writing. Adding
+_--depth 10_ to the clone command brings this down to around 60 MB. However
+such a clone is not really usable if there is a need to submit patches.
+FIXME: Not mingw
 
-Unfortunately "make install" does not work as it attempts to use the
-unix path. It may be possible to configure cmake iwth
--DCMAKE_INSTALL_PREFIX= to allow it to work. I am not sure.
+    $ git clone https://github.com/OpenCPN/OpenCPN.git
+    $ cd OpenCPN
 
-For make package, you must have nsis installed, I recommend version
-3.00b. Running the package and installing opencpn copies everything into
-~/.wine/drive_c/Program Files/OpenCPN
+== Build
 
-From there you can run opencpn without problems using wine. For building
-out of tree plugins, use exactly the same process.
+The build within Fedora is basically simple, as of commands below.
+Add other cmake options as required.
+
+    $ rm -rf build; mkdir build; cd build
+    $ cmake \
+        -DCMAKE_TOOLCHAIN_FILE=../mingw/fedora/toolchain.cmake \
+        -DOCPN_CI_BUILD:BOOL=ON \
+        ..
+    $ make
+    $ make package
+
+The build produces a NSIS .exe installation package. This can be used
+to install opencpn without problems using wine on Linux. Of
+course, the installer also works on Windows. Note that plugins built on
+windows using the MSVC compiler are *not* compatible with the mingw build.

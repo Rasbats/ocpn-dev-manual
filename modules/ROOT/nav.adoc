@@ -5,16 +5,20 @@
 ** xref:Community.adoc[Community]
 * Opencpn development
 ** xref:compiling_linux.adoc[Compiling on Linux]
+** xref:compiling_windows.adoc[Compiling on Windows]
+** xref:compile_mac_osx.adoc[Compiling on macOS]
+** xref:cross_compiling_for_windows_under_linux.adoc[Cross compile for Windows under Linux]
+** xref:code_formatting.adoc[Code Formatting]
+** xref:modularized_packaging.adoc[CMake Options]
+** xref:user_interface_styling.adoc[User Interface Styling]
+** Internationalization
+** xref:online_tools.adoc[Online Nmea Tools]
+*** FIXME Overview over the i18n system, translator site
 * Plugin development
-** Plugin Workflow
-*** Package Installer
-*** Managed Installer
-**** Services Setup
-**** Shipdriver
-**** Testplugin
-**** Additional Support
 * Manual Maintenance
 * The Attic
+** xref:compiling_mac_osx.adoc[Compiling on macOS]
+** xref:prerequisites.adoc[Prerequisites]
 ** xref:community_old.adoc[Community]
 ** xref:developer_manual.adoc[Background]
 ** xref:building_and_installing_on_cubieboard_2_with_hw_acceleration.adoc[Cubieboard 2 with HW acceleration]
@@ -22,31 +26,24 @@
 ** xref:building_on_motorola_xoom.adoc[Building on Motorola Xoom]
 ** xref:compiling_on_slackware.adoc[Compile on Slackware]
 ** xref:compile_linux_old.adoc[Compiling on Linux]
+** xref:vs2015_workflow.adoc[Compile 2015 VS Community Workflow]
+** xref:rpi2.adoc[Compile on Raspberry PI]
+** xref:nsis_installation_directory.adoc[NSIS Installation Directory]
+** xref:nsis_table.adoc[NSIS Table]
+** xref:ci-push-linux-build-to-launchpad.adoc[CI: Push Linux Build to Launchpad]
 +++
 <p/> <hr/> <p/> 
 +++
 * Old manual
-** xref:prerequisites.adoc[Prerequisites]
-*** xref:rpi2.adoc[Compile on Raspberry PI]
 ** Compiling on Windows
-*** xref:compiling_windows.adoc[Compiling on Windows]
-*** xref:cross_compiling_for_windows_under_linux.adoc[Cross compile for Windows under Linux]
 *** xref:compiling_external_plugins_and_building_install_packages.adoc[Compile Plugins and build Install Packages]
 *** xref:compiling_plugins_to_debug.adoc[Compile Plugins for Debugging]
-*** xref:nsis_installation_directory.adoc[NSIS Installation Directory]
-*** xref:nsis_table.adoc[NSIS Table]
-*** xref:vs2015_workflow.adoc[Compile 2015 VS Community Workflow]
-*** xref:compile_windows_2013_vs_community.adoc[Compile 2013 VS Community Workflow]
-*** xref:compile_windows_2013_vs_community_ov4.2-4.8.8.adoc[Compile 2013 VS Community Workflow ov4.2-4.8.8]
 *** xref:compiling_windows_mingw.adoc[Compile with MinGW]
-** xref:compiling_mac_osx.adoc[Compiling on macOS]
 ** Internationalization
 *** xref:plugin_languages.adoc[Plugin Languages]
-** xref:modularized_packaging.adoc[Modularized Packaging]
 ** xref:internationalization.adoc[Internationalization (i18n)]
-** xref:code_formatting.adoc[Code Formatting]
 ** xref:messaging.adoc[Messaging]
-**Developer Plugins
+** Developer Plugins
 ** Plugin API
 *** xref:plugin_api_versions.adoc[Plugin API Versions]
 *** xref:ocpn_draw_odapi.adoc[OCPN Draw ODAPI]
@@ -74,13 +71,10 @@
 ** xref:pi_installer_catalog_meta.adoc[PI Manager Catalog & Meta-Url]
 ** xref:pi_installer_dev_procedure.adoc[PI Manager Dev Procedure]
 ** xref:ci-push-build-to-git.adoc[CI: Push build to Git Release]
-** xref:ci-push-linux-build-to-launchpad.adoc[CI: Push Linux Build to Launchpad]
 ** xref:ci_travis_encryption_windows.adoc[CI: Travis Encryption for Windows Dev]
 ** xref:advanceddebugtips.adoc[CI Advanced Debug Tips]
 ** xref:codacy.adoc[Codacy:Automate code quality]
 ** xref:testquality.adoc[TestQuality -Test Management]
-** xref:online_tools.adoc[Online Nmea Tools]
-** xref:user_interface_styling.adoc[User Interface Styling]
 ** xref:updating_the_user_manual.adoc[Updating the User Manual]
 ** Managed Plugins Manual
 ** xref:AlternativeWorkflow:ROOT:index.adoc[Home]
