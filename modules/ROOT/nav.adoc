@@ -1,6 +1,7 @@
 .Developer Manual
 
 * xref:community.adoc[Community]
+* xref:developer_manual.adoc[Background]
 Developer Guide
 * xref:prerequisites.adoc[Prerequisites]
 * xref:compiling_linux.adoc[Compiling on Linux]
@@ -36,6 +37,7 @@ Developer Plugins
 * xref:plugin_guidelines.adoc[Plugin Guidelines]
 * xref:plugin_documentation.adoc[Plugin Documentation]
 * xref:plugin_submissions.adoc[Plugin Submissions]
+* xref:beta_plugins.adoc[Beta Plugins]
 * Learning
 ** xref:testplugin.adoc[Testplugin and Frontend2]
 ** xref:demo_plugin.adoc[Demonstration Plugin]

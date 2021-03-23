@@ -1,6 +1,4 @@
-= Compile 2015 VS Community Workflow
-
-UNDER CONSTRUCTION
+= Compile 2013 VS Community Workflow
 
 == Aim
 
@@ -16,7 +14,7 @@ for some of the programs used here. This applies to:
 * 7Zip
 
 The steps will follow the instructions
-xref:compiling_windows.adoc[here].
+link:/opencpn/developer_manual/developer_guide/compiling_windows[here].
 
 'Navigate' means using 'Windows Explorer' to find a folder or file.
 
@@ -28,39 +26,16 @@ xref:compiling_windows.adoc[here].
 * This assumes that you have accepted the suggested locations for
 installing the various programs.
 
-=== Install Visual Studio Community 2015
+=== Install Visual Studio Community 2013
 
-*https://www.visualstudio.com/downloads/[https://www.visualstudio.com/downloads]*
+*https://www.visualstudio.com/en-us/news/releasenotes/vs2013-community-vs*
 
 * Download the installer.
 
-image:vs2_download.png[vs2_download.png]
+image:/opencpn/dev/developer_guide/compiling_windows/vs_download.png[vs_download.png]
 
-* Install Visual Studio by a double-click on the installer '.exe'. Use
-the 'Custom' method and select the 'C++ language'. We are going to
-continue trying to build a version of OpenCPN that will run on Windows
-XP.
-* Tick the box 'Windows XP Support for C++'
-
-image:vs2_install.png[vs2_install.png]
-
-'''''
-
-*Note:*
-
-* If you have used the default ('Typical') installer option you will
-need to configure the program to use C++.
-* Right-click the Windows icon (bottom left) Select 'Programs and
-Features'. Select 'Microsoft Visual Community 2015 with Updates'.
-Right-click 'Change'.
-
-image:vs2_change.png[vs2_change.png]
-
-* Tick the C++ language option
-* You now have a lengthy wait while another install takes place
-* Lesson … 'Use Custom'
-
-'''''
+* Install Visual Studio by a double-click on the '.exe'. You can disable
+all the optional features offered to save space.
 
 === Install Git
 
@@ -73,12 +48,12 @@ just the following:
 * On the *Adjusting your PATH environment*, select *Run Git from the
 Windows Command Prompt*.
 
-image:git_command_prompt.png[git_command_prompt.png,width=513,height=399]
+image:/opencpn/dev/developer_guide/compiling_windows/git_command_prompt.png[git_command_prompt.png,width=513,height=399]
 
 * On the *Choosing CR/LF behavior* select *Checkout as-is, Commit Unix
 LF*.
 
-image:git_commit_unix_lf.png[git_commit_unix_lf.png,width=513,height=399]
+image:/opencpn/dev/developer_guide/compiling_windows/git_commit_unix_lf.png[git_commit_unix_lf.png,width=513,height=399]
 
 * This is really important, the codebase uses Unix LF line endings and
 committing CR/LF makes the commits huge and hides their real content.
@@ -86,24 +61,24 @@ committing CR/LF makes the commits huge and hides their real content.
 === Install CMake
 
 * Get the latest CMake installation packages from
-*http://www.cmake.org/[http://www.cmake.org]*
+http://www.cmake.org/[http://www.cmake.org]
 
 image:cmake_web1.png[cmake_web1.png]
 
-* *The installer used is shown at the bottom of this screenshot.*
+* The installer used is shown at the bottom of this screenshot.
 
 image:cmake_web2.png[cmake_web2.png]
 
-* *As part of the install choose this option:*
+* As part of the install choose this option:
 
 image:cmake_path.png[cmake_path.png]
 
 * Install CMake and let it register the *'Path'* environment variable
 
-=== Install Poedit
+==== Install Poedit
 
 Get the latest 'Poedit' installation package from
-http://www.poedit.net/[http://www.poedit.net]
+*http://www.poedit.net/[http://www.poedit.net]*
 
 . Install 'Poedit'.
 . Add *'C:\Program Files\Poedit\GettextTools\bin'* to the *PATH*
@@ -129,13 +104,13 @@ semicolon** is important!)
 
 image:poedit_system_environment_path_edit.png[poedit_system_environment_path_edit.png]
 
-* Press **'OK' **a number of times to save and exit.
+Press **'OK' **a number of times to save and exit.
 
-**Note: **If you look in the '**C:\Program
+{empty}**Note: **If you look in the '**C:\Program
 Files\Poedit\GettextTools\****bin' **folder you will see the file
 *'msgfmt.exe'* which does the work of the program.
 
-=== Install NSIS
+==== Install NSIS
 
 In case you want to create installation packages, install NSIS Unicode
 2.46.5 from
@@ -215,7 +190,7 @@ and the changes made and saved.
 
 image:nsis_norge.png[nsis_norge.png]
 
-=== Compile wxWidgets 3.0.2
+==== Compiling wxWidgets 3.0.2
 
 * Download the '3.0.2 release' as a *'zip'* file from
 *http://wxwidgets.org/downloads/*
@@ -230,102 +205,70 @@ press the 'Extract' button.
 
 image:wxw_extract.png[wxw_extract.png]
 
-==== Compile wxWidgets with Visual Studio Community 2015
+===== Start the 'VS2013 x86 Native Tools Command Prompt'
 
-* Find the Visual Studio solution ('sln') file in the folder
-'C:\wxWidgets-3.0.2\build\msw'
+**Note: **This can be confusing!!! Even though we have installed 'Visual
+Studio Community 2013' when you search the 'Program Files' folder you
+will see 'Microsoft Visual Studio 12' but not 'Microsoft Visual Studio
+13'. When you look at the installed 'Apps' you will see this:
 
-image:wx2_sln_file.png[wx2_sln_file.png]
+image:vs2012_2013.png[vs2012_2013.png]
 
-* Double click on the filename to open the solution in Visual Studio
-* Decided to ignore the security warning
+* If you start the command prompt from 'Apps' *DO NOT* use the
+'Microsoft Visual Studio 2012 - VS2012 x86 Native Tools Command Prompt'.
+An error message will appear:
 
-image:wx2_security.png[wx2_security.png]
+image:vs_11_error.png[vs_11_error.png]
 
-* Some changes are needed to the source files (Credit to 'doublemax' on
-forums.wxwidgets.org - topic 40491)
+* Instead … press the button 'Visual Studio Tools' under the heading
+'Visual Studio 2013'.
 
-....
-1) <wxdir>\src\zlib\gzguts.h - line 102
-change:
+This will open a folder of shortcuts.
 
-Code: Select all
-#ifdef _MSC_VER
-#  define snprintf _snprintf
-#endif
+image:vs_tools.png[vs_tools.png]
 
-to:
+You are in the folder 'C:\Program Files\Microsoft Visual Studio
+12.0\Common7\Tools\Shortcuts'
 
-Code: Select all
-#if (defined(_MSC_VER) && (_MSC_VER <1900))
-  #define snprintf _snprintf
-#endif
+* Double-click the 'VS2013 x86 Native Tools Command Prompt' shortcut and
+a 'Terminal' window will appear
 
-2) <wxdir>\src\tiff\libtiff\tif_config.h - line 367
-change:
+**Note: **On a 64 bit machine the prompt is 'VS2013 x64 Command Prompt'
 
-Code: Select all
-#define snprintf _snprintf
+image:vs_command_prompt.png[vs_command_prompt.png]
 
-to:
+Title is 'VS2013', the text reads 'Visual Studio 12'. You get the
+picture!!!
 
-Code: Select all
-#if (defined(_MSC_VER) && (_MSC_VER <1900))
-  #define snprintf _snprintf
-#endif
+* cd to *'C:\wxWidgets-3.0.2\build\msw*'.
 
-3) <wxdir>\include\wx\propgrid\advprops.h - line 453
-change:
+An easy way to enter the correct folder (cd) for 'wxWidgets
+3.0.2\build\msw' is to navigate to that folder with 'Explorer'.
 
-Code: Select all
-wxDateTime GetDateValue() const
-{
-    //return m_valueDateTime;
-    return m_value;
-}
+* On the line showing the folders right-click and select 'Copy address
+as text'.
+* In the Terminal window type 'cd ' (that is 'cd' plus a space').
+Right-click and 'Paste'.
 
-to:
-
-Code: Select all
-wxDateTime GetDateValue() const
-{
-    //return m_valueDateTime;
-    return m_value.GetDateTime();
-}
-
-Line numbers based on wxWidgets 3.0.2 (not the latest development version).
-....
-
-* Find the 3 pages using 'Solution Explorer'. The first 2 are under the
-projects in 'Additional Dependencies'.
-* Use the editor to make the changes. The changes are saved when you
-build the solution.
-
-image:wx2_changes.png[wx2_changes.png]
-
-* On the Toolbar select 'Dll Debug'
-* In Solution Explorer select all the projects from '_custom_build' down
-to the bottom ('xrc'). You can do this by selecting the first project,
-keeping the left button down and extending the highlight to the bottom
-using the 'Down' key.
-* Right click on the highlighted area. Select 'Properties',
-'Configuration Properties', 'General'. Under 'Platform Toolset' use the
-dropdown to select 'Visual Studio 2015-Windows XP (v140_xp)'
-* 'Apply', 'OK'
-
-image:wx2_highlight_toolset-release.png[wx2_highlight_toolset-release.png]
-
-* At the top of the window select 'Build', 'Build Solution'
-* Run the 'Dll Debug' build
-
-image:wx2_buiild_debug.png[wx2_buiild_debug.png]
-
-* Follow the same steps for 'Dll Release', which will make the build
+Build both *release* and *debug* configurations, which will be
 compatible with Windows XP.
-* Run 'Build', 'Build Solution'
-* Save and close the solution
 
-image:wx2_close_vs.png[wx2_close_vs.png]
+....
+RELEASE VERSION
+nmake -f makefile.vc BUILD=release SHARED=1 CFLAGS=/D_USING_V120_SDK71_ CXXFLAGS=/D_USING_V120_SDK71_
+
+DEBUG VERSION
+nmake -f makefile.vc BUILD=debug SHARED=1 CFLAGS=/D_USING_V120_SDK71_ CXXFLAGS=/D_USING_V120_SDK71_
+....
+
+* For the 'Release' version copy the line starting 'nmake' into the
+Terminal window and press 'Enter'. Wait until the building has finished.
+This could take some time.
+* Repeat the process for the 'Debug' version.
+
+image:wxw_release_compiled.png[wxw_release_compiled.png]
+
+* Close the 'Terminal' window.
 
 You will find that a number of files have been made in the folder
 *'c:\wxWidgets-3.0.2\lib\vc-dll'*.
@@ -356,7 +299,9 @@ image:git_cd_example.png[git_cd_example.png]
 
 * Type this text into the Terminal window and press 'Enter'.
 
+....
 git clone git://github.com/OpenCPN/OpenCPN.git
+....
 
 * This will download the latest Beta code.
 
@@ -366,8 +311,9 @@ image:git_clone_opencpn.png[git_clone_opencpn.png]
 'C:\Example\OpenCPN'
 * If you are happy to work with the Beta version source code … move on
 to the
-xref:compiling_windows-steps-example.adoc[next section].
+xref:compiling_windows/compiling_windows_-_steps_-_example[next section].
 
+'''''
 
 *Note:* If you want the source code for the latest stable release (4.4.0
 at time of writing) you need to locate that source on GitHub.com:
@@ -376,7 +322,7 @@ https://github.com/OpenCPN/OpenCPN/tree/v4.4.0
 
 * Press the 'Clone or download' button. *DO NOT* use the text for 'git
 clone' or you will get the Beta version. Instead …
-* Select 'Download Zip' and save the zip file.
+* Select 'Download Zip' and get the zip file.
 
 image:git_clone_download_44.png[git_clone_download_44.png]
 
@@ -392,14 +338,14 @@ the same way as for the files from 'git clone' (the Beta version).
 
 '''''
 
-== Get the binary dependency files
+=== Get the binary dependency files
 
 Sorry, this needs another program - *7Zip.*
 
-* Get the installer from http://www.7-zip.org/download.html[here.]
-* 7z files are compressed files making them smaller and faster to
-download. The '7Zip' program allows you to extract the original files.
-image:7z_download.png[7z_download.png]
+....
+ * Get the installer from [[http://www.7-zip.org/download.html|here. ]]
+* 7z files are compressed files making them smaller and faster to download. The '7Zip' program allows you to extract the original files. {{opencpn:dev:developer_guide:compiling_windows:7z_download.png?nolink&}}
+....
 
 * After the download double-click the '7z….exe' file to carry out the
 installation.
@@ -421,7 +367,7 @@ image:7z_extract_build_win.png[7z_extract_build_win.png]
 
 * Select the folder 'C:\Example\OpenCPN. The files and folders from the
 7z file will be placed under that
-directory image:7z_extract_folder.png[7z_extract_folder.png]
+directoryimage:7z_extract_folder.png[7z_extract_folder.png]
 
 * Uncheck the box next to the text 'OpenCPN_buildwin'.
 
@@ -434,17 +380,13 @@ image:bw_overwrite.png[bw_overwrite.png]
 * This will add extra files in the folder 'C:\Example\OpenCPN\buildwin'
 that are needed for the build.
 
-=== Make a Visual Studio solution for building OpenCPN
+==== Make a Visual Studio solution for building OpenCPN
 
-* Start the VS2015 x86 Native Tools Command Prompt
+* Start the VS2013 x86 Native Tools Command Prompt (A reminder is
+xref:compiling_windows_-_steps_-_example#_start_the_vs2013_x86_native_tools_command_prompt[here])
 
-image:vs2_command_prompt.png[vs2_command_prompt.png]
-
-* The command prompt shortcut is in the folder
-'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio
-2015\Visual Studio Tools\Windows Desktop Command Prompts'
-
-image:vs2_prompt_location.png[vs2_prompt_location.png]
+{empty}[The command prompt shortcut is in the folder 'C:\Program
+Files\Microsoft Visual Studio 12.0\Common7\Tools\Shortcuts']
 
 * Change Directory [cd] into 'C:\Example\OpenCPN'.
 * Create a folder named "build" under this topmost source folder.
@@ -457,60 +399,44 @@ mkdir build
 
 ....
 cd build
-cmake -T v140_xp ..
+cmake -T v120_xp ..
 ....
 
-image:o2_buiild.png[o2_buiild.png]
+image:b_terminal.png[b_terminal.png]
 
-image:o_build_solution_finished.png[o_build_solution_finished.png]
+image:b_terminal_finished.png[b_terminal_finished.png]
 
 * Close the Terminal window. +
 * This has created the Visual Studio solution file 'OpenCPN.sln'.
 
-image:o2_solution_file.png[o2_solution_file.png]
+image:b_solution_file.png[b_solution_file.png]
 
-=== Build OpenCPN
+....
+*
+....
 
-* Open the '.sln' file with the program Visual Studio Community 2015
+==== Build OpenCPN
+
+* Open the '.sln' file with the program Visual Studio Community 2013
 (you can double-click the file name)
 * The program window should look like this:
 
 image:vs_open_solution.png[vs_open_solution.png]
 
-* Set the project 'opencpn' as the 'Startup Project
+* Select the project 'opencpn' as the 'Startup Project
 
 image:vs_startup_project.png[vs_startup_project.png]
 
-
-* A number of additional dependencies need to be added to the following
-projects
-
-* dashboard
-* grib_pi
-* opencpn
-
-....
-wxmsw30u_richtext.lib
-wxmsw30u_adv.lib
-wxmsw30u_propgrid.lib
-wxmsw30u_aui.lib
-....
-
-* Right-click on the project in Solution Explorer
-* Select 'Properties', 'Linker Input', 'Additional Dependencies'
-* Use the drop down to insert the '.lib' files shown above
-
-image:vs2015_additional_depends.png[vs2015_additional_depends.png]
-
+'''''
 
 * To avoid problems later please check the following options are set
 correctly
 * Select 'Tools', 'Options'
 * Check the settings are the same as shown in these two screenshots
 
-image:/opencpn/dev/developer_guide/compiling_windows/vs2015_line_endings.png[vs2015_line_endings.png]
+image:vs2013_line_endings.png[vs2013_line_endings.png]
 
-image:/opencpn/dev/developer_guide/compiling_windows/vs2015_tabs.png[vs2015_tabs.png]
+image:vs2013_tabs.png[vs2013_tabs.png]
 
 '''''
 
@@ -535,18 +461,10 @@ image:vs_release_success.png[vs_release_success.png]
 * Two new folders have appeared in 'C:\Example\OpenCPN\build', called
 'Release' and 'Debug'.
 
-== Make a package to install OpenCPN
+=== Make a package to install OpenCPN
 
 This assumes that you have installed 'NSIS' (The guide was
-link:compiling_windows-steps-example.adoc[here]).
-
-* The folder 'C:\Example\OpenCPN\buildwin\wxwidgets' has 16 wxWidgets
-'.dll' files
-* Replace these with the same dll files found in
-'C:\wxWidgets-3.0.2\lib\vc_dll'. If this is not done now they will not
-be included in the package and will have to be copied later.
-
-image:wx2_replace_dlls.png[wx2_replace_dlls.png]
+xref::compiling_windows/compiling_windows_-_steps_-_example#_install_nsis[here]).
 
 * In Visual Studio Solution Explorer you will see a project called
 'PACKAGE'.
@@ -563,7 +481,7 @@ image:vs_package_built.png[vs_package_built.png]
 
 image:vs_package_location.png[vs_package_location.png]
 
-== Install OpenCPN
+=== Install OpenCPN
 
 * Double click the setup .exe
 * Accept the default settings
@@ -577,14 +495,3 @@ image:o_success.png[o_success.png]
 
 *OpenCPN (Version 4.4.0) and the four plugins included in the source
 files have been built successfully.*
-
-'''''
-
-**In order to run the setup on Windows XP it is necessary to download
-and run the ***'Microsoft Visual C++ Redistributable 2015*' *installer*
-
-*This was downloaded from
-http://standaloneofflineinstallers.blogspot.co.uk/2015/12/Microsoft-Visual-C-Redistributable-2015-2013-2012-2010-2008-2005-32-bit-x86-64-bit-x64-Standalone-Offline-Installer-for-Windows.html[here].
-I had problems with the version I found elsewhere on Microsoft.*
-
-'''''
