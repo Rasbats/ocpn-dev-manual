@@ -47,6 +47,8 @@
 ** xref:compiling_on_slackware.adoc[Compile on Slackware]
 ** xref:compile_linux_old.adoc[Compiling on Linux]
 ** xref:vs2015_workflow.adoc[Compile 2015 VS Community Workflow]
+** xref:compile_windows_2013_vs_community.adoc[Compile 2013 VS Community Workflow]
+** xref:compile_windows_2013_vs_community_ov4.2-4.8.8.adoc[Compile 2013 VS Community Workflow ov4.2-4.8.8]
 ** xref:rpi2.adoc[Compile on Raspberry PI]
 ** xref:nsis_installation_directory.adoc[NSIS Installation Directory]
 ** xref:nsis_table.adoc[NSIS Table]
