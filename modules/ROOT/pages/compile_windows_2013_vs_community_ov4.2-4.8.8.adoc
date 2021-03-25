@@ -449,8 +449,8 @@ Both Debugging and running Release (bypassing installation) require certain file
 
 There are two choices for setting up & maintaining the build, release and debug directories:
 
-. Use link to  developer_guide setup_batch_files1[6.1 Setup Batch Files] below (may be the quickest and easiest method).
-. Use link:#step_by_step_manual_copy_of_setup_files[Step by Step Manual copy of files] as shown below.
+. 6.1 Setup Batch Files just below(which may be the quickest and easiest method).
+. **link:{attachmentsdir}#step_by_step_manual_copy_of_setup_files[Step by Step Manual copy of files]**
 
 === 6.1 Setup Batch Files
 
@@ -461,17 +461,17 @@ There are two choices for setting up & maintaining the build, release and debug 
 When you have git fetched & pulled or changed files, these batch files can be Re-run: config.bat, build.bat, dbbuild.bat, dbcopy.bat as needed
 before using MS VStudio, Using the NSIS Batch or Running the release version directly without installation.
 
-. **link:{attachmentsdir}/files/batch/git_opencpn.bat.doc[git_opencpn.bat.doc]** NOTE: only used for a clean installation from *\github*
-. **link:{attachmentsdir}/files/batch/config.bat.doc[config.bat.doc]** del cmakeCache.txt, Copy files.
-. **link:{attachmentsdir}files/batch/dbbuild.bat.doc[dbbuild.bat.doc]** Run cmake –build . –config debug & call dbcopy.bat
-. **link:{attachmentsdir}files/batch/dbcopy.bat.doc[dbcopy.bat.doc] ** Copy necessary dll files.
-. **link:{attachmentsdir}files/batch/build.bat.doc[build.bat.doc]** Run cmake –build . –config release –target package
-. **link:{attachmentsdir}files/batch/clean.bat.doc[clean.bat.doc]** Run MS VStudio "clean"
+. **link:{attachmentsdir}/git_opencpn.bat.doc[git_opencpn.bat.doc]** NOTE: only used for a clean installation from *\github*
+. **link:{attachmentsdir}/config.bat.doc[config.bat.doc]** del cmakeCache.txt, Copy files.
+. **link:{attachmentsdir}/dbbuild.bat.doc[dbbuild.bat.doc]** Run cmake –build . –config debug & call dbcopy.bat
+. **link:{attachmentsdir}/dbcopy.bat.doc[dbcopy.bat.doc] ** Copy necessary dll files.
+. **link:{attachmentsdir}/build.bat.doc[build.bat.doc]** Run cmake –build . –config release –target package
+. **link:{attachmentsdir}/clean.bat.doc[clean.bat.doc]** Run MS VStudio "clean"
 . Refer to link:#download_the_aetup_batch_files[Download the Setup Batch Files] below for more step by step details.
 
 Remove the ".doc" from these batch files before running from the command prompt.
 
-*CopyFiles.bat.doc* Häkän's single batch file - Another alternative link:{attachmentsdir}files/batch/copyfiles-hakan.bat.doc[Copyfiles-Hakan.bat.doc]
+*CopyFiles.bat.doc* Häkän's single batch file - Another alternative link:{attachmentsdir}/copyfiles-hakan.bat.doc[Copyfiles-Hakan.bat.doc]
 
 Hakan has also provided a useful single batch file which is placed in the source\build directory and executed using the command prompt to copy
 all the needed files to the various directories. This batch file does not execute any cmake commands (unlike the first Git_opencpn.bat Systme
@@ -514,7 +514,7 @@ Plugin **_pi.DLL Files* (note source is different for debug & release)
 
 Use these batch files for a quicker way to complete Sections 3 through 7. Upon completion use MS VStudio Debug or run OpenCPN /p directly from the source\build\release directory.
 
-*Git_opencpn.bat* is the first batch file used, it will "git clone opencpn", get and install the binary dependencies, provided you have Powershell (most Windows OS have it) and 7z installed, execute "cmake -T v120_xp .." and then call the other batch files to complete the setup.
+*Git_opencpn.bat* is the first batch file used, it will "git clone opencpn", get and install the binary dependencies, provided you have Powershell (most Windows OS have it) and 7z installed, execute *cmake -T v120_xp ..* and then call the other batch files to complete the setup.
 
 *Git_opencpn.bat* will simplify installation once you have completed:
 
@@ -569,17 +569,17 @@ These files are being testing now, still beta.
 
 Mkdir, binary files, copy files, call config, dbbuild & build.bat
 
-. **link:{attachmentsdir}/files/batch/git_opencpn.bat.doc[git_opencpn.bat.doc]** NOTE: only used for a clean installation from *\github*
-. **link:{attachmentsdir}/files/batch/config.bat.doc[config.bat.doc]** del cmakeCache.txt, cmake -T v120_xp .., Copy files.
-. **link:{attachmentsdir}/files/batch/dbbuild.bat.doc[dbbuild.bat.doc]** Run cmake –build . –config debug & call dbcopy.bat
-. **link:{attachmentsdir}/files/batch/dbcopy.bat.doc[dbcopy.bat.doc]** Copy necessary dll files.
-. **link:{attachmentsdir}/files/batch/build.bat.doc[build.bat.doc]** Run cmake –build . –config release –target package
-. **link:{attachmentsdir}/files/batch/clean.bat.doc[clean.bat.doc]** Run MS VStudio "clean"
+. **link:{attachmentsdir}/git_opencpn.bat.doc[git_opencpn.bat.doc]** NOTE: only used for a clean installation from *\github*
+. **link:{attachmentsdir}/config.bat.doc[config.bat.doc]** del cmakeCache.txt, cmake -T v120_xp .., Copy files.
+. **link:{attachmentsdir}/dbbuild.bat.doc[dbbuild.bat.doc]** Run cmake –build . –config debug & call dbcopy.bat
+. **link:{attachmentsdir}/dbcopy.bat.doc[dbcopy.bat.doc]** Copy necessary dll files.
+. **link:{attachmentsdir}/build.bat.doc[build.bat.doc]** Run cmake –build . –config release –target package
+. **link:{attachmentsdir}/clean.bat.doc[clean.bat.doc]** Run MS VStudio "clean"
 
 Once executed you should then be able to use MS VStudio to debug Opencpn.
 After the full installation is completed, re-run config.bat, build.bat, dbbuild.bat as needed.
 
-*CopyFiles.bat.doc* Häkän's single batch file - Another alternative  link:attachments/files/batch/copyfiles-hakan.bat.doc[Copyfiles-Hakan.bat.doc]
+*CopyFiles.bat.doc* Häkän's single batch file - Another alternative  link:{attachmentsdir}/copyfiles-hakan.bat.doc[Copyfiles-Hakan.bat.doc]
 
 Remove the ".doc" from these batch files before running from the command prompt.
 
