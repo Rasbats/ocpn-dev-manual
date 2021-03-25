@@ -6,6 +6,13 @@
 * Opencpn development
 ** xref:compiling_linux.adoc[Compiling on Linux]
 * Plugin development
+** Plugin Workflow
+*** Package Installer
+*** Managed Installer
+**** Services Setup
+**** Shipdriver
+**** Testplugin
+**** Additional Support
 * Manual Maintenance
 * The Attic
 ** xref:community_old.adoc[Community]
@@ -29,6 +36,8 @@
 *** xref:nsis_installation_directory.adoc[NSIS Installation Directory]
 *** xref:nsis_table.adoc[NSIS Table]
 *** xref:vs2015_workflow.adoc[Compile 2015 VS Community Workflow]
+*** xref:compile_windows_2013_vs_community.adoc[Compile 2013 VS Community Workflow]
+*** xref:compile_windows_2013_vs_community_ov4.2-4.8.8.adoc[Compile 2013 VS Community Workflow ov4.2-4.8.8]
 *** xref:compiling_windows_mingw.adoc[Compile with MinGW]
 ** xref:compiling_mac_osx.adoc[Compiling on macOS]
 ** Internationalization
