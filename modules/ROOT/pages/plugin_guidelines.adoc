@@ -1,68 +1,55 @@
 = Plugin Guidelines
 
-*These are the guidelines for publishing OpenCPN Plugins on
-OpenCPN.org:*
+== Publishing rules
 
-Plugins published on OpenCPN.org must be distributable under the license
+These are the guidelines for publishing OpenCPN Plugins in the
+plugin xref:catalog.adoc[catalog] or on OpenCPN.org
+
+
+Plugins  must be distributed under the license
 terms of https://www.gnu.org/licenses/old-licenses/gpl-2.0.html[GPL V2]
 or later.
 
 . In particular, this means that the Plugin author must arrange for
 independent publication of the source code of the Plugin. OpenCPN.org
 will not host the Plugin source code.
-http://sourceforge.net/[Sourceforge] or http://github.com/[Github] are
-acceptable source publication methods. Others may be approved on
-application.
 . Plugins published on OpenCPN.org must be ported and available for one
 of the following list of platforms:
-. Debian style Linux
-. Microsoft Windows
-. Macintosh OS-X
+  * Debian style Linux
+  * Flatpak Linux
+  * Microsoft Windows
+  * Macintosh OS-X +
 . _Developers should keep in mind that the usability and popularity of a
 Plugin is directly related to its platform portability, and so should
 strive to make their Plugins available for all OpenCPN platforms._
-. Plugins published on OpenCPN.org must be freely available for user
-download on demand, without fee or cost.
 . Plugin binaries may exist on the OpenCPN.org server or elsewhere
 
-*Hints for using GitHub:
+New plugins are published using the
+xref:installer-overview.adoc[Plugin Installer] available since 5.2.0.
+This means that plugins are published after pull request to the
+plugins project as described in
+xref:catalog.adoc[the catalog documenation].
 
-* Developers should avoid including any compiled or extraneous files
-alongside the source code. This increases download times and bloats any
-releases.
-* Always consider making a release tag. This produces a zip file of the
-source code and a tarball.
-* Version numbers of releases should be lower case (e.g. v1.1). This
-makes life easier for Gentoo package makers.
-* Dlls (Windows) and other files associated with the plugin can be added
-to the releases section of your plugin GitHub page. You may wish to make
-a Windows installer yourself to place here.
-* Visual Studio inserts a 'Version.h' file in the source code. This is
-not needed and should be removed.
+== Documentation
 
-*How to publish OpenCPN plugins on OpenCPN.org:
+Plugins should properly documented as described in the
+xref:plugin_documentation.adoc[documentation page].
 
-Before asking for a plugin to be added to the OpenCPN.org server
-consider submitting a Beta version by following the guidelines
-link:/opencpn/user_manual/plugins/other/shipdriver[here]. This allows
-users to test and review the plugin, offer suggestions and notify the
-author of any bugs.
+== Internationalization (i18n)
 
-Even at the Beta stage you are encouraged to produce a user guide for
-the plugin. A template showing the sort of information needed is
-xref:plugin_page_template.adoc[here.]
+There is an i18n infrastrucure based on the gettext tools and the
+https://crowdin.com/[] web-based translator service. Plugin in need
+of i18n should use this infrastructure as described in the
+xref:plugin_languages.adoc[i18n] page.
 
-When you are satisfied that the plugin is ready for release please look
-at the xref:plugin_submissions.adoc[Plugin Submissions] page for more details.
 
-You can have edit access to this wiki, allowing you to make the User
-Guide. There is a User Guide template
-xref:plugin_page_template.adoc[here]and
-the completed guide can be added to the
-link:/opencpn/opencpn_user_manual/plugins[OpenCPN User Manual.]
+== Dependencies
 
-Even after the plugin has been published bugs may still exist or you may
-wish to improve the plugin. If work is being done on a further beta
-version it may be useful to have an entry on the
-link:/opencpn/user_manual/plugins/other/shipdriver[Beta Plugins]page to
-help users find and review the update to your work.
+Plugins should bundle all dependencies. This has two consequences:
+
+* Plugins should bundle libraries which exist in opencpn, like the
+  nmea0183 library. The plugins must not break if the library in opencpn
+  is updated.
+* Plugins should not depend on operating systems libraries beyond those
+  linked to the main binary since users will not have these installed.
+  See the xref:pi_dependencies.adoc[dependencies page].

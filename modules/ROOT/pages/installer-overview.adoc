@@ -26,3 +26,30 @@ updated.
 The flow from developer to user of a plugin:
 
 image:PI-flow.png[]
+
+
+* Developer updates the plugin code, commits and pushes to Github.
+
+* The commit on Github activates the CI builders, like CircleCI (there
+  is typically more of them), which start building the plugin for various
+  platforms.
+
+* Each CI build results in a tarball and a metadata file for a specific platform.
+
+* The tarball is uploaded to Cloudsmith, a binary repository from which users
+  can download it.
+
+* The metadata is sent to the librarian who reviews it.
+
+* If accepted, the librarian merges the metadata into the catalog
+
+* User updates the catalog regularly, downloading the last version of the catalog
+  to her computer.
+
+* When there is a need, user locates a plugin to download in the catalog. Here she
+  also finds the url which is used to download and install the plugin.
+
+A lof of services are mentioned in this text. However, these are just examples,
+source code could be stored anywhere, other CI builders (or none) could be used
+and the binary content can be stored anywhere. The only fixed point is the catalog.
+

@@ -16,14 +16,13 @@
 ** xref:online_tools.adoc[Online Nmea Tools]
 *** FIXME Overview over the i18n system, translator site
 * Plugin development
-** xref:plugin_documentation.adoc[Plugin Documentation]
-** OpenCPN Plugin API
-** xref:plugin_api_versions.adoc[Plugin API Versions]
-** xref:pi_dependencies.adoc[PI Dependencies]
-** xref:pi_installer_catalog_meta.adoc[PI Manager Catalog & Meta-Url]
+** xref:plugin_guidelines.adoc[Plugin Guidelines]
+*** xref:plugin_documentation.adoc[Documentation]
+*** xref:pi_dependencies.adoc[Dependencies]
+*** xref:plugin_languages.adoc[Languages]
+** xref:plugin_api_versions.adoc[Plugin API and ABI]
 ** xref:installer-overview.adoc[Deployment overview]
 ** Legacy packages
-** Plugin Installer
 ** Services
 *** Github
 *** Cloudsmith
@@ -63,6 +62,7 @@
 ** xref:testquality.adoc[TestQuality -Test Management]
 ** xref:plugin_build_files.adoc[Plugin Build Files]
 ** xref:troubleshooting_plugins.adoc[Troubleshooting Plugins]
+** xref:plugin_submissions.adoc[Plugin Submissions]
 +++
 <p/> <hr/> <p/> 
 +++
@@ -75,14 +75,11 @@
 *** xref:compiling_plugins_to_debug.adoc[Compile Plugins for Debugging]
 *** xref:compiling_windows_mingw.adoc[Compile with MinGW]
 ** Internationalization
-*** xref:plugin_languages.adoc[Plugin Languages]
 ** xref:internationalization.adoc[Internationalization (i18n)]
 ** xref:messaging.adoc[Messaging]
 ** Developer Plugins
 ** Plugin API
 *** xref:ocpn_draw_odapi.adoc[OCPN Draw ODAPI]
-** xref:plugin_guidelines.adoc[Plugin Guidelines]
-** xref:plugin_submissions.adoc[Plugin Submissions]
 ** xref:beta_plugins.adoc[Beta Plugins]
 ** Learning
 *** xref:coding_solutions.adoc[Coding Solutions]
