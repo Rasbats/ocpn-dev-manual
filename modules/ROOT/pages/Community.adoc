@@ -1,5 +1,7 @@
 = The OpenCPN Development Community
 
+image:community.png[]
+
 == General
 
 So, you are thinking about joining the OpenCPN project? You are most 
