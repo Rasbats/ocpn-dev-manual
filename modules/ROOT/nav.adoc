@@ -36,33 +36,36 @@
 *** Shipdriver
 * Manual Maintenance
 * The Attic
-** xref:compiling_mac_osx.adoc[Compiling on macOS]
-** xref:prerequisites.adoc[Prerequisites]
-** xref:community_old.adoc[Community]
-** xref:developer_manual.adoc[Background]
-** xref:building_and_installing_on_cubieboard_2_with_hw_acceleration.adoc[Cubieboard 2 with HW acceleration]
-** xref:building-on-armhf-linux-armbian-orange-pi.adoc[armhf linux - Armbian - Orange Pi]
-** xref:building_on_motorola_xoom.adoc[Building on Motorola Xoom]
-** xref:compiling_on_slackware.adoc[Compile on Slackware]
-** xref:compile_linux_old.adoc[Compiling on Linux]
-** xref:vs2015_workflow.adoc[Compile 2015 VS Community Workflow]
-** xref:compile_windows_2013_vs_community.adoc[Compile 2013 VS Community Workflow]
-** xref:compile_windows_2013_vs_community_ov4.2-4.8.8.adoc[Compile 2013 VS Community Workflow ov4.2-4.8.8]
-** xref:rpi2.adoc[Compile on Raspberry PI]
-** xref:nsis_installation_directory.adoc[NSIS Installation Directory]
-** xref:nsis_table.adoc[NSIS Table]
-** xref:ci-push-linux-build-to-launchpad.adoc[CI: Push Linux Build to Launchpad]
 ** xref:demo_plugin.adoc[Demonstration Plugin]
 ** xref:updating_the_user_manual.adoc[Updating the User Manual]
 ** xref:bug_and_feature_tracking.adoc[Bugs and feature tracking]
-** xref:standalone_plugin_compilation.adoc[Plugin Compilation Win]
-** xref:pi_installer-ui.adoc[PI Manager UI Discussion]
-** xref:pi_installer_summary.adoc[PI Manager Summary]
-** xref:codacy.adoc[Codacy:Automate code quality]
-** xref:testquality.adoc[TestQuality -Test Management]
 ** xref:plugin_build_files.adoc[Plugin Build Files]
 ** xref:troubleshooting_plugins.adoc[Troubleshooting Plugins]
 ** xref:plugin_submissions.adoc[Plugin Submissions]
+** Redundant
+** Reference
+*** xref:prerequisites.adoc[Prerequisites]
+*** xref:compiling_mac_osx.adoc[Compiling on macOS]
+*** xref:compile_linux_old.adoc[Compiling on Linux]
+*** xref:rpi2.adoc[Compile on Raspberry PI]
+*** xref:building_and_installing_on_cubieboard_2_with_hw_acceleration.adoc[Cubieboard 2 with HW acceleration]
+*** xref:building-on-armhf-linux-armbian-orange-pi.adoc[armhf linux - Armbian - Orange Pi]
+*** xref:building_on_motorola_xoom.adoc[Building on Motorola Xoom]
+*** xref:compiling_on_slackware.adoc[Compile on Slackware]
+*** xref:vs2015_workflow.adoc[Compile 2015 VS Community Workflow]
+*** xref:compile_windows_2013_vs_community.adoc[Compile 2013 VS Community Workflow]
+*** xref:compile_windows_2013_vs_community_ov4.2-4.8.8.adoc[Compile 2013 VS Community Workflow ov4.2-4.8.8]
+*** xref:standalone_plugin_compilation.adoc[Plugin Compilation Win]
+*** xref:ci-push-linux-build-to-launchpad.adoc[CI: Push Linux Build to Launchpad]
+*** xref:codacy.adoc[Codacy:Automate code quality]
+*** xref:testquality.adoc[TestQuality -Test Management]
+*** xref:nsis_installation_directory.adoc[NSIS Installation Directory]
+*** xref:nsis_table.adoc[NSIS Table]
+** UM
+*** xref:developer_manual.adoc[Background]
+*** xref:community_old.adoc[Community]
+*** xref:pi_installer-ui.adoc[PI Manager UI Discussion]
+*** xref:pi_installer_summary.adoc[PI Manager Summary]
 +++
 <p/> <hr/> <p/> 
 +++
@@ -92,6 +95,6 @@
 ** xref:ci_travis_encryption_windows.adoc[CI: Travis Encryption for Windows Dev]
 ** xref:advanceddebugtips.adoc[CI Advanced Debug Tips]
 ** Shipdriver Workflow  Manual
-** xref:AlternativeWorkflow:ROOT:index.adoc[Home]
+** xref:AlternativeWorkflow:ROOT:index.adoc[Home-AlternativeWorkFlow]
 ** Plugin Installer Manual
-** xref:plugin-installer:ROOT:Home.adoc[Home]
+** xref:plugin-installer:ROOT:Home.adoc[Home-Plugin-Installer]
