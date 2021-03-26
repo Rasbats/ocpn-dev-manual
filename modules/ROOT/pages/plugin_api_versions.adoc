@@ -11,7 +11,7 @@ On MSVC Windows::
   ocpn_plugin.h and the opencpn.lib import lib
 
 On mingw Windows builds::
-  ocpn_plugin.h and the opencpn.dll.a import lib
+  ocpn_plugin.h and the libopencpn.dll.a import lib
 
 The  API Designation is found in the ocpn_plugin.h file:
 
