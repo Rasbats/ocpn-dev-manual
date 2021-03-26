@@ -22,18 +22,13 @@
 *** xref:plugin_languages.adoc[Languages]
 ** xref:plugin_api_versions.adoc[Plugin API and ABI]
 ** xref:installer-overview.adoc[Deployment overview]
+** Plugin Workflow Templates 
+*** xref:plugin-workflows.adoc[Overview]
+*** xref:testplugin-overview.adoc[Testplugin Templates]
+**** xref:pi_installler_dev_setup.adoc[PI Manager Dev Setup]
+**** xref:testplugin.adoc[Testplugin and Frontend2]
+*** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Templates]
 ** Legacy packages
-** Services
-*** Github
-*** Cloudsmith
-*** CircleCI
-*** Appveyor
-*** Drone
-*** Github Actions
-*** Travis
-** Template plugins and workflows
-*** Testplugin and Testplugin2
-*** Shipdriver
 * Manual Maintenance
 * The Attic
 ** xref:demo_plugin.adoc[Demonstration Plugin]
@@ -70,8 +65,6 @@
 <p/> <hr/> <p/> 
 +++
 * Testplugin Workflow Manual
-** xref:pi_installler_dev_setup.adoc[PI Manager Dev Setup]
-** xref:testplugin.adoc[Testplugin and Frontend2]
 * Old manual
 ** Compiling on Windows
 *** xref:compiling_external_plugins_and_building_install_packages.adoc[Compile Plugins and build Install Packages]

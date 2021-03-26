@@ -1,0 +1,43 @@
+= Plugin Workflows
+
+The workflow described in xref:installer-overview.adoc[Deployment overview]
+requires plugin vendors to provide:
+
+* A plugin tarball, downloadable from an URL.
+* A metadata file containg said URL, name, versions, etc.
+
+These items must be provided separately for each platform the plugin
+is aimed to work at (i. e., is compiled for).  The reasonable
+way to implement it is to configure a Continous Intration (CI) setup
+which for every build:
+
+* Creates a tarball according to the
+  xref:plugin-installer:ROOT:Tarballs.adoc[specifications].
+* Uploads this tarball to a public site where it can be downloaded 
+  by user.
+* Creates a metadata file according to the 
+  xref:plugin-installer:ROOT:Catalog.adoc[specifications].
+  with a correct tarball download URL and other data.
+
+In order to accomplish this, most plugins uses one of two sets of
+templates available: The
+xref:managed-plugins:ROOT:index.adoc[Shipdriver] and the 
+xref:testplugin-overview.adoc[Testplugin] workflow.
+
+The Testplugin is the most commonly used, partly because it has been
+around for some time. 
+
+The Shipdriver workflow is an updated variant, with some new functionality
+and a lot of simplifications.
+
+Both frameworks basically uses the same services:
+
+  - Github is used as source repository
+  - Cloudsmith is used for binary artifacts, notably tarballs.
+  - CircleCI, Appveyor, Drone.io and Github Actions are used
+    as builders (not all builders are used everywhere).
+  - Travis.com is still used, but basically fading away due to
+    a lack of free open-source options.
+
+The setup of these services is also very similar, but there are
+differences. 
