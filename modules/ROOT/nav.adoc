@@ -87,6 +87,5 @@
 ** xref:ci_travis_encryption_windows.adoc[CI: Travis Encryption for Windows Dev]
 ** xref:advanceddebugtips.adoc[CI Advanced Debug Tips]
 ** Shipdriver Workflow  Manual
-** xref:AlternativeWorkflow:ROOT:index.adoc[Home-AlternativeWorkFlow]
 ** Plugin Installer Manual
 ** xref:plugin-installer:ROOT:Home.adoc[Home-Plugin-Installer]
