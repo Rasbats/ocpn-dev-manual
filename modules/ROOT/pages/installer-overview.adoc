@@ -7,7 +7,7 @@ Tarball::
 A tarball is (in this context) the complete plugin which the installer
 installs. It is basically the result of `make install` packed together
 with metadata. The layout is fixed and documented in 
-xref:plugin-installer:ROOT:Tarball.adoc[here]
+xref:plugin-installer:ROOT:Tarballs.adoc[here]
 
 Metadata::
 The plugin metadata contains plugin name, version and an url from which
