@@ -86,6 +86,5 @@
 ** xref:ci-push-build-to-git.adoc[CI: Push build to Git Release]
 ** xref:ci_travis_encryption_windows.adoc[CI: Travis Encryption for Windows Dev]
 ** xref:advanceddebugtips.adoc[CI Advanced Debug Tips]
-** Shipdriver Workflow  Manual
 ** Plugin Installer Manual
 ** xref:plugin-installer:ROOT:Home.adoc[Home-Plugin-Installer]
