@@ -8,18 +8,18 @@
 ** xref:compiling_windows.adoc[Compiling on Windows]
 ** xref:compile_mac_osx.adoc[Compiling on macOS]
 ** xref:cross_compiling_for_windows_under_linux.adoc[Cross compile for Windows under Linux]
+** xref:languages.adoc[Internationalization]
 ** xref:code_formatting.adoc[Code Formatting]
 ** xref:modularized_packaging.adoc[CMake Options]
 ** xref:user_interface_styling.adoc[User Interface Styling]
 ** xref:troubleshooting.adoc[Troubleshooting]
-** Internationalization
 ** xref:online_tools.adoc[Online Nmea Tools]
 *** FIXME Overview over the i18n system, translator site
 * Plugin development
 ** xref:plugin_guidelines.adoc[Plugin Guidelines]
 *** xref:plugin_documentation.adoc[Documentation]
 *** xref:pi_dependencies.adoc[Dependencies]
-*** xref:plugin_languages.adoc[Languages]
+*** xref:plugin-i18n.adoc[Internationalization]
 ** xref:plugin_api_versions.adoc[Plugin API and ABI]
 ** xref:installer-overview.adoc[Deployment overview]
 ** Plugin Workflow Templates 
@@ -71,7 +71,6 @@
 *** xref:compiling_plugins_to_debug.adoc[Compile Plugins for Debugging]
 *** xref:compiling_windows_mingw.adoc[Compile with MinGW]
 ** Internationalization
-** xref:internationalization.adoc[Internationalization (i18n)]
 ** xref:messaging.adoc[Messaging]
 ** Developer Plugins
 ** Plugin API
