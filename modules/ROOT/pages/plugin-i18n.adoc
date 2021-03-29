@@ -25,7 +25,8 @@ The workflow: image:i18n.png[]
 * Translators translates the pot file to all sorts of languages using
   the https://crowdin.net/project/opencpn[Crowdin] web service.
 * Plugin developers downloads the translated po-files, one for each
-  language. 
+  language. Contact [Hakan Cruiser's Forum] with your github plugin and branch.
+  He can make a PR with the necessary files. He has access to the Crowdin account.  
 * During the build process, each po-file is compiled to a mo-file.
   These are the files used in runtime to provide translations.
 
@@ -78,8 +79,9 @@ is a simple change to a couple of files to implement.
 files when compiling plugins?_*
 +
 The "normal" routine is that when new development for each plugin is
-ready, at least for text parts, address a message to Pavel or me and we
-can upload the new strings, the POT-file, to Crowdin. When translators
+ready, at least for text parts, address a message to Pavel or me 
+[Hakan, through Cruiser's Forum] and we can upload the new strings, 
+the POT-file, to Crowdin. When translators
 are ready or at least to an acceptable level and before release a new
 message will result in download of translations, the po-files, and a PR
 to the plugin's Github. The crucial task is to message when new strings
