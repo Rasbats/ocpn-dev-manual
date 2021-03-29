@@ -4,17 +4,17 @@
 ** xref:devel_manual.adoc[Background]
 ** xref:Community.adoc[Community]
 * Opencpn development
-** xref:compiling_linux.adoc[Compiling on Linux]
-** xref:compiling_windows.adoc[Compiling on Windows]
-** xref:compile_mac_osx.adoc[Compiling on macOS]
-** xref:cross_compiling_for_windows_under_linux.adoc[Cross compile for Windows under Linux]
+** Compiling
+*** xref:compiling_linux.adoc[Linux]
+*** xref:compiling_windows.adoc[Windows]
+*** xref:compile_mac_osx.adoc[MacOS]
+*** xref:cross_compiling_for_windows_under_linux.adoc[Mingw windows build on Linux]
 ** xref:languages.adoc[Internationalization]
 ** xref:code_formatting.adoc[Code Formatting]
 ** xref:modularized_packaging.adoc[CMake Options]
 ** xref:user_interface_styling.adoc[User Interface Styling]
 ** xref:troubleshooting.adoc[Troubleshooting]
 ** xref:online_tools.adoc[Online Nmea Tools]
-*** FIXME Overview over the i18n system, translator site
 * Plugin development
 ** xref:plugin_guidelines.adoc[Plugin Guidelines]
 *** xref:plugin_documentation.adoc[Documentation]
@@ -29,7 +29,7 @@
 **** xref:testplugin.adoc[Testplugin and Frontend2]
 *** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Templates]
 ** Legacy packages
-* Manual Maintenance
+* xref:manual-maint.adoc[Maintenance of this Manual]
 * The Attic
 ** xref:demo_plugin.adoc[Demonstration Plugin]
 ** xref:updating_the_user_manual.adoc[Updating the User Manual]
@@ -86,7 +86,5 @@
 ** xref:ci-push-build-to-git.adoc[CI: Push build to Git Release]
 ** xref:ci_travis_encryption_windows.adoc[CI: Travis Encryption for Windows Dev]
 ** xref:advanceddebugtips.adoc[CI Advanced Debug Tips]
-** Shipdriver Workflow  Manual
-** xref:AlternativeWorkflow:ROOT:index.adoc[Home-AlternativeWorkFlow]
 ** Plugin Installer Manual
 ** xref:plugin-installer:ROOT:Home.adoc[Home-Plugin-Installer]
