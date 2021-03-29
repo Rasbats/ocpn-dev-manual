@@ -29,7 +29,9 @@ be developed. +
 Crowdin announcing a deadline by which language updates must be ready. +
 3. Hakan, Pavel or Dave make a Pull Request to the plugin developer with
 the completed language *.PO files. +
-4. Plugin developer merges the Pull Request and then the languages
+4. You can contact them through the Cruiser Forum Thread 
+https://www.cruisersforum.com/forums/f134/opencpn-internationalization-i18n-34181.html(Opencpn Internationalization)
+5. Plugin developer merges the Pull Request and then the languages
 become available when the plugin in is built the next time.
 
 == Crowdin Project OpenCPN - Translators are needed
