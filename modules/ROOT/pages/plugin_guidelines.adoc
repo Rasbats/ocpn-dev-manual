@@ -40,7 +40,7 @@ xref:plugin_documentation.adoc[documentation page].
 There is an i18n infrastrucure based on the gettext tools and the
 https://crowdin.com/[] web-based translator service. Plugin in need
 of i18n should use this infrastructure as described in the
-xref:plugin_languages.adoc[i18n] page.
+xref:plugin_i18n.adoc[i18n] page.
 
 
 == Dependencies
