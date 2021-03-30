@@ -17,23 +17,19 @@ https://github.com/leamas/OpenCPN/wiki[Plugin Installer Documents]
 
 ....
 
- DEVELOP Repos.  <--Key #1-->       BUILD     <--Key #2-->     DEPLOY Repos.
-      |   |                             |
-      |   |                             |
-    GITHUB              CIRCLECI - APPVEYOR - TRAVIS            CLOUDSMITH
+ DEVELOP Repos.  <-Key #1->      BUILD     <-Key #2->     DEPLOY Repos.
+        |                          |                           |
+        |                          |                           |
+     GITHUB          APPVEYOR - CIRCLECI - TRAVIS         CLOUDSMITH
 
 ....
 
 NOTE:
 
-* It is important to get Key #1 and Key #2 entered correctly, provided
-you need them.
-* KEY #1 is only needed to PUSH the build back to your Github RELEASE
-Repository.
-* Github OpenSource accounts are Public and easily accessible for
-download by the BUILD services.
-* KEY #2 is needed to give the BUILD services the ability to PUSH to
-CLOUDSMITH.
+* It is important to get Key #1 and Key #2 entered correctly, provided you need them.
+* KEY #1 is only needed to PUSH the build back to your Github RELEASE Repository.
+* Github OpenSource accounts are Public and easily accessible for download by the BUILD services.
+* KEY #2 is needed to give the BUILD services the ability to PUSH to CLOUDSMITH.
 
 == PI Manager System consists of three parts:
 
@@ -44,7 +40,7 @@ of opencpn from this branch. There are occasional improvements made now.
 
 === 2. Plugin Build & Deploy by Plugin Devs
 
-FIXME We need to simplify
+We need to simplify
 
 . Step by step
 . List of files needed
