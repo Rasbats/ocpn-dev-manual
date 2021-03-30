@@ -5,13 +5,13 @@
 ** xref:Community.adoc[Community]
 * Opencpn development
 ** Compiling
+*** xref:cmake.adoc[CMake]
 *** xref:compiling_linux.adoc[Linux]
 *** xref:compiling_windows.adoc[Windows]
 *** xref:compile_mac_osx.adoc[MacOS]
 *** xref:cross_compiling_for_windows_under_linux.adoc[Mingw windows build on Linux]
 ** xref:languages.adoc[Internationalization]
 ** xref:code_formatting.adoc[Code Formatting]
-** xref:modularized_packaging.adoc[CMake Options]
 ** xref:user_interface_styling.adoc[User Interface Styling]
 ** xref:troubleshooting.adoc[Troubleshooting]
 ** xref:online_tools.adoc[Online Nmea Tools]
