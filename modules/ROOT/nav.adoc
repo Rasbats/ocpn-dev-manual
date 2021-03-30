@@ -25,8 +25,20 @@
 ** Plugin Workflow Templates 
 *** xref:plugin-workflows.adoc[Overview]
 *** xref:testplugin-overview.adoc[Testplugin Templates]
+**** xref:AlternativeWorkflow:ROOT:Metadata-Flow.adoc[Metadata Files]
+**** xref:AlternativeWorkflow:ROOT:Appveyor.adoc[Appveyor]
+**** xref:AlternativeWorkflow:ROOT:Circleci.adoc[Circleci]
+**** xref:AlternativeWorkflow:ROOT:Cloud-Service-Changes.adoc[Cloud Service Changes]
+**** xref:AlternativeWorkflow:ROOT:Cloudsmith.adoc[Cloudsmith]
+**** xref:AlternativeWorkflow:ROOT:Travis.adoc[Travis]
+**** xref:AlternativeWorkflow:ROOT:Github.adoc[Github]
 **** xref:pi_installler_dev_setup.adoc[PI Manager Dev Setup]
 **** xref:testplugin.adoc[Testplugin and Frontend2]
+**** Adapting the Plugin
+**** Code Changes
+**** Building Locally
+**** xref:AlternativeWorkflow:ROOT:Useful-Stuff.html[Useful Techniques]
+**** xref:AlternativeWorkflow:ROOT:Plugin-Dependencies.adoc[Plugin Dependencies]
 *** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Templates]
 ** Legacy packages
 * xref:manual-maint.adoc[Maintenance of this Manual]
