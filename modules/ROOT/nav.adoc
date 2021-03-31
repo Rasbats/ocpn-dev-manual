@@ -28,7 +28,7 @@
 **** Code Changes
 **** Build Locally
 *** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Templates]
-** Legacy Package Installation
+** Legacy Package Deployment
 * xref:i18n.adoc[Internationalization]
 * Resources
 ** xref:online_tools.adoc[Online Nmea Tools]
