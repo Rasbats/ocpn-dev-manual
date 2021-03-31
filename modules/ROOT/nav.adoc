@@ -68,7 +68,6 @@
 +++
 <p/> <hr/> <p/> 
 +++
-* Testplugin Workflow Manual
 * Old manual
 ** Compiling on Windows
 *** xref:compiling_external_plugins_and_building_install_packages.adoc[Compile Plugins and build Install Packages]
