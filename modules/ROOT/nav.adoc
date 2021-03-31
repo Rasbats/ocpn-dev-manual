@@ -14,7 +14,6 @@
 ** xref:code_formatting.adoc[Code Formatting]
 ** xref:user_interface_styling.adoc[User Interface Styling]
 ** xref:troubleshooting.adoc[Troubleshooting]
-** xref:online_tools.adoc[Online Nmea Tools]
 * Plugin development
 ** xref:plugin_guidelines.adoc[Plugin Guidelines]
 *** xref:plugin_documentation.adoc[Documentation]
@@ -29,8 +28,10 @@
 **** Adapt Plugin
 **** Code Changes
 **** Build Locally
-*** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Template]
-** Legacy Package Installer
+*** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Templates]
+** Legacy PAckage Installation
+* Resources
+** xref:online_tools.adoc[Online Nmea Tools]
 * xref:manual-maint.adoc[Maintenance of this Manual]
 * The Attic
 ** xref:demo_plugin.adoc[Demonstration Plugin]
