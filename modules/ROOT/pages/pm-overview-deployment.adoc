@@ -1,12 +1,12 @@
-= Plugin Installer Overview
+= Plugin Manager Deployment Overview
 
-The plugin installer is, from 5.2.0 the normal way to install plugins. The 
+The Plugin Manager (PM) installer is, from 5.2.0 the normal way to install plugins. The
 installer is designed around some concepts
 
 Tarball::
 A tarball is (in this context) the complete plugin which the installer
 installs. It is basically the result of `make install` packed together
-with metadata. The layout is fixed and documented in 
+with metadata. The layout is fixed and documented in
 xref:plugin-installer:ROOT:Tarballs.adoc[here]
 
 Metadata::
@@ -19,7 +19,7 @@ The catalog is the list of plugins available for an OpenCPN installation.
 The UI in the program, a list of plugins, is based on the catalog.
 
 Librarian::
-The librarian, really Dave, manages the catalog which is continously 
+The librarian, really Dave, manages the catalog which is continously
 updated.
 
 
@@ -39,17 +39,14 @@ image:PI-flow.png[]
 * The tarball is uploaded to Cloudsmith, a binary repository from which users
   can download it.
 
-* The metadata is sent to the librarian who reviews it.
+* The metadata is sent to the librarian who reviews it. Using a script, Plugin Developers add metadata, commit and make a PR to the librarian using https://github.com/OpenCPN/plugins
 
 * If accepted, the librarian merges the metadata into the catalog
 
-* User updates the catalog regularly, downloading the last version of the catalog
-  to her computer.
+* User updates the catalog regularly, downloading the last version of the catalog to the computer.
 
-* When there is a need, user locates a plugin to download in the catalog. Here she
-  also finds the url which is used to download and install the plugin.
+* When there is a need, user locates a plugin to download in the catalog, metadata is used to find the url which is used to download and install the plugin.
 
 A lof of services are mentioned in this text. However, these are just examples,
 source code could be stored anywhere, other CI builders (or none) could be used
 and the binary content can be stored anywhere. The only fixed point is the catalog.
-

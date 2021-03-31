@@ -21,18 +21,16 @@
 *** xref:pi_dependencies.adoc[Dependencies]
 *** xref:plugin-i18n.adoc[Internationalization]
 ** xref:plugin_api_versions.adoc[Plugin API and ABI]
-** xref:installer-overview.adoc[Deployment overview]
-** Plugin Workflow Templates 
-*** xref:plugin-workflows.adoc[Overview]
-*** xref:tp-overview.adoc[CI-CMake Testplugin Overview]
-**** Services
-**** xref:tp-dev-setup.adoc[CI-CMake Dev Setup]
-**** xref:tp.adoc[CI-CMake Testplugin]
+** xref:pm-overview-deployment.adoc[Deployment overview]
+** xref:pm-overview-workflow.adoc[Workflow overview]
+*** xref:pm-tp-overview.adoc[Testplugin Template]
+**** xref:pm-tp-dev-setup.adoc[Testplugin Dev Setup]
+**** xref:pm-tp-ci-cmake.adoc[Testplugin CI-CMake ]
 **** Adapt Plugin
 **** Code Changes
 **** Build Locally
-*** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Templates]
-** Legacy packages
+*** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Template]
+** Legacy Package Installer
 * xref:manual-maint.adoc[Maintenance of this Manual]
 * The Attic
 ** xref:demo_plugin.adoc[Demonstration Plugin]
