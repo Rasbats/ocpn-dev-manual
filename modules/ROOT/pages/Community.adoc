@@ -15,9 +15,8 @@ license (GPLv2+), but there are a lot of other licenses in dependencies used.
 Contributions to the project must be licensed under an open-source license,
 normally GPLv2+.
 
-The starting point for developer activities is in many cases the Flyspray 
-OpenCPN forum at
-https://opencpn.org/flyspray/index.php?project=0&do=index[FlySpray].
+The starting point for developer activities is in many cases the OpenCPN forum
+at https://opencpn.org/flyspray/index.php?project=0&do=index[FlySpray].
 Here, end-user reports problems and sometimes also submits enhancement
 requests (RFEs).
 
