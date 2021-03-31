@@ -2,7 +2,7 @@
 
 The testplugin templates provides a set of templates which manages
 all the plugin basic tasks, including generation of tarballs
-and metadata. 
+and metadata.
 
 This documentation is a WIP. Current parts:
 
