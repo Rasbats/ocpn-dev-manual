@@ -3,6 +3,7 @@
 ** xref:AboutThisManual.adoc[About this Manual]
 ** xref:devel_manual.adoc[Background]
 ** xref:Community.adoc[Community]
+** xref:Terminology.adoc[Terminology]
 * Opencpn development
 ** Compiling
 *** xref:cmake.adoc[CMake]
