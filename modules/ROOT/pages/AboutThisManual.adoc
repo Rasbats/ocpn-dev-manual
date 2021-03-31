@@ -2,7 +2,7 @@
 
 The purpose of this manual is provide necessary info about OpenCPN
 development for new and old contributors. It's currently a work in 
-progress and should not be used get obtain information. The currently
+progress and should not be used t obtain information. The currently
 used manual is available at 
 https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:developer_manual[The OpenCPN website]
 
@@ -16,6 +16,9 @@ the main program and how to contribute to the OpenCPN project.
 The second section, Plugin Development, covers development and
 maintenance of plugins. This includes programming info like API and
 other interfaces, build setup and plugin deployment.
+
+The Resources section contains various useful resources, notably
+on-line NMEA tools.
 
 The Manual Maintenance section does indeed cover how to contribute
 to this manual
@@ -31,4 +34,4 @@ This is  one of four manuals available:
 * http://nowhere.net[User Plugin Manual]
 * http://nowhere.net[Development manual]
 
-IMPORTANT: FIXME
+IMPORTANT: FIXME manual links
