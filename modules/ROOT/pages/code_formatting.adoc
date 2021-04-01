@@ -1,7 +1,7 @@
 = Code Formatting
 
-Unfortunately, there  is not much of accepted code formatting 
-rules int the project. See for example
+Unfortunately, there is not much of accepted code formatting 
+rules in the project. See for example
 https://github.com/OpenCPN/OpenCPN/issues/1118[Bug 1118].
 
 Until a consistent style is applied, the following applies to new code: 
@@ -16,7 +16,7 @@ and variables is preferred over comments.
 
 **Whitespace:** No trailing whitespace.
 
-Besides these rules, try to adapt to the existing layout when
+Besides these rules, try to adapt to the surrounding layout when
 making patches.
 
 For **Eclipse **users there is a Code Formatter template available
