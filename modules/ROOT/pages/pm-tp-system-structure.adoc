@@ -4,15 +4,11 @@
 
 === 1. Plugin Manager Code - inside OpenCPN
 
-==== Purpose:
-
-* This code handles all operations under **Options > Plugins** and the PI User Interface.
+Purpose: This code handles all operations under **Options > Plugins** and the PI User Interface.
 
 === 2. Plugin Code - CMake & CI added via Templates
 
-==== Purpose:
-
-* Provide a prebuilt and tested CMake Template to enable Continuous Integration (CI) to manage the routine tasks required to build and deploy multiple build environments.
+Purpose: Provide a prebuilt and tested CMake Template to enable Continuous Integration (CI) to manage the routine tasks required to build and deploy multiple build environments.
 
 xref:pm-tp-system-structure.adoc[CI-CMake Template] has more detail for these steps:
 
@@ -24,7 +20,7 @@ xref:pm-tp-system-structure.adoc[CI-CMake Template] has more detail for these st
 
 === 3. Transfer of metadata files to Catalog Library
 
-==== Purpose:
+Purpose:
 
 . To collect all the plugins metadata.xml's for the various environments and push them to opencpn/plugins master branch.
 . The metadate.xml file contains all necessary PI information and location of tarball files so that these files can be accessed and downloaded to OpenCPN catalog to be used to download the associated tarball when the user chooses.
@@ -40,10 +36,10 @@ xref:pm-tp-system-structure.adoc[CI-CMake Template] has more detail for these st
 . Makes a Pull Request (PR) to github.com/opencpn/plugins master branch.
 . Confirms that the github action script accepts the PR.
 
-==== Maintainer Dave then reviews the Pull Request:
+==== Library Maintainer Dave reviews Pull Request:
 
 . Accepts or rejects the PR.
-. If the PR is accepted, the files are added to the Catalog Library
+. If the PR is accepted, the metadata.xml files are added to the Catalog Library
 . Users can then use the "Update Plugin Catalog" button in Options > Plugins to update the catalog.
 
 ==== Catalog now available to the User in **Options > Plugins**
