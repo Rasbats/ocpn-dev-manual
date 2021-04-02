@@ -32,7 +32,7 @@
 **** Code Changes
 **** Build Locally
 *** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Templates]
-** Legacy Package Deployment
+** xref:legacy-plugins.adoc[Legacy Plugins Deployment]
 * xref:i18n.adoc[Internationalization]
 * Resources
 ** xref:online_tools.adoc[Online Nmea Tools]
