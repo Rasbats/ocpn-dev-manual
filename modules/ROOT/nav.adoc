@@ -14,25 +14,31 @@
 ** xref:code_formatting.adoc[Code Formatting]
 ** xref:user_interface_styling.adoc[User Interface Styling]
 ** xref:troubleshooting.adoc[Troubleshooting]
-* Plugin development
+* Plugin Manager Development
 ** xref:plugin_guidelines.adoc[Plugin Guidelines]
 *** xref:plugin_documentation.adoc[Documentation]
 *** xref:pi_dependencies.adoc[Dependencies]
 ** xref:plugin_api_versions.adoc[Plugin API and ABI]
+* Plugin Manager Workflow
 ** xref:pm-overview-deployment.adoc[Deployment overview]
 ** xref:pm-overview-prerequisite.adoc[Prerequisites overview]
 ** xref:pm-overview-prereq-services.adoc[Prerequisite Services]
-*** xref:pm-overview-prereq-other.adoc[Cloudsmith Setup]
+** xref:pm-overview-prereq-other.adoc[Cloudsmith Setup]
 ** xref:pm-overview-workflow.adoc[Workflow overview]
-*** xref:pm-tp-template.adoc[Testplugin Template]
-**** xref:pm-tp-system-structure.adoc[System Structure]
-**** xref:pm-tp-dev-setup.adoc[Developer Setup]
-**** xref:pm-tp-ci-cmake-template.adoc[CI-CMake Template]
-**** Adapt Plugin
-**** Code Changes
-**** Build Locally
-*** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Templates]
-** xref:legacy-plugins.adoc[Legacy Plugins Deployment]
+** xref:pm-tp-template.adoc[Testplugin Template]
+*** xref:pm-tp-system-structure.adoc[System Structure]
+*** xref:pm-tp-dev-setup.adoc[Developer Setup]
+*** xref:pm-tp-ci-cmake-template.adoc[CI-CMake Template]
+*** Adapt Plugin
+*** Code Changes
+*** Build Locally
+** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Templates]
+* Legacy Plugin Packaging
+** xref:plugin_build_files.adoc[Plugin Build Files]
+** xref:standalone_plugin_compilation.adoc[Plugin Compilation Win]
+** xref:compiling_external_plugins_and_building_install_packages.adoc[Compile Plugins and build Install Packages]
+** xref:compiling_plugins_to_debug.adoc[Compile Plugins for Debugging]
+** xref:compiling_windows_mingw.adoc[Compile with MinGW]
 * xref:i18n.adoc[Internationalization]
 * Resources
 ** xref:online_tools.adoc[Online Nmea Tools]
@@ -64,19 +70,17 @@
 *** xref:testquality.adoc[TestQuality -Test Management]
 *** xref:nsis_installation_directory.adoc[NSIS Installation Directory]
 *** xref:nsis_table.adoc[NSIS Table]
-** UM
-*** xref:developer_manual.adoc[Background]
-*** xref:community_old.adoc[Community]
-*** xref:pi_installer-ui.adoc[PI Manager UI Discussion]
-*** xref:pi_installer_summary.adoc[PI Manager Summary]
+* User Manual (UM)
+** xref:developer_manual.adoc[Background]
+** xref:community_old.adoc[Community]
+** xref:pi_installer-ui.adoc[PI Manager UI Discussion]
+** xref:pi_installer_summary.adoc[PI Manager Summary]
 +++
 <p/> <hr/> <p/>
 +++
-* Old manual
+* Old Manual
 ** Compiling on Windows
-*** xref:compiling_external_plugins_and_building_install_packages.adoc[Compile Plugins and build Install Packages]
-*** xref:compiling_plugins_to_debug.adoc[Compile Plugins for Debugging]
-*** xref:compiling_windows_mingw.adoc[Compile with MinGW]
+
 ** Internationalization
 ** xref:messaging.adoc[Messaging]
 ** Developer Plugins
