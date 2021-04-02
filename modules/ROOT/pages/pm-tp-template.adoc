@@ -29,18 +29,25 @@ CMake and CMakeLists.txt controls the processes below via ci scripts and utilize
 
 For more details about the entire system review https://github.com/leamas/OpenCPN/wiki[Plugin Manager Installer Documents]
 
-== Links
+== Prerequisites
 
-Links for Testplugin Template CI-CMake System:
+We hope you understand and have completed these steps,
+including completing Services and Cloudsmith Setup.
 
-* xref:pm-overview-workflow.adoc[Workflow Overview]
+* xref:pm-overview-deployment.adoc[Deployment Overview]
 * xref:pm-overview-prerequisite.adoc[Prerequisites Overview]
 * xref:pm-overview-prereq-services.adoc[Prerequisite Services]
 * xref:pm-overview-prereq-other.adoc[Cloudsmith Setup]
+* xref:pm-overview-workflow.adoc[Workflow overview]
+
+== Testplugin Template System:
+
 * xref:pm-tp-system-structure.adoc[System Structure]
-* xref:pm-tp-dev-setup.adoc[Development Setup]
+* xref:pm-tp-dev-setup.adoc[Developer Setup]
 * xref:pm-tp-ci-cmake-template.adoc[CI-CMake Template]
-* xref:pm-tp-ci-cmake.adoc[Testplugin CI-CMake]
+* Adapt Plugin
+* Code Changes
+* Build Locally
 
 == Plugin Adaptation
 
