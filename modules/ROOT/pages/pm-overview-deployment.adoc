@@ -27,7 +27,6 @@ The flow from developer to user of a plugin:
 
 image:PI-flow.png[]
 
-
 * Developer updates the plugin code, commits and pushes to Github.
 
 * The commit on Github activates the CI builders, like CircleCI (there

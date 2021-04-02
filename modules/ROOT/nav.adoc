@@ -22,10 +22,14 @@
 *** xref:plugin-i18n.adoc[Internationalization]
 ** xref:plugin_api_versions.adoc[Plugin API and ABI]
 ** xref:pm-overview-deployment.adoc[Deployment overview]
+** xref:pm-overview-prerequisite.adoc[Prerequisites overview]
+** xref:pm-overview-prereq-services.adoc[Prerequisite Services]
+*** xref:pm-overview-prereq-other.adoc[Cloudsmith Setup]
 ** xref:pm-overview-workflow.adoc[Workflow overview]
-*** xref:pm-tp-overview.adoc[Testplugin Template]
-**** xref:pm-tp-dev-setup.adoc[Testplugin Dev Setup]
-**** xref:pm-tp-ci-cmake.adoc[Testplugin CI-CMake ]
+*** xref:pm-tp-template.adoc[Testplugin Template]
+**** xref:pm-tp-system-structure.adoc[System Structure]
+**** xref:pm-tp-dev-setup.adoc[Developer Setup]
+**** xref:pm-tp-ci-cmake-template.adoc[CI-CMake Template]
 **** Adapt Plugin
 **** Code Changes
 **** Build Locally
@@ -64,7 +68,7 @@
 *** xref:pi_installer-ui.adoc[PI Manager UI Discussion]
 *** xref:pi_installer_summary.adoc[PI Manager Summary]
 +++
-<p/> <hr/> <p/> 
+<p/> <hr/> <p/>
 +++
 * Testplugin Workflow Manual
 * Old manual

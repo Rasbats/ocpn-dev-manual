@@ -1,7 +1,11 @@
 = Plugin Manager Workflow Overview
 
+ Github --> CircleCI  --> Cloudsmith --> Library
+  Code       Build          Deploy       Catalog
+
 The Plugin Manager (PM) Workflow described in xref:pm-overview-deployment.adoc[Deployment overview]
 requires plugin vendors to provide:
+
 
 * A plugin tarball, downloadable from an URL.
 * A metadata file contain said URL, name, versions, etc.
@@ -16,7 +20,7 @@ It is easiest to configure a Continuous Integration (CI) setup for every build w
 Most plugins use one of the templates below to establish the Plugin Manager system:
 
 * xref:managed-plugins:ROOT:index.adoc[Shipdriver]
-* xref:pm-tp-overview.adoc[Testplugin]
+* xref:pm-tp-template.adoc[Testplugin]
 
 Testplugin workflow is the most commonly used, partly because it has been around for awhile (recently updated and maintained). Typical settings for plugin and maintenance are located conveniently in the CMakeLists.txt fiie
 
@@ -24,10 +28,15 @@ Shipdriver workflow is an updated variant, with some new functionality and a lot
 
 Both frameworks use the same free opensource cloud services:
 
+ Github --> CircleCI  --> Cloudsmith --> Library
+  Code       Build          Deploy       Catalog
+
 * Github for plugin source repository
-* Cloudsmith for public storage of binary artifacts, notably tarballs, metadata, and packages.
+* Cloudsmith for public storage of binary artifacts, notably tarballs, metadata and packages.
 * CircleCI, Appveyor, Drone.io and Github Actions to build (not all builders are used everywhere).
-* Travis.com to build, still used, fading due to canceled free open-source options.
+* Travis.com to build, fading due to canceled free open-source options.
 
 The setup of these services is also very similar, but there are differences.
 For a good conceptual graphic see xref:pm-overview-deployment.adoc[Deployment overview]
+
+For Prerequisites see xref:pm-overview-prerequisite.adoc[Prerequisite Overview] and xref:pm-overview-prereq-services.adoc[Prerequisite Services]

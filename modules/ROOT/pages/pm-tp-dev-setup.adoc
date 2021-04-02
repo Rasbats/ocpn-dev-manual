@@ -1,155 +1,15 @@
-= PI Manager Dev Setup
+= Developer Setup
 
 https://github.com/leamas/OpenCPN/wiki[PIugin Manager Github Wiki]
 Extensive documentation
 
-== Build and Deploy Plugins
+== Saved for reuse
 
-Alec Leamas is the author of PI Installer and should be given extensive
-credit & thanks for his many months of work on the Plugin Installer. Jon
-Gough has also generously spent many months to improve the PI Dev
-experience by his extensive work revising and improving the Build and
-Deploy side of PI Installer, the CMake and CI files needed at the head
-of any plugin that supports PI Installer.
+Plugin Dev executes script to copy Cloudsmith metadate files to https://github.com/OpenCPN/plugins[OpenCPN Container Project for an Integrated Plugin Management Facility] {github.com/opencpn/plugins) so they can be added to the **Plugin Management User Interface**.
 
-To understand more detail about the entire system, please also review
-https://github.com/leamas/OpenCPN/wiki[Plugin Installer Documents]
 
-....
 
- DEVELOP Repos.  <-Key #1->      BUILD     <-Key #2->     DEPLOY Repos.
-        |                          |                           |
-        |                          |                           |
-     GITHUB          APPVEYOR - CIRCLECI - TRAVIS         CLOUDSMITH
 
-....
-
-NOTE:
-
-* It is important to get Key #1 and Key #2 entered correctly, provided you need them.
-* KEY #1 is only needed to PUSH the build back to your Github RELEASE Repository.
-* Github OpenSource accounts are Public and easily accessible for download by the BUILD services.
-* KEY #2 is needed to give the BUILD services the ability to PUSH to CLOUDSMITH.
-
-== PI Manager System consists of three parts:
-
-=== 1. Plugin Manager inside OpenCPN
-
-The plugin manager is now in OpenCPN master branch. Make a fresh build
-of opencpn from this branch. There are occasional improvements made now.
-
-=== 2. Plugin Build & Deploy by Plugin Devs
-
-We need to simplify
-
-. Step by step
-. List of files needed
-. Provide two sample file packages for download
-. To be applied to the plugin (provided they are working)>
-
-CMake and CI Files from Jon Gough's much improved
-https://github.com/jongough/testplugin_pi[testplugin_pi] using the
-"cmake_flatpak_test" branch. These are pre-configured with the code
-required to create the compressed binary and metadata xml files needed
-for the PI Installer to work. These files create plugin binary and
-metadata xml catalog files for various operating systems, utilizing git,
-the plugin's GitHub repository, Appveyor, Travis and Circleci to build,
-and the Cloudsmith repository for deployments. The earlier
-https://github.com/mauroc/squiddio_pi[squiddio_pi] CMake and CI Files
-were a significant step in the development process, however we recommend
-use of the files in Testplugin_pi. Also please note that the CI parts,
-while useful, are not necessary to use the installer. As long as there
-is a working file with metadata and a downloadable tarball everything is
-fine, at least for a starter.
-
-=== 3. Metadata Repository:Git OpenCPN/Plugins
-
-FIXME
-
-. Diagram: to explain relationship between CLOUDSMITH REPO and
-OPENCPN/PLUGINS
-. Purpose: To collect all the plugins metadata.xml's for the tarballs
-and push them to opencpn/plugins master:beta:alpha branches.
-
-https://github.com/OpenCPN/plugins/blob/master/DEVELOPER-INFO.md[OpenCPN
-plugins project README] The github repository that stores plugin
-metadata files (submitted by Pull Request), and the python code to
-create a single "ocpn-plugin.xml" file of plugin metadata for use by the
-PI Installer. This file contains all the necessary PI information and
-locations of files. Dave R. has control of this github repository and
-will accept PRs
-
-== Assumed Cloud Services
-
-We assume you have or are able to configure the following free
-opensource accounts/services:
-
-. Code Repository https://github.com/[GitHub]
-. Deployment Repository https://cloudsmith.io/[Cloudsmith]
-. Build Tool https://circleci.com/[CircleCI] Needs authorizations from
-Code & Deploy repositories. Preferred.
-. Build Tool https://www.appveyor.com/[Appveyor] Needs authorizations
-from Code & Deploy repositories.
-. Build Tool https://travis-ci.org/[Travis-CI.org] Needs authorizations
-from Code & Deploy repositories.
-. Build Tool https://travis-ci.com/[Travis-CI.com] Needs authorizations
-from Code & Deploy repositories.
-
-These next steps add build and deployment of multiple OS to Git Release
-and Cloudsmith for PI Installer.
-
-== Plugins Adaptation
-
-You may have to adapt the plugin in various ways. Please review the
-items in this link
-https://github.com/leamas/OpenCPN/wiki/Plugin-adaptation[Plugin
-Adaptation]
-
-== GITHUB Personal Token Generation and Use
-
-KEY #1 provides your BUILD (Appveyor,Travis-ci or Circleci) service the
-ability to PUSH artifacts (tarballs, xml, packages) back to your GitHub
-RELEASE repository.
-
-Provide access for APPVEYOR, TRAVIS-CI and CIRCLECI to your plugin's
-GitHub repository, so that these accounts can clone the repository in
-order to build the plugin. FIXME (This needs to be confirmed, it is an
-opensource public account, so no auth_key may be needed.)
-
-. From your GITHUB account [Username]
-
-....
-    - Select Settings
-    - Pick Developer Settings
-    - Pick Personal Access Settings
-    - Enter 'git-ptoken-[plugin]-into-appveyor' or 'git-ptoken-[plugin]-into-circleci' or similar, etc
-    - Then copy and save the 'number' for use below to provide CIRCLECI, APPEVEYOR and TRAVIS with credentials to access and download from your personal GitHib repository (for each plugin and each service).
-    - You will need a separate Github Personal Access Token for each plugin, and each service (Appveyor, Travis)
-- From your CIRCLECI account
-    - See [[:opencpn:developer_manual:pi_installler_build_deploy#circleci_build_account|CIRCLECI (Build Account)]]
-- From your APPVEYOR account
-    - Plugin, then select Setting (gear on top line to the right)
-    - Pick Environment (left menu)
-    - Pick Environment variables (in the center entry area).
-    - Pick Add Variable.
-    - Enter name "GIT-PTOKEN-[pluginname]-INTO-APPVEYOR"
-    - Enter value, which you saved, from GitHub.
-    - Pick SAVE at the bottom.
-    - Now simply use "GIT-PTOKEN-[pluginname]-into-APPVEYOR" with your appveyor.yml file
-    - Note: Appveyor used to give you an encryption number to at the bottom of the appveyor.yml file [[:opencpn:developer_manual:pi_installler_build_deploy#appveyoryml|Appveyor.yml file example]].
-- For TRAVIS-CI  [[https://docs.travis-ci.com/user/encryption-keys/|Travis-CI Encryption Docs]]
-    - First install [[:opencpn:developer_manual:ci-push-build-to-git#c_install_travis_cli_to_encrypt_a_github_secure_public_key|Travis CLI]] to encrypt a github secure public key.
-    - Then [[https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:developer_manual:ci-push-build-to-git#d_encrypt_a_github_api_token_with_travis_encrytion|Encrypt a Github API Token with Travis CLI Encryption]] using the Personnal Access Token 'number' you saved from Git.
-    - Then use the resulting 'encryption' in the [[:opencpn:developer_manual:pi_installler_build_deploy#travisyml|.Travis.yml file example]].
-    - For more information about Travis encryption of a Github Personnal Access Token see [[:opencpn:developer_manual:ci_travis_encryption_windows|CI:Travis Encryption for Windows]]
-    - For more information about Travis encryption using Linux and TravisCI see [[https://docs.travis-ci.com/user/encrypting-files/|Travis Encrypting]].
-- After setup, Refer to [[:opencpn:developer_manual:ci-push-build-to-git|How to push build to Git using Appveyor and Travis]]
-....
-
-https://github.com/rgleason/squiddio_pi/tree/reset35-rg[Working Example
-deploys/uploads to Cloudsmith and GitHub Release] +
-https://github.com/mauroc/squiddio_pi/issues/77[GitHub Issues discussion
-here Deploy to your repository is simple... #77]
 
 == CIRCLECI (Build Account)
 
@@ -178,49 +38,6 @@ account.
 
 image:circleci-build-all-pr.png[CircleCI build all
 PR,width=600]
-
-== CLOUDSMITH Deployment Repository
-
-Create your own CLOUDSMITH Deployment Repository. The shipped
-configuration uses cloudsmith.io. This is not a requirement in any way,
-but this is how to get the shipped setup working. Setup a Cloudsmith.IO
-Free Opensource Account:
-
-. Go to Cloudsmith.io https://cloudsmith.io/user/signup/ to sign up for
-a free opensource account using your github account.
-. After the 7 day trial, you may be asked for credit card, as long as
-you stay public opensource with the base services, it should not cost
-you. Don't get alarmed when it looks like they want money. Open-source
-repos are free.
-. Create [user name] For Example: "firstname-lastname"
-. Create 3 repositories named
-
-....
-    - [pluginname_pi]-prod
-    - [pluginname_pi]-beta
-    - [pluginname_pi]-alpha
-- OR (if you plan on deploying multiple plugins)
-    - opencpn-plugins-prod
-    - opencpn-plugins-beta
-    - opencpn-plugins-alpha
-- Which will store compressed binary files and metadata xml catalog built by circleci.
-- Create a [new repository] by clicking the "+" and then use one of the names above. Make sure you fill in the 'Slug' with exactly the same text as you used in 'Name' or you repository may not work as you expect and debugging is difficult.
-- Make sure you select "Opensource" (not Public) and complete the rest of the information appropriately, see below.
-....
-
-image:cloudsmith-create-repository.png[Cloudsmith create
-Repository,width=600]
-
-. When completed the new repository should have a "heart" icon which
-when hovered over shows "Opensource".
-. For each new repository select:
-
-....
-    - Under "Set me up" dropdown on the right side, select "Raw"
-    - See notes below for setting up [[:opencpn:developer_manual:pi_installler_build_deploy#cloudsmith_api_key_generation_and_use|CLOUDSMITH_API_KEY Generation and Use]].
-    - Test each repository to make sure you can upload and download a file using the web UI.
-    - Then at the bottom "Upload Packages" button.
-....
 
 == CLOUDSMITH_API_KEY Generation and Use
 
@@ -272,22 +89,6 @@ Key,width=400]
 
 Once this is done the deploy to Cloudsmith should work.
 
-== Cloudsmith Retention Policy Settings
-
-Example: A repository with 4gb and about 5000 packages used for
-development. Retention policy set some time ago but these have not
-disappeared. Deleting them 25 at a time is impractical. Response: This
-is normally a misunderstanding of how the retention functionality works.
-Retention Policy only kicks in when a repository is uploaded, even for
-time-based retention. Also, you've currently got "Group Packages By
-Name" enabled, which means it is is counting per package name, rather
-than the packages in total. The 33 packages count you have means you'd
-have to have 34 versions of a named package before it deletes them. If
-you'd like to keep 30-days worth of absolute packages, just untick the
-box and we'll trim it down to 30 days after the next upload.
-
-Some more information on how retention works here:
-https://help.cloudsmith.io/docs/retention-lifecycle
 
 Also, for manual actions, at the bottom of the packages list page,
 there's an "X Per Page" selector, where you can change the setting from

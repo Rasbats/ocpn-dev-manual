@@ -1,0 +1,19 @@
+= CI-CMake Template
+
+Github: https://github.com/jongough/testplugin_pi
+
+. Fully functional plugin
+. Uses all of the required OCPN interfaces and demonstrates how to use
+the ocpn_draw_pi API set, both the JSON and Binary versions.
+. CI-CMake
+. Guidance for the automated build process
+
+----
+    - Cmake, CMakeLists.txt and scripts needed to compile the environments.
+    - Encapsulates the complexities of multi environment builds and deploys to make it easier to build and deliver plugins
+    - All plugin changes can be made in CMakeLists.txt, i.e. adding source and header files, there is no need to modify the other build files
+	- Delivered to OpenCPN Plugin Management User Interface using metadata files via the https://github.com/OpenCPN/plugins(OpenCPN Container Project for an Integrated Plugin Management Facility - github.com/opencpn/plugins)
+----
+
+Additional guidance for converting an existing plugin to use CI-CMake
+https://github.com/rgleason/testplugin_pi/blob/updates/Frontend2.md[Frontend2.md]
