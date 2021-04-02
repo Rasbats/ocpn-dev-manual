@@ -3,6 +3,7 @@
 ** xref:AboutThisManual.adoc[About this Manual]
 ** xref:devel_manual.adoc[Background]
 ** xref:Community.adoc[Community]
+** xref:Terminology.adoc[Terminology]
 * Opencpn development
 ** Compiling
 *** xref:cmake.adoc[CMake]
@@ -10,16 +11,13 @@
 *** xref:compiling_windows.adoc[Windows]
 *** xref:compile_mac_osx.adoc[MacOS]
 *** xref:cross_compiling_for_windows_under_linux.adoc[Mingw windows build on Linux]
-** xref:languages.adoc[Internationalization]
 ** xref:code_formatting.adoc[Code Formatting]
 ** xref:user_interface_styling.adoc[User Interface Styling]
 ** xref:troubleshooting.adoc[Troubleshooting]
-** xref:online_tools.adoc[Online Nmea Tools]
 * Plugin development
 ** xref:plugin_guidelines.adoc[Plugin Guidelines]
 *** xref:plugin_documentation.adoc[Documentation]
 *** xref:pi_dependencies.adoc[Dependencies]
-*** xref:plugin-i18n.adoc[Internationalization]
 ** xref:plugin_api_versions.adoc[Plugin API and ABI]
 ** xref:pm-overview-deployment.adoc[Deployment overview]
 ** xref:pm-overview-prerequisite.adoc[Prerequisites overview]
@@ -33,8 +31,11 @@
 **** Adapt Plugin
 **** Code Changes
 **** Build Locally
-*** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Template]
-** Legacy Package Installer
+*** xref:AlternativeWorkflow:ROOT:index.adoc[Shipdriver Templates]
+** Legacy Package Deployment
+* xref:i18n.adoc[Internationalization]
+* Resources
+** xref:online_tools.adoc[Online Nmea Tools]
 * xref:manual-maint.adoc[Maintenance of this Manual]
 * The Attic
 ** xref:demo_plugin.adoc[Demonstration Plugin]
@@ -45,6 +46,7 @@
 ** xref:plugin_submissions.adoc[Plugin Submissions]
 ** Redundant
 ** Reference
+*** xref:languages.adoc[Internationalization]
 *** xref:prerequisites.adoc[Prerequisites]
 *** xref:compiling_mac_osx.adoc[Compiling on macOS]
 *** xref:compile_linux_old.adoc[Compiling on Linux]
@@ -70,7 +72,6 @@
 +++
 <p/> <hr/> <p/>
 +++
-* Testplugin Workflow Manual
 * Old manual
 ** Compiling on Windows
 *** xref:compiling_external_plugins_and_building_install_packages.adoc[Compile Plugins and build Install Packages]
