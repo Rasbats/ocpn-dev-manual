@@ -22,8 +22,8 @@ Most plugins use one of the templates below to establish the Plugin Manager syst
 * xref:managed-plugins:ROOT:index.adoc[Shipdriver]
 * xref:pm-tp-template.adoc[Testplugin]
 
-Testplugin workflow is the most commonly used, partly because it has been around for
-awhile).
+
+Testplugin workflow is the most commonly used, partly because it has been around for awhile (recently updated and maintained). Typical settings for plugin and maintenance are located conveniently in the CMakeLists.txt fiie.
 
 Shipdriver workflow is an updated variant, with some new functionality and a lot of
 simplifications.

@@ -16,9 +16,10 @@ Linux]
 Windows]
 * xref:compiling_mac_osx.adoc[Compiling
 macOS]
-* xref:modularized_packaging.adoc[Modularized
-Packaging]
-* xref:internationalization.adoc[Internationalization]
+* xref:pm-overview-workflow.adoc[Plugin Manager (PM) Workflow Overview]
+* xref:legacy-plugins.adoc[Legacy Plugin Packages]
+* modularized_packaging.adoc[Modularized Packaging]
+* xref:i18n.adoc[i18nInternationalization]
 * xref:code_formatting.adoc[Code
 Formatting]
 * xref:messaging.adoc[Messaging]

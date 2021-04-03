@@ -22,7 +22,7 @@ No longer waste time with manual releases! Integrate your workflow with OpenCPN 
 
 CMake and CMakeLists.txt controls the processes below via ci scripts and utilizes the plugins github resource for each environment.
 
- Plugin                                     Library    Metadata.xml
+ Plugin                                     Library    Metadata
  Repository --> Build    --> Deploy     --> Script --> Catalog
  Github     --> CircleCi --> Cloudsmith --> PI Dev --> User loads
  Github     --> Appveyor --> Cloudsmith --> PI Dev --> User Loads
