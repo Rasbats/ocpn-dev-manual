@@ -18,6 +18,7 @@ Windows]
 macOS]
 * xref:pm-overview-workflow.adoc[Plugin Manager (PM) Workflow Overview]
 * xref:legacy-plugins.adoc[Legacy Plugin Packages]
+8 xref:cmake.adoc[Cmake]  What title?
 * modularized_packaging.adoc[Modularized Packaging]
 * xref:i18n.adoc[i18nInternationalization]
 * xref:code_formatting.adoc[Code
