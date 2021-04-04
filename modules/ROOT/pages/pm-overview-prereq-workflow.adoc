@@ -1,4 +1,4 @@
-= Plugin Manager (PM) Prerequisites
+= Workflow Prerequisites
 
 We assume you have:
 

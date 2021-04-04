@@ -22,7 +22,7 @@
 ** xref:plugin_api_versions.adoc[Plugin API and ABI]
 * Plugin Manager Workflow
 ** xref:pm-overview-deployment.adoc[Deployment overview]
-** xref:pm-overview-prerequisite.adoc[Prerequisites overview]
+** xref:pm-overview-prereq-workflow.adoc[Workflow Prerequisites]
 ** xref:pm-overview-prereq-services.adoc[Prerequisite Services]
 ** xref:pm-overview-prereq-other.adoc[Cloudsmith Setup]
 ** xref:pm-overview-workflow.adoc[Workflow overview]
