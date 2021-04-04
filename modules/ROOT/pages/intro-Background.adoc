@@ -1,7 +1,7 @@
-= Developer Manual 
+= Developer Manual
 
 This section is the playground of the thriving OpenCPN
-Development Community.  Feel comfortable, and consider 
+Development Community.  Feel comfortable, and consider
 joining the project as described in
 xref:Community.adoc[the Community Page]
 

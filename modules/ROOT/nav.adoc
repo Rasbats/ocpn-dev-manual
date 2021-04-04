@@ -1,9 +1,10 @@
 .Developer Manual
+*  xref:developer_guide.adoc[Developer Guide]
 * Introduction
-** xref:AboutThisManual.adoc[About this Manual]
-** xref:devel_manual.adoc[Background]
-** xref:Community.adoc[Community]
-** xref:Terminology.adoc[Terminology]
+** xref:intro-AboutThisManual.adoc[About this Manual]
+** xref:intro-Background.adoc[Background]
+** xref:intro-Community.adoc[Community]
+** xref:intro-Terminology.adoc[Terminology]
 * Opencpn development
 ** Compiling
 *** xref:cmake.adoc[CMake]

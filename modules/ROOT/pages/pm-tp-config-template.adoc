@@ -173,33 +173,37 @@ EDIT  EDIT
 CHECK THE TEXT BELOW WITH THE ABOVE
 BELOW IS MORE CURRENT
 
-1. Get setup locally.
-   A. From local <plugin> master branch  git checkout -b master-cmake
-   B. From remote online github Testplugin repository master branch make a PR from jongough master and merge it.
-   C. Locally using bash prompt cd documents/github/testplugin_pi   then  git pull origin master to update
-   D. Locally in bash cd watchdog_pi  make sure you are in master-cmake branch
-   E. Locally using WinMerge open a comparison between testplugin_pi and watchdog_pi
-7. Now you are ready to update frontend2 to be current. copy these folder and files to the plugin from Testplugin_pi
-8. Directories & files to copy from Testplugin--->plugin to be identical.
-9. Folders identical to testplugin - circleci, buildosx, buildwin, ci, cmake, mingw, extinclude, extsrc
-10. Folders for testplugin only (don't copy) - include,  (actually there is one android datectrl.h file)
-11 Folders that are different/not exist in watchdog  (Different) build, data, src  (Not existing) forms, ocpninclude
-12. ocpninclude  - Many ocpn_draw files.  I don't believe we need this folder.
-       Did the GL folder go to libs/GL?
-       I see that ocpn_plugin.h, msvc/opencpn.lib and mingw/libopencpn.dll.a landed in libs/ocpn-api so I can delete the api-16 directory.
-      Texfont.h is in src/ folder.
-       Don't see pluginmanager.h anywhere, is it needed?
-      How to instruct other Plugin Devs about the paths for these changes?
-      Watchdog_pi uses ocpn_draw for boundaries.
-13. libs  (renamed from lib) - copy over all folders leaving existing folders (nmea0183 and bzip2).
-14. mingw  identical
-15. modules for watchdog documentation..
-16 ocpninclude -not needed.  (Tried copying all files to wd to fix TexFont.cpp issues - it did not fix it)
-17. ocpnsrc - copied over, is it needed?  Has glu and Texfont.cpp
-18  po - different
-19  src - different
-20  ui -different
-21  adding buildandroid back in but it is old from bdbcat build and probably not needed.
-22. adding include/android/wx/datectrl.h  back in but it is old from bdbcat and probably not needed.
-21.  Files travis.yml, appveyor.yml should be copied.
-22.  CMakeLists.txt will vary and should be changed appropriately to build.
+== Posssible Addditions
+
+=== 1. Get setup locally.
+. From local <plugin> master branch  git checkout -b master-cmake
+. From remote online github Testplugin repository master branch make a PR from jongough master and merge it.
+. Locally using bash prompt cd documents/github/testplugin_pi   then  git pull origin master to update
+. Locally in bash cd watchdog_pi  make sure you are in master-cmake branch
+. Locally using WinMerge open a comparison between testplugin_pi and watchdog_pi
+
+. Now you are ready to update frontend2 to be current. copy these folder and files to the plugin from Testplugin_pi
+. Directories & files to copy from Testplugin--->plugin to be identical.
+. Folders identical to testplugin - circleci, buildosx, buildwin, ci, cmake, mingw, extinclude, extsrc
+. Folders for testplugin only (don't copy) - include,  (actually there is one android datectrl.h file)
+. Folders that are different/not exist in watchdog  (Different) build, data, src  (Not existing) forms, ocpninclude
+. ocpninclude  - Many ocpn_draw files.  I don't believe we need this folder.
+. Did the GL folder go to libs/GL?
+. I see that ocpn_plugin.h, msvc/opencpn.lib and mingw/libopencpn.dll.a landed in libs/ocpn-api so I can delete the api-16 directory.
+. Texfont.h is in src/ folder.
+. Don't see pluginmanager.h anywhere, is it needed?
+. How to instruct other Plugin Devs about the paths for these changes?
+. Watchdog_pi uses ocpn_draw for boundaries.
+. libs  (renamed from lib) - copy over all folders leaving existing folders (nmea0183 and bzip2).
+
+. mingw  identical
+. modules for watchdog documentation..
+. ocpninclude -not needed.  (Tried copying all files to wd to fix TexFont.cpp issues - it did not fix it)
+. ocpnsrc - copied over, is it needed?  Has glu and Texfont.cpp
+. po - different
+. src - different
+. ui -different
+. adding buildandroid back in but it is old from bdbcat build and probably not needed.
+. adding include/android/wx/datectrl.h  back in but it is old from bdbcat and probably not needed.
+. Files travis.yml, appveyor.yml should be copied.
+. CMakeLists.txt will vary and should be changed appropriately to build.

@@ -6,7 +6,7 @@ A plugin deployed as a native package like NSIS (Windows),
 was installed before the Plugin Manager emerged in 5.2.0.
 
 Plugin Manager::
-The new (from 5.2.0) plugin manager which is able to install 
+The new (from 5.2.0) plugin manager which is able to install
 tarballs directly in the OpenCPN Options | Plugins GUI.
 
 TBC...
