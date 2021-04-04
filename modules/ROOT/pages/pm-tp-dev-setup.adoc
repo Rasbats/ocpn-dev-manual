@@ -1,5 +1,12 @@
 = Developer Setup
 
+
+EDIT DOWN
+
+ELIM DUPS
+
+MOVE CONTENT
+
 https://github.com/leamas/OpenCPN/wiki[PIugin Manager Github Wiki]
 Extensive documentation
 

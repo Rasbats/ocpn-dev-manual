@@ -16,7 +16,10 @@ After the 7 day trial, you may be asked for credit card, as long as you stay pub
 * Generally don't touch 'Slug'. But with troubles, make sure you fill in the 'Slug' with exactly the same text as you used in 'Name' or you repository may not work as you expect and debugging is difficult.
 * Make sure you select "Opensource" (not Public) and complete the rest.
 
-In your Cloudsmith Account configure your personal repository with the required preconfigured repository names necessary for the template being used (Shipdriver or Testplugin).
+
+== Create Open-source repositories
+
+In your Cloudsmith Account configure your personal repository with the required pre-configured repository names necessary for the template being used (Shipdriver or Testplugin).
 
 Use the "+ in the upper right to configure a new repository.
 Enter the following for a Public OpenSource Repository:
@@ -55,31 +58,7 @@ Create 3 repositories named following this guiide:
 
 Which will store compressed binary files and metadata xml catalog built by circleci.
 
-=== Plugin Repository Types and Use
-
-Follow the name conventions above.
-Each plugin should have three repositories with these suffixes:
-
-==== ALPHA
-* Development
-* Retainage - Limit by 36 days, Limit by Count 27 packages, Limit by Size 0 disabled.
-* Old packages will be deleted when new packages are synchronized.
-* Retention is performed in the following order: By count, then by days, then by size.
-
-==== BETA
-* Testing
-* Retainage - Limit by days 0 disabled, Limit by count 223 packages, Limit by Size 0 disabled.
-* See general comments above.
-
-==== PROD
-* Releases
-* Retainage - Limit by days 0 disabled, Limit by count 223 packages, Limit by Size 0 disabled.
-* See general comments above.
-* Generally, plugins that are deployed to the Plugin Manager should be located in this repository.
-* The retainage for this repository should retain at least the 4 last releases.
-* Currently each plugin has between 12-15 environments, each environment deploys a tarball and metadata file and may deploy one additional file (for deb linux, exe windows or pkg macos file).
-* 15 environments x 3 files x 4 releases = 180 packages.
-
+xref:pm-tp-deploy.adoc[Deploy Details] more detail on use.
 
 == OpenCPN Organization Repositories
 
@@ -114,11 +93,9 @@ development.
 . Retention policy set some time ago but these have not
 disappeared.
 . Deleting them 25 at a time is impractical.
-. Response from Cloudsmith support:
-.. This is normally a misunderstanding of how the retention functionality works.
-... Retention Policy only kicks in when a repository is uploaded, even for time-based retention. Also, you've currently got "Group Packages By Name" enabled, which means it is is counting per package name, rather than the packages in total.
-... The 33 packages count you have means you'd have to have 34 versions of a named package before it deletes them.
-... If you'd like to keep 30-days worth of absolute packages, just untick the box and we'll trim it down to 30 days after the next upload.
+. Response from Cloudsmith support: This is normally a misunderstanding of how the retention functionality works.
+.. Retention Policy only kicks in when a repository is uploaded, even for time-based retention. Also, you've currently got "Group Packages By Name" enabled, which means it is is counting per package name, rather than the packages in total.
+.. The 33 packages count you have means you'd have to have 34 versions of a named package before it deletes them.
+.. If you'd like to keep 30-days worth of absolute packages, just untick the box and we'll trim it down to 30 days after the next upload.
 
-More information on how retention works here:
-https://help.cloudsmith.io/docs/retention-lifecycle
+More Information: https://help.cloudsmith.io/docs/retention-lifecycle[Cloudsmith Retention:]

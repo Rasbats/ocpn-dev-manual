@@ -27,7 +27,10 @@ A Text Editor is useful and Bash is required to build locally
 * Git Assit Program: https://desktop.github.com/[Github Desktop for Windows]
 * Git Assist Program: https://www.syntevo.com/smartgit/[Smartgit]
 * Text Editor: https://notepad-plus-plus.org/downloads/[Notepad++] or https://atom.io/[Atom]
+. Text Editor: VIM with Bash, NotePad++, Atom
 
 === Linux
+
+Text Editor: VIM
 
 === MacOS

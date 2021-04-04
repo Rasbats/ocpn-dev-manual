@@ -44,10 +44,12 @@ including completing Services and Cloudsmith Setup.
 
 * xref:pm-tp-system-structure.adoc[System Structure]
 * xref:pm-tp-dev-setup.adoc[Developer Setup]
-* xref:pm-tp-ci-cmake-template.adoc[CI-CMake Template]
-* Adapt Plugin
-* Code Changes
-* Build Locally
+* xref:pm-tp-config-template.adoc[Configure Template]
+* Build Locally  - Need to add
+* xref:pm-tp-adapt-plugin.adoc[Adapt Plugin]
+* xref:pm-tp-deploy.adoc[Deploy Details]
+* xref:pm-tp-update-library.adoc[Update the Library]
+* xref:pm-tp-language-nuance.adoc[Language Nuance]
 
 == Plugin Adaptation
 

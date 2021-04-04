@@ -2,52 +2,25 @@
 
 == Plugin Manager (PM) System consists of three parts:
 
-=== 1. Plugin Manager User Interface & PI Operations in OpenCPN
+=== 1. OpenCPN Plugin Manager Code - UI
 
-Purpose: Operations under **Options > Plugins** and the PI User Interface.
+Purpose: User Interface & PI Operations in OpenCPN +
+Operations under **Options > Plugins** and the PI User Interface. +
 
-=== 2. Plugin Code (CI & CMake) added via Templates
+=== 2. Plugin Code - Configure Template
 
 Purpose: Provide a prebuilt and tested CMake Template to enable Continuous Integration (CI) to manage the routine tasks required to build and deploy multiple build environments.
-
-xref:pm-tp-system-structure.adoc[CI-CMake Template] has more detail for these steps:
 
 . Confirm the plugin builds locally and works properly before starting.
 . Step by step Instructions
 . List of folders and files needed
 . Process to make a backup and to apply the folders and files to the plugin.
+. Details xref:pm-tp-config-template.adoc[Configure Template] has more detail for these steps:
 
 === 3. Transfer of metadata files to Catalog Library
 
-Manual Process: by Plugin Developer
+Purpose: To include the plugin listing in OpenCPN Plugin +
+Manual Process: by Plugin Developer +
+Details: xref:pm-tp-update-library.adoc[Update Library] +
 
-. After Plugin Developer commits and pushes a Release, the PM system builds and deploys environments tarballs & metadata to Cloudsmith.
-. All successfully built plugin metadata.xml's are readily available in a Cloudsmith repository.
-
-==== Plugin Developer actions:
-
-. Uses github  and a script to tranfer the metadata.xmls from a Cloudsmith Repository to the 'library' github.com/opencn/plugins.
-. Removes older plugin releases if present.
-. Git adds and commits the changes to local git. Then pushes to their remote git repository.
-. Makes a Pull Request (PR) to 'library' github.com/opencpn/plugins master branch.
-. Confirms that the github action script accepts the PR.
-
-More Detail:
-. Plugin Developer updates git local 'library' repository from upstream (opencpn/plugins).
-. Executes a script to copy Cloudsmith metadata to the git a local "library'.
-. Checks the new xml files added to the metadata directory and deletes the old xml files for the plugin.
-. Uses Git to add the changes, make a commit and push to the plugin developer's remote fork.
-. Then from the online remote, makes a pull requesst to the 'library' opencpn/plugins master branch.
-
-. The metadate.xml file contains information necessary to download the essential Plugin tarball files into OpenCPN when the user chooses.
-. Refer to https://github.com/OpenCPN/plugins/blob/master/DEVELOPER-INFO.md[OpenCPN plugins project README]
-
-==== Library Maintainer Dave reviews Pull Request:
-
-. Accepts or rejects the PR.
-. If the PR is accepted, the metadata.xml files are added to the Catalog Library
-. Users can then use the "Update Plugin Catalog" button in Options > Plugins to update the catalog.
-
-==== Catalog now available to the User in **Options > Plugins**
-
-The excellent Graphic on this page describes the system structure as xref:pm-overview-deployment.adoc[Deployment Overview Graphic].
+For a Graphic of system structure xref:pm-overview-deployment.adoc[Deployment Overview Graphic].
