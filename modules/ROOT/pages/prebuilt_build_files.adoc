@@ -1,11 +1,14 @@
-= Plugin Build Files
+= Prebuilt  Build Files
 
-The links to download pre-built build dependencies can become
+The project publishes some prebuilt resources which are used
+when building both the OpenCPN core and in plugin builds.
+
+The links to these pre-built build dependencies can become
 broken/changed occasionally (such as after CDN closed their sponsorship
-program). These are the available and current Build File links for use
-compilation.
+program). When they do, please update this list.
 
-. Packages.dmg for macOS can be installed using brew:
+
+- Packages.dmg for macOS can be installed using brew:
 https://github.com/OpenCPN/OpenCPN/blob/master/ci/generic-build-macos.sh[https:__github.com/OpenCPN/OpenCPN/blob/master/ci/generic-build-macos.sh]]
 - wxWidgets for macOS, wx312B_opencpn50_macos109.tar.xz:
 https:__download.opencpn.org/s/rwoCNGzx6G34tbC/download[]
@@ -13,8 +16,3 @@ https:__download.opencpn.org/s/rwoCNGzx6G34tbC/download[]
 https:__download.opencpn.org/s/54HsBDLNzRZLL6i/download[]
 - wxWidgets for msWindows, wxWidgets-3.1.2.7z:
 https:__download.opencpn.org/s/E2p4nLDzeqx4SdX/download[]
-
-When these file locations change, please update this list.
-
-Brief Build instructions for Windows, MacOS, Debian, Flatpak
-https://github.com/bdbcat/oesenc_pi/blob/master/INSTALL.md[]
