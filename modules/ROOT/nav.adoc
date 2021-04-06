@@ -54,6 +54,7 @@
 ** xref:standalone_plugin_compilation.adoc[Plugin Compilation Win]
 ** xref:compiling_external_plugins_and_building_install_packages.adoc[Compile Plugins and build Install Packages]
 ** xref:compiling_plugins_to_debug.adoc[Compile Plugins for Debugging]
+** xref:developer_guide.adoc[Developer Guide]
 ** Redundant
 ** Reference
 *** xref:languages.adoc[Internationalization]
