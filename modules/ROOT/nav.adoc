@@ -1,5 +1,4 @@
 .Developer Manual
-*  xref:developer_guide.adoc[Developer Guide]
 * Introduction
 ** xref:intro-AboutThisManual.adoc[About this Manual]
 ** xref:intro-Background.adoc[Background]
@@ -42,7 +41,7 @@
 * Resources
 ** xref:online_tools.adoc[Online Nmea Tools]
 * xref:manual-maint.adoc[Maintenance of this Manual]
-* Legacy Plugin Packaging
+* xref:legacy-plugins.adoc[Legacy Plugin Packaging]
 ** xref:plugin_build_files.adoc[Plugin Build Files]
 ** xref:standalone_plugin_compilation.adoc[Plugin Compilation Win]
 ** xref:compiling_external_plugins_and_building_install_packages.adoc[Compile Plugins and build Install Packages]

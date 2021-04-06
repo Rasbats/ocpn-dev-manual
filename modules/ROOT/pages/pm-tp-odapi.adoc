@@ -1,5 +1,7 @@
 = Ocpn_Draw ODAPI
 
+ODAPI is not part of  the official API/ABI which is between all plugins and OpenCPN core. It is used for messaging between Ocpn_Draw and other plugins such as Watchdog (boundaries and guard zones) , Weather_routing (boundaries) and Squiddio (when using ocpn_draw odapi text_points instead of waypoints).
+
 == Updated ODAPI for faster access OCPN_Draw capabilities
 
 

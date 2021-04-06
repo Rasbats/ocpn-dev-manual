@@ -16,7 +16,7 @@ On mingw Windows builds::
 The  API Designation is found in the ocpn_plugin.h file:
 
     #define     MY_API_VERSION_MAJOR    1
-    #define     MY_API_VERSION_MINOR    13
+    #define     MY_API_VERSION_MINOR    16
 
 The API is intended to be backwards compatible, and has stayed so since
 at least 10 years.
